@@ -1,0 +1,21 @@
+# WordPress Core & Config
+wp-config.php
+.htaccess
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# Logs & Backups
+*.log
+*.sql
+*.bkp
+error_log
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/

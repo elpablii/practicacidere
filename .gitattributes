@@ -1,0 +1,22 @@
+# Forzar el comportamiento por defecto para que Git maneje los finales de línea
+* text=auto
+
+# Declarar explícitamente archivos de texto para que siempre se normalicen
+*.php text
+*.html text
+*.css text
+*.js text
+*.sql text
+*.txt text
+*.xml text
+*.json text
+*.md text
+
+# Archivos binarios (no tocar)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
