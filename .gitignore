@@ -19,3 +19,6 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+
+# Legacy Site (Local only)
+practicaprofesional/cidere/paginaactualcidere/
