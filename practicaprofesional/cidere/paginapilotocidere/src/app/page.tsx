@@ -1,12 +1,12 @@
-import React from "react";
+import Image from "next/image";
+import logoFull from "@/assets/logos/logo-full.png";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-primary text-white p-6 text-center">
       <div className="max-w-2xl w-full space-y-8">
-        {/* Logo Placeholder or Icon */}
-        <div className="mx-auto w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg mb-8">
-          <span className="text-primary text-4xl font-bold">C</span>
+        <div className="flex justify-center mb-8">
+
         </div>
 
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl">
