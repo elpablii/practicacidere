@@ -7,6 +7,8 @@ import logoCidere from "@/assets/logos/logo-full.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
     return (
         <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
@@ -75,15 +77,81 @@ const Navbar = () => {
 
                     {/* Botón Menú Móvil */}
                     <div className="md:hidden">
-                        <button className="text-primary p-2 focus:outline-none">
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                            </svg>
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="text-primary p-2 focus:outline-none hover:bg-gray-50 rounded-md transition-colors"
+                        >
+                            {isMobileMenuOpen ? (
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                                </svg>
+                            )}
                         </button>
                     </div>
 
                 </div>
             </div>
+
+            {/* Menú Móvil (Desplegable) */}
+            {isMobileMenuOpen && (
+                <div className="md:hidden bg-white border-t border-gray-100 shadow-lg h-screen overflow-y-auto pb-20">
+                    <div className="px-4 pt-4 pb-6 space-y-2">
+                        <Link
+                            href="/"
+                            className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Inicio
+                        </Link>
+
+                        {/* Dropdown Móvil: CIDERE Coquimbo */}
+                        <div>
+                            <button
+                                onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                                className="w-full flex justify-between items-center px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors"
+                            >
+                                CIDERE Coquimbo
+                                <svg className={`w-4 h-4 transition-transform duration-200 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            {/* Submenú Móvil */}
+                            {isMobileDropdownOpen && (
+                                <div className="pl-6 space-y-1 mt-1 bg-gray-50/50 rounded-lg py-2">
+                                    <Link href="/nosotros#mision" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Misión y Visión
+                                    </Link>
+                                    <Link href="/nosotros#directorio" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Directorio
+                                    </Link>
+                                    <Link href="/nosotros#equipo" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Equipo CIDERE
+                                    </Link>
+                                    <Link href="/nosotros#objetivos" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Objetivos
+                                    </Link>
+                                    <Link href="/socios" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Socios Asociados
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+
+                        <Link
+                            href="/contacto"
+                            className="block px-3 py-3 text-base font-bold text-primary hover:bg-primary/5 rounded-lg transition-colors mt-4"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Contacto
+                        </Link>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };
