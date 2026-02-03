@@ -22,6 +22,23 @@ const Navbar = () => {
         setIsMobileDropdownOpen(false);
     };
 
+    // Función para alternar el menú en móviles (Toggle: Abre/Cierra)
+    const toggleMobileDropdown = (e: React.MouseEvent) => {
+        e.stopPropagation(); // Evita que el clic afecte al fondo (overlay)
+        setIsMobileDropdownOpen(!isMobileDropdownOpen);
+    };
+
+    // Cerrar menú desktop al hacer clic fuera
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
     // Bloquear scroll en móvil
     useEffect(() => {
         document.body.style.overflow = isMobileMenuOpen ? "hidden" : "unset";
@@ -38,7 +55,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Menú Desktop con despliegue por HOVER */}
+                    {/* Menú Desktop (Hover) */}
                     <div className="hidden md:flex items-center space-x-8">
                         <Link href="/" className={`font-medium transition-colors ${isActive('/') ? 'text-secondary' : 'text-primary hover:text-secondary'}`}>
                             Inicio
@@ -48,12 +65,12 @@ const Navbar = () => {
                             className="relative group"
                             onMouseEnter={() => setIsDropdownOpen(true)}
                             onMouseLeave={() => setIsDropdownOpen(false)}
+                            ref={dropdownRef}
                         >
                             <button
                                 className={`flex items-center font-medium transition-colors py-2 focus:outline-none ${isNosotrosActive || isDropdownOpen ? 'text-secondary' : 'text-primary hover:text-secondary'}`}
                             >
                                 CIDERE Coquimbo
-                                {/* Ícono Chevron con contraste alto */}
                                 <svg
                                     className={`ml-1.5 w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-secondary' : 'text-primary'}`}
                                     fill="none"
@@ -64,7 +81,6 @@ const Navbar = () => {
                                 </svg>
                             </button>
 
-                            {/* Lista Desplegable Desktop */}
                             <div className={`absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-4 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
                                 <div className="px-4 py-1 mb-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Nuestra Organización</div>
                                 <Link href="/nosotros#mision" onClick={() => setIsDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary transition-colors">Misión y Visión</Link>
@@ -82,7 +98,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Botón Menú Móvil con Contraste Reforzado */}
+                    {/* Botón Menú Móvil */}
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -116,27 +132,19 @@ const Navbar = () => {
 
                             <div className="space-y-1">
                                 <button
-                                    onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-medium transition-colors ${isNosotrosActive || isMobileDropdownOpen ? 'text-secondary bg-secondary/5' : 'text-gray-700 hover:bg-gray-50'}`}
+                                    onClick={toggleMobileDropdown} // Aquí aplicamos el Toggle corregido
+                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ${isNosotrosActive || isMobileDropdownOpen ? 'text-secondary bg-secondary/10' : 'text-gray-700 hover:bg-gray-50'}`}
                                 >
                                     CIDERE Coquimbo
-                                    <svg className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    <svg className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
-                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileDropdownOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                    <div className="pl-6 py-2 space-y-1 bg-gray-50/50 rounded-xl mt-1 text-sm text-gray-600">
-                                        <Link href="/nosotros#mision" className="block py-2 hover:text-secondary" onClick={closeAllMobile}>Misión y Visión</Link>
-                                        <Link href="/nosotros#directorio" className="block py-2 hover:text-secondary" onClick={closeAllMobile}>Directorio</Link>
-                                        <Link href="/nosotros#equipo" className="block py-2 hover:text-secondary" onClick={closeAllMobile}>Equipo CIDERE</Link>
-                                        <Link href="/nosotros#objetivos" className="block py-2 hover:text-secondary" onClick={closeAllMobile}>Objetivos</Link>
-
-                                        <button
-                                            onClick={() => setIsMobileDropdownOpen(false)}
-                                            className="w-full text-left py-3 mt-2 text-primary font-bold border-t border-gray-100 flex items-center"
-                                        >
-                                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 15l7-7 7 7" /></svg>
-                                            Cerrar sección
-                                        </button>
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileDropdownOpen ? 'max-h-[500px] opacity-100 mt-1' : 'max-h-0 opacity-0'}`}>
+                                    <div className="pl-6 py-2 space-y-1 bg-gray-50/80 rounded-xl text-sm text-gray-600">
+                                        <Link href="/nosotros#mision" className="block py-2.5 hover:text-secondary transition-colors" onClick={closeAllMobile}>Misión y Visión</Link>
+                                        <Link href="/nosotros#directorio" className="block py-2.5 hover:text-secondary transition-colors" onClick={closeAllMobile}>Directorio</Link>
+                                        <Link href="/nosotros#equipo" className="block py-2.5 hover:text-secondary transition-colors" onClick={closeAllMobile}>Equipo CIDERE</Link>
+                                        <Link href="/nosotros#objetivos" className="block py-2.5 hover:text-secondary transition-colors" onClick={closeAllMobile}>Objetivos</Link>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +153,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="mt-auto pt-6 border-t border-gray-100">
-                            <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/10" onClick={closeAllMobile}>Contacto Directo</Link>
+                            <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/10 active:scale-95 transition-all" onClick={closeAllMobile}>Contacto Directo</Link>
                         </div>
                     </div>
                 </div>
