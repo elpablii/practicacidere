@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar.tsx";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,14 +25,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* 2. Colocamos el Navbar arriba de todo */}
+    <html lang="es" className="scroll-smooth">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        {/* El Navbar arriba de todo */}
         <Navbar />
-        {/* Añadimos un padding-top para que el contenido no quede debajo del menú fijo */}
-        <div className="pt-20">
+
+        {/* El contenido principal que "empuja" al footer hacia abajo si hay poco texto */}
+        <main className="flex-grow pt-20">
           {children}
-        </div>
+        </main>
+
+        {/* El Footer al final */}
+        <Footer />
       </body>
     </html>
   );

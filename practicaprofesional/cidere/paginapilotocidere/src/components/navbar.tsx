@@ -22,16 +22,7 @@ const Navbar = () => {
         setIsMobileDropdownOpen(false);
     };
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                setIsDropdownOpen(false);
-            }
-        };
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
-
+    // Bloquear scroll en móvil
     useEffect(() => {
         document.body.style.overflow = isMobileMenuOpen ? "hidden" : "unset";
     }, [isMobileMenuOpen]);
@@ -40,53 +31,67 @@ const Navbar = () => {
         <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
-                    {/* Parte para el Logo */}
+                    {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" onClick={() => setIsDropdownOpen(false)}>
                             <Image src={logoCidere} alt="Logo CIDERE" width={160} height={55} priority className="cursor-pointer" />
                         </Link>
                     </div>
 
-                    {/* Menú Desktop */}
+                    {/* Menú Desktop con despliegue por HOVER */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/" onClick={() => setIsDropdownOpen(false)} className={`font-medium transition-colors ${isActive('/') ? 'text-secondary' : 'text-primary hover:text-secondary'}`}>
+                        <Link href="/" className={`font-medium transition-colors ${isActive('/') ? 'text-secondary' : 'text-primary hover:text-secondary'}`}>
                             Inicio
                         </Link>
 
-                        <div className="relative" ref={dropdownRef}>
+                        <div
+                            className="relative group"
+                            onMouseEnter={() => setIsDropdownOpen(true)}
+                            onMouseLeave={() => setIsDropdownOpen(false)}
+                        >
                             <button
-                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                 className={`flex items-center font-medium transition-colors py-2 focus:outline-none ${isNosotrosActive || isDropdownOpen ? 'text-secondary' : 'text-primary hover:text-secondary'}`}
                             >
                                 CIDERE Coquimbo
-                                <svg className={`ml-1 w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                {/* Ícono Chevron con contraste alto */}
+                                <svg
+                                    className={`ml-1.5 w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-secondary' : 'text-primary'}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
 
-                            <div className={`absolute left-0 mt-2 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-4 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
+                            {/* Lista Desplegable Desktop */}
+                            <div className={`absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-4 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
                                 <div className="px-4 py-1 mb-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Nuestra Organización</div>
                                 <Link href="/nosotros#mision" onClick={() => setIsDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary transition-colors">Misión y Visión</Link>
                                 <Link href="/nosotros#directorio" onClick={() => setIsDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary transition-colors">Directorio</Link>
                                 <Link href="/nosotros#equipo" onClick={() => setIsDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary transition-colors">Equipo CIDERE</Link>
                                 <Link href="/nosotros#objetivos" onClick={() => setIsDropdownOpen(false)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary transition-colors">Objetivos</Link>
                                 <div className="border-t border-gray-100 my-3 mx-4"></div>
+                                <div className="px-4 py-1 mb-1 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Vinculación</div>
                                 <Link href="/socios" onClick={() => setIsDropdownOpen(false)} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-secondary' : 'text-gray-700 hover:bg-gray-50 hover:text-secondary'}`}>Socios Asociados</Link>
                             </div>
                         </div>
 
-                        <Link href="/contacto" onClick={() => setIsDropdownOpen(false)} className={`px-6 py-2.5 rounded-full font-semibold transition-all shadow-md active:scale-95 ${isActive('/contacto') ? 'bg-secondary text-white' : 'bg-primary text-white hover:bg-secondary'}`}>
+                        <Link href="/contacto" className={`px-6 py-2.5 rounded-full font-semibold transition-all shadow-md active:scale-95 ${isActive('/contacto') ? 'bg-secondary text-white' : 'bg-primary text-white hover:bg-secondary'}`}>
                             Contacto
                         </Link>
                     </div>
 
-                    {/* Botón Menú Móvil */}
+                    {/* Botón Menú Móvil con Contraste Reforzado */}
                     <div className="md:hidden">
-                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-primary p-2 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none relative z-50">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="text-primary p-2 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none relative z-50"
+                        >
                             {isMobileMenuOpen ? (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                             ) : (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16m-7 6h7" /></svg>
                             )}
                         </button>
                     </div>
@@ -95,17 +100,14 @@ const Navbar = () => {
 
             {/* Menú Móvil (Vertical) */}
             <div className={`md:hidden fixed inset-0 z-[60] transition-all duration-300 ${isMobileMenuOpen ? 'visible' : 'invisible'}`}>
-                {/* 1. CLIC AFUERA: Al clickear en el fondo oscuro, se sale de todo el menú */}
                 <div className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} onClick={closeAllMobile}></div>
 
                 <div className={`absolute right-0 top-0 h-[100dvh] w-[85%] max-w-[320px] bg-white shadow-2xl transition-transform duration-300 ease-in-out flex flex-col ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="p-6 flex flex-col h-full">
                         <div className="flex justify-between items-center mb-8">
                             <span className="text-xl font-bold text-primary">Navegación</span>
-
-                            {/* BOTÓN PARA SALIR: Botón X interno adicional */}
-                            <button onClick={closeAllMobile} className="p-2 text-gray-400 hover:text-primary">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                            <button onClick={closeAllMobile} className="p-2 text-primary">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                             </button>
                         </div>
 
@@ -128,12 +130,11 @@ const Navbar = () => {
                                         <Link href="/nosotros#equipo" className="block py-2 hover:text-secondary" onClick={closeAllMobile}>Equipo CIDERE</Link>
                                         <Link href="/nosotros#objetivos" className="block py-2 hover:text-secondary" onClick={closeAllMobile}>Objetivos</Link>
 
-                                        {/* BOTÓN PARA SALIR DE ESTA PARTE: Permite contraer solo esta sección */}
                                         <button
                                             onClick={() => setIsMobileDropdownOpen(false)}
                                             className="w-full text-left py-3 mt-2 text-primary font-bold border-t border-gray-100 flex items-center"
                                         >
-                                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 15l7-7 7 7" /></svg>
                                             Cerrar sección
                                         </button>
                                     </div>
