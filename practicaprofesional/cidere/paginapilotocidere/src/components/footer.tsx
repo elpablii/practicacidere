@@ -92,7 +92,6 @@ const Footer = () => {
                                 </Link>
                             ))}
                         </div>
-                        <p className="mt-4 text-[10px] text-gray-400 font-medium">Síguenos para novedades regionales.</p>
                     </div>
                 </div>
 
