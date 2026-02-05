@@ -54,7 +54,7 @@ const Navbar = () => {
 
                     {/* Menú Desktop / iPad Horizontal */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/" className={`font-medium transition-colors ${isActive('/') ? 'text-secondary' : 'text-primary hover:text-secondary'}`}>
+                        <Link href="/" className={`font-medium transition-colors ${isActive('/') ? 'text-primary' : 'text-primary/70 hover:text-primary'}`}>
                             Inicio
                         </Link>
 
@@ -105,7 +105,6 @@ const Navbar = () => {
 
             {/* Menú Móvil */}
             <div className={`md:hidden fixed inset-0 z-[60] ${isMobileMenuOpen ? 'visible' : 'invisible'}`}>
-                {/* FIX CELULAR: El overlay ahora tiene e.stopPropagation para evitar el "rebote" */}
                 <div
                     className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`}
                     onClick={(e) => {

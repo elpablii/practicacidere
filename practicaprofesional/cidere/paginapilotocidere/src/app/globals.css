@@ -2,10 +2,6 @@
 
 @config "../../tailwind.config.ts";
 
-/*
-  Theme configuration is now imported from tailwind.config.ts
-*/
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
