@@ -123,7 +123,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex-1 space-y-2 overflow-y-auto pr-2">
-                            <Link href="/" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/') ? 'bg-secondary/10 text-secondary' : 'text-gray-700'}`} onClick={closeAll}>Inicio</Link>
+                            <Link href="/" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/') ? 'bg-primary/70 text-primary' : 'text-gray-700'}`} onClick={closeAll}>Inicio</Link>
 
                             <div className="space-y-1">
                                 <button
