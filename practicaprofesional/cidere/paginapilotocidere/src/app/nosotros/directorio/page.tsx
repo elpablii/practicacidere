@@ -3,31 +3,54 @@ import MemberCard from "@/components/MemberCard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Directorio | CIDERE",
+    title: "Directorio - CIDERE",
     description: "Conoce a los líderes que componen el directorio de CIDERE Región de Coquimbo.",
 };
 
 const DirectorioPage = () => {
     const directorioData = [
         {
-            name: "Nombre del Director 1",
+            name: "Francisco Puga Medina",
             role: "Presidente",
-            company: "Nombre de su Empresa S.A.",
-            image: "", // Ruta a la foto en /public/directorio/foto1.jpg
+            company: "Grupo El Día",
+            image: "/images/directorio/presidente-franciscopuga.webp",
         },
         {
-            name: "Nombre del Director 2",
+            name: "Luis Carmona Amenábar",
             role: "Vicepresidente",
-            company: "Empresa Constructora Ejemplo",
-            image: "",
+            company: "West Rent a Car",
+            image: "/images/directorio/vicepresidente-luiscarmona.webp",
         },
         {
-            name: "Nombre del Director 3",
-            role: "Tesorero",
-            company: "Servicios Mineros Coquimbo",
-            image: "",
+            name: "Gastón Yver Hudson",
+            role: "Secretario",
+            company: "Phillips, Yver y San Francisco Ltda.",
+            image: "/images/directorio/secretario-gastonyver.webp",
         },
-        // Añade tantos como necesites...
+        {
+            name: "Yerko Rendic Vladislav",
+            role: "Tesorero",
+            company: "Rendic Hermanos",
+            image: "/images/directorio/tesorero-yerkorendic.webp",
+        },
+        {
+            name: "Daniel Más Valdés",
+            role: "Director",
+            company: "Concreces Leasing S.A.",
+            image: "/images/directorio/director-danielmasvaldes.webp",
+        },
+        {
+            name: "Jorge Contador Araya",
+            role: "Director",
+            company: "Maquinarias Olmué Ltda.",
+            image: "/images/directorio/director-jorgecontador.webp",
+        },
+        {
+            name: "Franco Dalbosco",
+            role: "Director",
+            company: "Dalbosco Hermanos y Cia Ltda.",
+            image: "/images/directorio/director-francodalbosco.webp",
+        },
     ];
 
     return (
@@ -39,7 +62,7 @@ const DirectorioPage = () => {
                         Nuestro Directorio
                     </h1>
                     <p className="text-blue-100 text-lg opacity-80 max-w-2xl mx-auto">
-                        Líderes comprometidos con la articulación y el desarrollo de la Región de Coquimbo.
+                        Conoce a la mesa directiva de CIDERE Coquimbo.
                     </p>
                 </div>
             </section>
@@ -47,9 +70,15 @@ const DirectorioPage = () => {
             {/* Grilla Responsiva */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {/* Cambiamos 'grid' por 'flex flex-wrap' y añadimos 'justify-center' */}
+                    <div className="flex flex-wrap justify-center gap-8">
                         {directorioData.map((persona, index) => (
-                            <MemberCard key={index} {...persona} />
+                            <div
+                                key={index}
+                                className="w-full sm:w-[calc(50%-2rem)] md:w-[calc(33.33%-2rem)] lg:w-[calc(25%-2rem)] max-w-[300px]"
+                            >
+                                <MemberCard {...persona} />
+                            </div>
                         ))}
                     </div>
                 </div>
