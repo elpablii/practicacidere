@@ -3,8 +3,6 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        // min-h-[50dvh]: Reducimos la altura a la mitad de la pantalla en vertical
-        // md:min-h-[85vh]: Mantenemos el gran impacto en tablets y PCs
         <section className="relative w-full min-h-[50dvh] md:min-h-[85vh] flex items-center overflow-hidden bg-primary">
 
             {/* FONDO CON OVERLAY */}
@@ -18,7 +16,7 @@ const Hero = () => {
             </div>
 
             {/* RECURSOS INTERNOS */}
-            {/* py-8: Reducimos el relleno vertical en móvil para "apretar" el contenido */}
+
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-20 w-full py-8 md:py-20 mt-12 md:mt-0">
                 <div className="max-w-3xl">
 

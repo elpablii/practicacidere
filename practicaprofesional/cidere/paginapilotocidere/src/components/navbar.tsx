@@ -83,7 +83,7 @@ const Navbar = () => {
 
                             <div className={`absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-4 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
                                 <Link href="/nosotros#mision" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Misión y Visión</Link>
-                                <Link href="/nosotros#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Directorio</Link>
+                                <Link href="/nosotros/directorio#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Directorio</Link>
                                 <Link href="/nosotros#equipo" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Equipo CIDERE</Link>
                                 <Link href="/nosotros#objetivos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Objetivos</Link>
                                 <div className="border-t border-gray-100 my-3 mx-4"></div>
