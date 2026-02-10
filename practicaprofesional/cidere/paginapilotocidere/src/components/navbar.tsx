@@ -125,12 +125,12 @@ const Navbar = () => {
 
                             <div className="space-y-1">
                                 <button
+                                    type="button"
                                     onClick={(e) => {
-                                        e.preventDefault();
                                         e.stopPropagation();
                                         setIsMobileDropdownOpen(!isMobileDropdownOpen);
                                     }}
-                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-medium transition-all ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
+                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-medium transition-all select-none ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
                                 >
                                     CIDERE Coquimbo
                                     <svg className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
@@ -139,8 +139,8 @@ const Navbar = () => {
                                 <div className={`overflow-hidden transition-all duration-300 ${isMobileDropdownOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
                                     <div className="pl-6 py-2 space-y-4 text-sm text-gray-600">
                                         <Link href="/nosotros#mision" className="block hover:text-primary" onClick={closeAll}>Misión y Visión</Link>
-                                        <Link href="/nosotros#directorio" className="block hover:text-primary" onClick={closeAll}>Directorio</Link>
-                                        <Link href="/nosotros#equipo" className="block hover:text-primary" onClick={closeAll}>Equipo CIDERE</Link>
+                                        <Link href="/nosotros/directorio#directorio" className="block hover:text-primary" onClick={closeAll}>Directorio</Link>
+                                        <Link href="/nosotros/equipo#equipo" className="block hover:text-primary" onClick={closeAll}>Equipo CIDERE</Link>
                                         <Link href="/nosotros#objetivos" className="block hover:text-primary" onClick={closeAll}>Objetivos</Link>
                                     </div>
                                 </div>
