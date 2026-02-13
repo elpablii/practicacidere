@@ -146,7 +146,7 @@ const Navbar = () => {
                                 </div>
                             </div>
 
-                            <Link href="/socios" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Socios Asociados</Link>
+                            <Link href="/socios#socios" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Socios Asociados</Link>
                         </div>
                         <div className="mt-auto pt-6 border-t border-gray-100">
                             <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg" onClick={closeAll}>Contacto Directo</Link>
