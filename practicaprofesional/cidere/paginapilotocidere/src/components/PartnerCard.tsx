@@ -1,35 +1,30 @@
 import React from "react";
-import Image from "next/image";
 
 interface PartnerProps {
-    name: string;
     logo: string;
-    website?: string;
+    url: string;
+    name: string; // Para el atributo alt (SEO)
 }
 
-const PartnerCard = ({ name, logo, website }: PartnerProps) => {
+const PartnerCard = ({ logo, url, name }: PartnerProps) => {
     return (
         <a
-            href={website || "#"}
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex flex-col items-center justify-center p-8 bg-white border border-gray-100 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            className="group relative flex items-center justify-center p-8 bg-white border border-gray-100 rounded-3xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:-translate-y-2 active:scale-95"
         >
-            <div className="relative w-full aspect-video filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100">
+            {/* Contenedor del Logo */}
+            <div className="relative w-full aspect-video flex items-center justify-center overflow-hidden">
                 <img
                     src={logo}
                     alt={`Logo de ${name}`}
-                    className="w-full h-full object-contain"
+                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-in-out opacity-70 group-hover:opacity-100"
                 />
             </div>
 
-            {/* Nombre del Socio (aparece sutilmente) */}
-            <span className="mt-4 text-sm font-semibold text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {name}
-            </span>
-
-            {/* Decoración inferior azul */}
-            <div className="absolute bottom-0 left-0 h-1 bg-primary w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl" />
+            {/* Brillo decorativo interno al hacer hover */}
+            <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary/5 transition-colors duration-500"></div>
         </a>
     );
 };

@@ -4,63 +4,131 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Socios Asociados - CIDERE",
-    description: "Conoce a las empresas y organizaciones que forman parte de la red de CIDERE Región de Coquimbo.",
+    description: "Red de empresas asociadas a CIDERE Región de Coquimbo.",
 };
 
 const SociosPage = () => {
-    // Aquí es donde irás completando la lista de socios
-    const sociosData = [
-        {
-            name: "Empresa Ejemplo 1",
-            logo: "https://via.placeholder.com/300x150?text=Logo+Socio",
-            website: "https://google.com",
-        },
-        {
-            name: "Empresa Ejemplo 2",
-            logo: "https://via.placeholder.com/300x150?text=Logo+Socio",
-            website: "#",
-        },
-        {
-            name: "Empresa Ejemplo 3",
-            logo: "https://via.placeholder.com/300x150?text=Logo+Socio",
-            website: "#",
-        },
-        // Agrega más socios siguiendo este formato
+
+    const socios = [
+        { name: "Aguas del Valle", url: "https://www.aguasdelvalle.cl/personas/inicio", logo: "/images/socios/Aguas-del-Valle.webp" },
+        { name: "AIEP", url: "https://www.aiep.cl/", logo: "/images/socios/aiep.webp" },
+        { name: "Universidad del Alba", url: "https://www.udalba.cl/", logo: "/images/socios/ALBA.webp" },
+        { name: "Inmobiliaria Los Andes", url: "https://www.instagram.com/losandesinmobiliaria/?hl=es", logo: "/images/socios/ANDES.webp" },
+        { name: "Millan", url: "https://jmillan.cl/", logo: "/images/socios/Millan.webp" },
+        { name: "Andes Iron", url: "https://www.andesiron.com/", logo: "/images/socios/ANDES-IRON.webp" },
+        { name: "Barrick Chile", url: "https://www.barrickchile.cl/", logo: "/images/socios/Barrick.webp" },
+        { name: "Centro de Formación Técnica Juan Bohon", url: "https://www.juanbohon.cl/", logo: "/images/socios/BOHON.webp" },
+        { name: "Empresas Huerta", url: "https://empresashuerta.cl/", logo: "/images/socios/CAHO.webp" },
+        { name: "Transportes Callegari", url: "https://transportescallegari.cl/", logo: "/images/socios/CALLEGARI.webp" },
+        { name: "Enjoy Coquimbo", url: "https://www.enjoy.cl/", logo: "/images/socios/CASINO-DE-LA-BAHIA.webp" },
+        { name: "CDN Ingeniería & Construcción", url: "https://cdningenieria.cl/", logo: "/images/socios/CDN.webp" },
+        { name: "CEDUC UCN", url: "https://ceduc.cl/", logo: "/images/socios/CEDUC.webp" },
+        { name: "Celta", url: "https://ceduc.cl/", logo: "/images/socios/Celta.webp" },
+        { name: "Centro Médico del Trabajador", url: "https://www.cmtsalud.cl/", logo: "/images/socios/CENTRO-MEDICO.webp" },
+        { name: "Chirino y Asociados", url: "https://www.chirino.cl/", logo: "/images/socios/CHIRINO.webp" },
+        { name: "Concreces", url: "https://concreces.cl/", logo: "/images/socios/CONCRESES.webp" },
+        { name: "Consorcio", url: "https://sitio.consorcio.cl/", logo: "/images/socios/CONSORCIO.webp" },
+        { name: "Contaud", url: "https://www.contaud.cl/", logo: "/images/socios/CONTAUD.webp" },
+        { name: "Estrella Alpina", url: "https://www.estrellalpina.cl/", logo: "/images/socios/Estrella-Alpina.webp" },
+        { name: "El Día", url: "https://www.diarioeldia.cl/", logo: "/images/socios/DIARIO.webp" },
+        { name: "Dos Barbas", url: "https://dosbarbas.cl/web/", logo: "/images/socios/Dos-Barbas.webp" },
+        { name: "Ecomac Empresas", url: "https://www.ecomac.cl/", logo: "/images/socios/ECOMAC.webp" },
+        { name: "EDN Inversores", url: "", logo: "/images/socios/EDN.webp" },
+        { name: "Planning P3", url: "https://www.planningp3.cl/", logo: "/images/socios/PLANNING-P3.webp" },
+        { name: "Enrique Osses", url: "https://osses.cl/", logo: "/images/socios/ENRIQUE.webp" },
+        { name: "Viña Falernia", url: "https://falernia.com/", logo: "/images/socios/FALERNIA.webp" },
+        { name: "Faremin", url: "https://faremin.cl/", logo: "/images/socios/FAREMIN.webp" },
+        { name: "Flex Buses", url: "https://www.flexbuses.com/", logo: "/images/socios/FLEX.webp" },
+        { name: "F y A Servicios de Ingeniería", url: "https://www.instagram.com/fya_serviciosdeingenieria/", logo: "/images/socios/FYA-SERVICIOS-E-INGENIERIA.webp" },
+        { name: "Habita", url: "https://www.ihabita.cl/", logo: "/images/socios/HABITA.webp" },
+        { name: "Automotriz Hanshing", url: "https://www.automotrizhanshing.cl/", logo: "/images/socios/Hanshing.webp" },
+        { name: "Agricola HC", url: "https://www.agricolahc.cl/", logo: "/images/socios/HC.webp" },
+        { name: "Hellema", url: "https://www.hhechile.com/", logo: "/images/socios/Hellema.webp" },
+        { name: "Hikza", url: "https://hikza.com/", logo: "/images/socios/Hikza.webp" },
+        { name: "IGD Chile", url: "https://igdchile.com/", logo: "/images/socios/IGD.webp" },
+        { name: "Imatec Salud", url: "https://www.imatecsalud.cl/", logo: "/images/socios/IMATEC.webp" },
+        { name: "Importadora Elqui", url: "https://www.importadoraelqui.cl/", logo: "/images/socios/Importadora.webp" },
+        { name: "Inacap", url: "https://portal.inacap.cl/", logo: "/images/socios/INACAP.webp" },
+        { name: "Innova4d", url: "https://innova4d.cl/", logo: "/images/socios/INNOVA.webp" },
+        { name: "Isa", url: "https://interchilesa.com/es/", logo: "/images/socios/ISA.webp" },
+        { name: "Espacio Modular", url: "https://www.espaciomodular.cl/", logo: "/images/socios/INVES.webp" },
+        { name: "Mall Puerta del Mar", url: "https://www.mallpuertadelmar.cl/", logo: "/images/socios/La-serena.webp" },
+        { name: "Meet Greet", url: "https://meetgreet.cl/", logo: "/images/socios/MEET.webp" },
+        { name: "Mill Montajes", url: "https://www.millmontajes.cl/", logo: "/images/socios/Mill.webp" },
+        { name: "Molinor", url: "https://www.molinor.cl/", logo: "/images/socios/MOLINERA.webp" },
+        { name: "Mutual de Seguros", url: "https://www.mutualdeseguros.cl/", logo: "/images/socios/MUTUAL.webp" },
+        { name: "Napoleón Eventos", url: "https://www.instagram.com/napoleoneventos/", logo: "/images/socios/NAPOLEON.webp" },
+        { name: "Norte Verde", url: "https://norte-verde.cl/", logo: "/images/socios/Norte-Verde-1.webp" },
+        { name: "North Quality", url: "https://northquality.cl/", logo: "/images/socios/NORTH.webp" },
+        { name: "Nutriser", url: "https://nutriser.cl/", logo: "/images/socios/Nutriser.webp" },
+        { name: "Maquinarias Olmué", url: "https://www.maquinariasolmue.cl/", logo: "/images/socios/OLMUE.webp" },
+        { name: "Vita Optica", url: "https://vitaoptica.cl/tienda/?swoof=1&product_cat=lentes-de-sol", logo: "/images/socios/OPTICA.webp" },
+        { name: "CMP", url: "https://www.cmp.cl/", logo: "/images/socios/PACIFICO.webp" },
+        { name: "Pacifictek", url: "https://www.pacifictek.cl/", logo: "/images/socios/PACIFICTEK.webp" },
+        { name: "Pasmar", url: "http://www.pasmar.cl/", logo: "/images/socios/PASMAR.webp" },
+        { name: "Minera Los Pelambres", url: "https://web.pelambres.cl/", logo: "/images/socios/PELAMBRE.webp" },
+        { name: "Phillips, Yver y Cía Abogados", url: "", logo: "/images/socios/PHILLIPS.webp" },
+        { name: "Pillado Empresas", url: "https://www.pilladoempresas.cl/", logo: "/images/socios/PILLADO.webp" },
+        { name: "Preomed", url: "https://www.preomed.cl/", logo: "/images/socios/Preomed-1.webp" },
+        { name: "Preuniversitario Gauss", url: "https://www.preugauss.com/", logo: "/images/socios/preu-gauss.webp" },
+        { name: "Prime Energia", url: "https://prime-energia.com/", logo: "/images/socios/PRIME.webp" },
+        { name: "Prowise", url: "https://www.prowise.cl/", logo: "/images/socios/PROWISE.webp" },
+        { name: "Rio Comunicaciones y Territorio", url: "https://riocomunicaciones.cl/", logo: "/images/socios/Rio.webp" },
+        { name: "Buses Romani", url: "https://www.busesromani.cl/", logo: "/images/socios/ROMANI.webp" },
+        { name: "SAE", url: "https://www.sae.cl/", logo: "/images/socios/SAE.webp" },
+        { name: "Minera San Gerónimo", url: "https://www.cmsg.cl/nuestra-gente/", logo: "/images/socios/SAN-GERONIMO.webp" },
+        { name: "Sociedad Santa Valentina", url: "https://www.esantavalentina.cl/constructora", logo: "/images/socios/Santa-Valentina.webp" },
+        { name: "Sercomp", url: "https://sercompruiz.cl/", logo: "/images/socios/Sercomp.webp" },
+        { name: "Serena Golf", url: "https://www.serenagolf.cl/", logo: "/images/socios/Serena-Golf.webp" },
+        { name: "Serena Suite Park Hotel WG", url: "https://www.serenasuiteparkhotelwg.com/", logo: "/images/socios/SERENA-SUITE.webp" },
+        { name: "Inmobiliaria Serena", url: "https://www.iserena.cl/", logo: "/images/socios/Serena.webp" },
+        { name: "Servicios Mod", url: "https://serviciosmod.cl/", logo: "/images/socios/Serv-Modulares.webp" },
+        { name: "Somos Inolvidable", url: "https://www.somosinolvidable.cl/", logo: "/images/socios/Somos-Inolvidable.webp" },
+        { name: "Tabali", url: "https://tabali.com/", logo: "/images/socios/TABALI.webp" },
+        { name: "Teatro Centenario", url: "https://teatrocentenario.cl/", logo: "/images/socios/Teatro-Centenario.webp" },
+        { name: "Teck", url: "https://www.teck.com/operations-es/chile-es/operaciones-es/carmen-de-andacollo-es/", logo: "/images/socios/teck-2.webp" },
+        { name: "TPC", url: "https://tpc.cl/", logo: "/images/socios/TPC.webp" },
+        { name: "Universidad Central", url: "https://www.ucentral.cl/", logo: "/images/socios/UCEN.webp" },
+        { name: "Universidad Católica del Norte", url: "https://www.ucn.cl/", logo: "/images/socios/UCN.webp" },
+        { name: "Universidad de La Serena", url: "https://www.userena.cl/", logo: "/images/socios/ULS.webp" },
+        { name: "Universidad Santo Tomás", url: "https://www.santotomas.cl/", logo: "/images/socios/UST.webp" },
+        { name: "Vigil Telecomunicaciones", url: "https://vigilltda.cl/", logo: "/images/socios/VIGIL.webp" },
+        { name: "Villa Verla", url: "https://www.villaverla.cl/", logo: "/images/socios/VILLA-VERLA.webp" },
+        { name: "West Rent a Car", url: "https://www.westrentacar.com/", logo: "/images/socios/WEST.webp" },
+        { name: "Wilug", url: "https://www.custodis.cl/", logo: "/images/socios/WILUG.webp" },
+        { name: "Broker", url: "https://thebroker.cl/", logo: "/images/socios/The-Broker.webp" },
+        { name: "Pernocenter", url: "https://www.instagram.com/pernocenter_laserena/", logo: "/images/socios/Pernocenter.webp" },
+        { name: "clínica Red Salud Elqui", url: "https://www.redsalud.cl/", logo: "/images/socios/Red-Salud.webp" },
+        { name: "Dulcería Lilis", url: "https://www.lilis.cl/quienes-somos/", logo: "/images/socios/Lilis.webp" },
+        { name: "Elquivisión", url: "https://www.elquivision.cl/", logo: "/images/socios/Elquivision.webp" },
+        { name: "SIMAQ", url: "https://www.gruasimaq.cl/", logo: "/images/socios/SIMAQ.webp" },
+        { name: "CA Servicios Spa", url: "https://caserviciosspa.cl/", logo: "/images/socios/CA.webp" },
+        { name: "R y T Ingeniería Construcción", url: "https://rytconstruccion.cl/", logo: "/images/socios/RyT.webp" },
+        { name: "Angela Suckel y Asociados", url: "https://asuckel.cl/", logo: "/images/socios/Angela.webp" },
+        { name: "ICOMAT", url: "https://icomat.cl/", logo: "/images/socios/icomat.webp" },
+        { name: "Serviteg", url: "http://www.serviteg.cl/", logo: "/images/socios/Serviteg.webp" },
+        { name: "DV Drilling", url: "https://www.dvdrilling.cl/", logo: "/images/socios/dvd.webp" },
+
     ];
 
     return (
-        <div className="bg-gray-50 min-h-screen">
-            {/* Header institucional */}
-            <section className="bg-primary py-20 px-4">
+        <div className="bg-gray-50/50 min-h-screen">
+            {/* Header elegante */}
+            <section className="bg-primary py-24 px-6">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-6">
+                    <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
                         Nuestros Socios
                     </h1>
-                    <p className="text-blue-100 text-lg md:text-xl max-w-3xl mx-auto opacity-90 leading-relaxed">
-                        Una red estratégica de empresas comprometidas con el progreso económico,
-                        social y tecnológico de la Región de Coquimbo.
-                    </p>
                 </div>
             </section>
 
-            {/* Grilla de Socios */}
-            <section className="py-20 px-6 sm:px-8 lg:px-12">
+            {/* Grilla de Logos */}
+            <section className="py-24 px-6 sm:px-8 lg:px-12">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        {sociosData.map((socio, index) => (
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10">
+                        {socios.map((socio, index) => (
                             <PartnerCard key={index} {...socio} />
                         ))}
-                    </div>
-
-                    {/* Mensaje de invitación */}
-                    <div className="mt-24 p-12 bg-primary rounded-3xl text-center text-white shadow-2xl">
-                        <h2 className="text-3xl font-bold mb-4">¿Quieres ser parte de nuestra red?</h2>
-                        <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-                            Únete a la corporación líder en desarrollo regional y potencia el impacto de tu empresa.
-                        </p>
-                        <button className="bg-secondary hover:bg-emerald-500 text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg active:scale-95">
-                            Solicitar Información
-                        </button>
                     </div>
                 </div>
             </section>
