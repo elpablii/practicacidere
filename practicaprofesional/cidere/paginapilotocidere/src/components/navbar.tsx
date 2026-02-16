@@ -82,12 +82,18 @@ const Navbar = () => {
                             </button>
 
                             <div className={`absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-4 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
-                                <Link href="/nosotros#mision" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Misión y Visión</Link>
-                                <Link href="/nosotros/directorio#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Directorio</Link>
-                                <Link href="/nosotros/equipo#equipo" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Equipo CIDERE</Link>
-                                <Link href="/nosotros#objetivos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">Objetivos</Link>
+                                <Link href="/nosotros#mision" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Misión y Visión</Link>
+                                <Link href="/nosotros/directorio#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Directorio</Link>
+                                <Link href="/nosotros/equipo#equipo" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Equipo CIDERE</Link>
+                                <Link href="/nosotros#objetivos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Objetivos</Link>
+                                <Link
+                                    href="/hazte-socio"
+                                    onClick={closeAll}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">
+                                    Hazte Socio
+                                </Link>
                                 <div className="border-t border-gray-100 my-3 mx-4"></div>
-                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50'}`}>Socios Asociados</Link>
+                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100'}`}>Socios Asociados</Link>
                             </div>
                         </div>
 

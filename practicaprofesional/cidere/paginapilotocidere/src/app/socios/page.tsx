@@ -1,4 +1,7 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import rdsLogo from "@/assets/logos/RDS - LOGO VERTICAL-03.png";
 import PartnerCard from "@/components/PartnerCard";
 import { Metadata } from "next";
 
@@ -73,6 +76,7 @@ const SociosPage = () => {
         { name: "Preuniversitario Gauss", url: "https://www.preugauss.com/", logo: "/images/socios/preu-gauss.webp" },
         { name: "Prime Energia", url: "https://prime-energia.com/", logo: "/images/socios/PRIME.webp" },
         { name: "Prowise", url: "https://www.prowise.cl/", logo: "/images/socios/PROWISE.webp" },
+        { name: "Puerto Coquimbo", url: "https://puertocoquimbo.cl/", logo: "/images/socios/PUERTO-COQUIMBO.webp" },
         { name: "Rio Comunicaciones y Territorio", url: "https://riocomunicaciones.cl/", logo: "/images/socios/Rio.webp" },
         { name: "Buses Romani", url: "https://www.busesromani.cl/", logo: "/images/socios/ROMANI.webp" },
         { name: "SAE", url: "https://www.sae.cl/", logo: "/images/socios/SAE.webp" },
@@ -112,23 +116,46 @@ const SociosPage = () => {
     ];
 
     return (
-        <div className="bg-gray-50/50 min-h-screen">
-            {/* Header elegante */}
-            <section className="bg-primary py-24 px-6">
-                <div className="max-w-7xl mx-auto text-center">
+        <div className="bg-[#f8fafc] min-h-screen">
+            <section className="bg-gradient-to-br from-primary to-blue-900 py-28 px-6 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-10 pointer-events-none"
+                    style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+                <div className="max-w-7xl mx-auto text-center relative z-10">
                     <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
                         Nuestros Socios
                     </h1>
+                    <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto opacity-80 leading-relaxed">
+                        Más de 90 empresas líderes colaborando para el desarrollo de la Región de Coquimbo.
+                    </p>
                 </div>
             </section>
 
-            {/* Grilla de Logos */}
-            <section className="py-24 px-6 sm:px-8 lg:px-12">
+            <section className="py-20 px-6">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                         {socios.map((socio, index) => (
                             <PartnerCard key={index} {...socio} />
                         ))}
+                    </div>
+
+                    {/* BLOQUE HAZTE SOCIO */}
+                    <div className="mt-32 bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-gray-100 flex flex-col md:flex-row items-center gap-10">
+                        <div className="flex-1 text-center md:text-left">
+                            <h2 className="text-primary text-3xl md:text-4xl font-black mb-4">¿Tu empresa aún no es parte?</h2>
+                            <p className="text-gray-600 text-lg mb-8">
+                                Únete a la corporación multisectorial con más trayectoria de la región accediendo a la Red de Socios Cidere para potenciar tus conexiones estratégicas.
+                            </p>
+                            <Link href="/hazte-socio" className="inline-block bg-secondary hover:bg-emerald-500 text-white font-bold py-4 px-10 rounded-2xl shadow-lg transition-all hover:-translate-y-1">
+                                Quiero ser Socio
+                            </Link>
+                        </div>
+                        <div className="flex-1 flex justify-center items-center">
+                            <Image
+                                src={rdsLogo}
+                                alt="Logo RDS"
+                                className="w-full max-w-xs md:max-w-sm object-contain drop-shadow-xl"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
