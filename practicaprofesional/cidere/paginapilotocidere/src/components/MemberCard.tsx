@@ -48,7 +48,7 @@ const MemberCard = ({ name, role, company, image }: MemberProps) => {
             </div>
 
             {/* Detalle decorativo: línea inferior que se expande */}
-            <div className={`absolute bottom-0 left-0 h-1 bg-secondary transition-all duration-500 group-hover:w-full ${isTouched ? 'w-full' : 'w-0'}`} />
+            <div className={`absolute bottom-0 left-0 h-1 bg-primary transition-all duration-500 group-hover:w-full ${isTouched ? 'w-full' : 'w-0'}`} />
         </div>
     );
 };

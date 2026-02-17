@@ -54,7 +54,7 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             href="/"
-                            className={`font-medium transition-colors ${isActive('/') ? 'text-primary' : 'text-primary hover:text-secondary'}`}
+                            className={`font-medium transition-colors ${isActive('/') ? 'text-primary' : 'text-primary hover:text-primary/80'}`}
                         >
                             Inicio
                         </Link>

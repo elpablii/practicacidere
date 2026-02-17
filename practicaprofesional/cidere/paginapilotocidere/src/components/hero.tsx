@@ -22,7 +22,7 @@ const Hero = () => {
 
                     {/* Badge de Trayectoria: Más compacto */}
                     <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-3 md:mb-6">
-                        <span className="flex h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
+                        <span className="flex h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
                         <span className="text-white text-[9px] sm:text-xs font-bold uppercase tracking-widest">
                             50 Años de Trayectoria
                         </span>
@@ -30,7 +30,7 @@ const Hero = () => {
 
                     {/* TÍTULO: Tamaño reducido para que no fuerce el estiramiento del fondo */}
                     <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 tracking-tight">
-                        Liderando el <span className="text-secondary">Desarrollo Sostenible</span> regional
+                        Liderando el <span className="text-white">Desarrollo Sostenible</span> regional
                     </h1>
 
                     {/* PÁRRAFO: Texto más breve y pequeño en móvil */}
@@ -42,7 +42,7 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row gap-2 md:gap-4 max-w-[240px] sm:max-w-none">
                         <Link
                             href="/contacto"
-                            className="px-5 py-3 bg-white text-primary font-bold rounded-xl text-center hover:bg-secondary transition-all shadow-lg active:scale-95 text-xs sm:text-base"
+                            className="px-5 py-3 bg-white text-primary font-bold rounded-xl text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95 text-xs sm:text-base"
                         >
                             Hazte Socio ahora
                         </Link>

@@ -45,7 +45,7 @@ const HazteSocio = () => {
                         diseñado para potenciar el crecimiento sostenible de la región.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="https://rdscidere.cl" target="_blank" className="bg-secondary hover:bg-emerald-500 text-white font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1">
+                        <Link href="https://rdscidere.cl" target="_blank" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1">
                             Registrarse en RDS
                         </Link>
                     </div>
@@ -57,7 +57,7 @@ const HazteSocio = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {pilares.map((pilar, i) => (
                         <div key={i} className="group p-10 bg-gray-50 rounded-[2.5rem] hover:bg-white hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                            <div className="text-secondary mb-6 group-hover:scale-110 transition-transform">
+                            <div className="text-primary mb-6 group-hover:scale-110 transition-transform">
                                 {pilar.icon}
                             </div>
                             <h3 className="text-2xl font-bold text-primary mb-4">{pilar.title}</h3>

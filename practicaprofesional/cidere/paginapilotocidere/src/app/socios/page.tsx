@@ -145,7 +145,7 @@ const SociosPage = () => {
                             <p className="text-gray-600 text-lg mb-8">
                                 Únete a la corporación multisectorial con más trayectoria de la región accediendo a la Red de Socios Cidere para potenciar tus conexiones estratégicas.
                             </p>
-                            <Link href="/hazte-socio" className="inline-block bg-secondary hover:bg-emerald-500 text-white font-bold py-4 px-10 rounded-2xl shadow-lg transition-all hover:-translate-y-1">
+                            <Link href="/hazte-socio" className="inline-block bg-primary hover:bg-primary-light text-white font-bold py-4 px-10 rounded-2xl shadow-lg transition-all hover:-translate-y-1">
                                 Quiero ser Socio
                             </Link>
                         </div>

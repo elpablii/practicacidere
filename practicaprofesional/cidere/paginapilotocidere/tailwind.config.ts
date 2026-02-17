@@ -34,7 +34,7 @@ const config: Config = {
                     dark: "#141B2D",
                 },
                 secondary: {
-                    DEFAULT: "#00BFA5", // Verde Azulado/cian
+                    DEFAULT: "#1F2A44", // Igual al primario para eliminar el verde agua
                     foreground: "#FFFFFF",
                 },
                 accent: {

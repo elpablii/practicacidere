@@ -41,62 +41,70 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <footer>
+            {/* Sección Principal (Fondo Azul Cidere) */}
+            <div className="bg-primary text-white pt-16 pb-12">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    {/* Columna 1: Identidad*/}
-                    <div className="space-y-6">
-                        <Image
-                            src={logoCidere}
-                            alt="CIDERE Coquimbo"
-                            width={140}
-                            height={50}
-                            className="grayscale opacity-80 hover:grayscale-0 transition-all"
-                        />
-                        <p className="text-gray-500 text-sm leading-relaxed">
-                            Fomentando el desarrollo industrial y el crecimiento sostenible de la Región de Coquimbo por 50 años.
-                        </p>
-                    </div>
+                        {/* Columna 1: Identidad*/}
+                        <div className="space-y-6">
+                            <Image
+                                src={logoCidere}
+                                alt="CIDERE Coquimbo"
+                                width={160}
+                                height={57}
+                                className="brightness-0 invert opacity-90 transition-all hover:opacity-100"
+                            />
+                            <p className="text-gray-200 text-sm leading-relaxed max-w-xs">
+                                Fomentando el desarrollo industrial y el crecimiento sostenible de la Región de Coquimbo por 50 años.
+                            </p>
+                        </div>
 
-                    {/* Columna 2: Contacto */}
-                    <div>
-                        <h3 className="text-primary font-bold mb-6 text-sm uppercase tracking-wider">Contacto</h3>
-                        <ul className="space-y-4 text-sm text-gray-600">
-                            <li className="flex items-center">
-                                <span className="text-secondary mr-3">📍</span> {contactInfo.address}
-                            </li>
-                            <li className="flex items-center">
-                                <span className="text-secondary mr-3">📞</span> {contactInfo.phone}
-                            </li>
-                            <li className="flex items-center">
-                                <span className="text-secondary mr-3">✉️</span> {contactInfo.email}
-                            </li>
-                        </ul>
-                    </div>
+                        {/* Columna 2: Contacto */}
+                        <div>
+                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Contacto</h3>
+                            <ul className="space-y-4 text-sm text-gray-200">
+                                <li className="flex items-start">
+                                    <span className="text-secondary mr-3 mt-1">📍</span>
+                                    <span>{contactInfo.address}</span>
+                                </li>
+                                <li className="flex items-center">
+                                    <span className="text-secondary mr-3">📞</span>
+                                    <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contactInfo.phone}</a>
+                                </li>
+                                <li className="flex items-center">
+                                    <span className="text-secondary mr-3">✉️</span>
+                                    <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">{contactInfo.email}</a>
+                                </li>
+                            </ul>
+                        </div>
 
-                    {/* Columna 3: Redes Sociales*/}
-                    <div>
-                        <h3 className="text-primary font-bold mb-6 text-sm uppercase tracking-wider">Redes Sociales</h3>
-                        <div className="flex flex-wrap gap-3">
-                            {socialLinks.map((social) => (
-                                <Link
-                                    key={social.name}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all shadow-md"
-                                    aria-label={social.name}
-                                >
-                                    {social.icon}
-                                </Link>
-                            ))}
+                        {/* Columna 3: Redes Sociales*/}
+                        <div className="lg:pl-8">
+                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Redes Sociales</h3>
+                            <div className="flex flex-wrap gap-4">
+                                {socialLinks.map((social) => (
+                                    <Link
+                                        key={social.name}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-secondary hover:text-white transition-all shadow-md transform hover:-translate-y-1"
+                                        aria-label={social.name}
+                                    >
+                                        {social.icon}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Derechos */}
-                <div className="border-t border-gray-100 pt-8 text-center md:text-left">
+            {/* Derechos (Fondo Negro) */}
+            <div className="bg-black py-6 border-t border-white/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
                     <p className="text-gray-400 text-xs">
                         © {new Date().getFullYear()} CIDERE Región de Coquimbo. Todos los derechos reservados.
                     </p>
