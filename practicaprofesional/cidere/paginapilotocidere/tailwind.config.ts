@@ -8,12 +8,11 @@ const config: Config = {
     ],
     theme: {
         extend: {
-
-            animation: {
-                marquee: 'marquee 240s linear infinite',
-                marquee2: 'marquee2 240s linear infinite',
-            },
             keyframes: {
+                'slow-zoom': {
+                    '0%': { transform: 'scale(1)' },
+                    '100%': { transform: 'scale(1.1)' },
+                },
                 marquee: {
                     '0%': { transform: 'translateX(0%)' },
                     '100%': { transform: 'translateX(-100%)' },
@@ -23,22 +22,27 @@ const config: Config = {
                     '100%': { transform: 'translateX(0%)' },
                 },
             },
+            animation: {
+                'slow-zoom': 'slow-zoom 20s ease-in-out infinite alternate',
+                marquee: 'marquee 240s linear infinite',
+                marquee2: 'marquee2 240s linear infinite',
+            },
 
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
 
                 primary: {
-                    DEFAULT: "#1F2A44", // Azul Marino
+                    DEFAULT: "#1F2A44",
                     light: "#2C3B5E",
                     dark: "#141B2D",
                 },
                 secondary: {
-                    DEFAULT: "#1F2A44", // Igual al primario para eliminar el verde agua
+                    DEFAULT: "#1F2A44",
                     foreground: "#FFFFFF",
                 },
                 accent: {
-                    DEFAULT: "#E5E7EB", // Gris claro
+                    DEFAULT: "#E5E7EB",
                 },
             },
         },
