@@ -148,6 +148,7 @@ const Navbar = () => {
                                         <Link href="/nosotros/directorio#directorio" className="block hover:text-primary" onClick={closeAll}>Directorio</Link>
                                         <Link href="/nosotros/equipo#equipo" className="block hover:text-primary" onClick={closeAll}>Equipo CIDERE</Link>
                                         <Link href="/nosotros#objetivos" className="block hover:text-primary" onClick={closeAll}>Objetivos</Link>
+                                        <Link href="/hazte-socio" className="block hover:text-primary" onClick={closeAll}>Hazte Socio</Link>
                                     </div>
                                 </div>
                             </div>
