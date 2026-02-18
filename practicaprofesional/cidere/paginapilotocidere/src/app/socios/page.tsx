@@ -125,7 +125,7 @@ const SociosPage = () => {
                         Nuestros Socios
                     </h1>
                     <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto opacity-80 leading-relaxed">
-                        Más de 90 empresas líderes colaborando para el desarrollo de la Región de Coquimbo.
+                        Conoce a las más de 90 empresas que colaboran para el desarrollo de la Región de Coquimbo.
                     </p>
                 </div>
             </section>

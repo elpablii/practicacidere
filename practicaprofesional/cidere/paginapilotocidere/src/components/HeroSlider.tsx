@@ -7,45 +7,48 @@ const slides = [
     {
         id: 1,
         // Sugerencia: Usa una foto de la región o una industrial de alta calidad
-        image: "/assets/logos/CIDERE LOGO ORIGINAL.png",
-        badge: "Red de Impacto Regional",
-        title: "Nuestra Fuerza: <br /> Más de 90 Empresas Socias",
-        desc: "Conoce a las organizaciones líderes que impulsan el desarrollo productivo, la innovación y el compromiso social en la Región de Coquimbo.",
+        image: "/images/slider/Slide1RDS.webp",
+        badge: "",
+        title: "",
+        desc: "",
         primaryBtn: {
-            text: "Ver Socios Asociados",
-            link: "/socios"
+            text: "Ir a RDS",
+            link: "https://rdscidere.cl"
         },
         secondaryBtn: {
-            text: "Hazte Socio",
-            link: "/hazte-socio"
+            text: "",
+            link: ""
         }
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1454165833767-027ffea7028c?q=80&w=2070&auto=format&fit=crop",
-        badge: "Innovación Tecnológica",
-        title: "Soberanía Digital con RDS",
-        desc: "Potenciamos la vinculación empresarial mediante nuestra plataforma exclusiva de Red de Socios.",
-        primaryBtn: { text: "Explorar RDS", link: "https://rdscidere.cl" },
-        secondaryBtn: { text: "Ver Proyectos", link: "/proyectos" }
+        image: "/images/slider/Slide2VerSocios.webp",
+        badge: "",
+        title: "Nuestros Socios",
+        desc: "Conoce a las empresas que forman parte de nuestra red de Cidere",
+        primaryBtn: { text: "Ver los Socios", link: "/socios" },
+        secondaryBtn: {
+            text: "",
+            link: ""
+        }
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2070&auto=format&fit=crop",
-        badge: "Impacto Regional",
-        title: "Creando Región Juntos",
-        desc: "Somos más de 90 empresas comprometidas con el progreso económico y social de Coquimbo.",
-        primaryBtn: { text: "Nuestros Socios", link: "/socios" },
-        secondaryBtn: { text: "Contacto", link: "/contacto" }
+        image: "/images/slider/Slide3QuieresSerSocio.webp",
+        badge: "",
+        title: "¿Quieres ser Socio?",
+        desc: "Empieza tu proceso de ingreso y pronto serás parte de nosotros",
+        primaryBtn: { text: "Hazte Socio", link: "/hazte-socio" },
+        secondaryBtn: { text: "", link: "" }
     },
     {
         id: 4,
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2070&auto=format&fit=crop",
-        badge: "Impacto Regional",
-        title: "Creando Región Juntos",
-        desc: "Somos más de 90 empresas comprometidas con el progreso económico y social de Coquimbo.",
-        primaryBtn: { text: "Nuestros Socios", link: "/socios" },
-        secondaryBtn: { text: "Contacto", link: "/contacto" }
+        image: "/images/slider/Slide4EspacioIndustrialMinero.webp",
+        badge: "",
+        title: "Registro Regional de Proveedores",
+        desc: "Conecta con proveedores de la Región de Coquimbo",
+        primaryBtn: { text: "Sé parte del Espacio Industrial Minero", link: "https://www.espacioindustria.cl/" },
+        secondaryBtn: { text: "", link: "" }
     }
 ];
 
@@ -72,50 +75,64 @@ const HeroSlider = () => {
                 >
                     {/* IMAGEN DE FONDO */}
                     <div className="absolute inset-0">
-                        <img
-                            src={slide.image}
-                            alt={`Slide ${slide.id}`}
-                            className="w-full h-full object-cover"
-                        />
+                        {slide.image && (
+                            <img
+                                src={slide.image}
+                                alt={`Slide ${slide.id}`}
+                                className={`w-full h-full ${index === 0 ? 'object-contain md:object-cover' : 'object-cover'}`}
+                            />
+                        )}
                         {/* OVERLAY PARA CONTRASTE */}
-                        <div className="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-primary/95 md:via-primary/70 md:to-transparent"></div>
+                        {index !== 0 && (
+                            <div className="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-primary/95 md:via-primary/70 md:to-transparent"></div>
+                        )}
                     </div>
 
                     {/* CONTENIDO (TEXTO Y BOTONES) */}
-                    <div className="relative z-20 h-full flex items-center">
-                        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
-                            <div className="max-w-3xl">
+                    <div className={`relative z-20 h-full flex ${index === 0 ? 'items-end justify-center pb-12 sm:pb-20' : 'items-center'}`}>
+                        <div className={`w-full ${index === 0 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
+                            <div className={`${index === 0 ? 'text-center' : 'max-w-3xl'}`}>
                                 {/* BADGE */}
-                                <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-6">
-                                    <span className="text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest">
-                                        {slide.badge}
-                                    </span>
-                                </div>
+                                {slide.badge && (
+                                    <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-6">
+                                        <span className="text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+                                            {slide.badge}
+                                        </span>
+                                    </div>
+                                )}
 
                                 {/* TÍTULO */}
-                                <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
-                                    dangerouslySetInnerHTML={{ __html: slide.title }}
-                                />
+                                {slide.title && (
+                                    <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
+                                        dangerouslySetInnerHTML={{ __html: slide.title }}
+                                    />
+                                )}
 
                                 {/* DESCRIPCIÓN */}
-                                <p className="text-sm sm:text-base md:text-xl text-gray-200 mb-10 leading-relaxed max-w-xl drop-shadow-md">
-                                    {slide.desc}
-                                </p>
+                                {slide.desc && (
+                                    <p className="text-sm sm:text-base md:text-xl text-gray-200 mb-10 leading-relaxed max-w-xl drop-shadow-md">
+                                        {slide.desc}
+                                    </p>
+                                )}
 
                                 {/* BOTONES */}
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    <Link
-                                        href={slide.primaryBtn.link}
-                                        className="px-8 py-4 bg-white text-primary font-bold rounded-xl text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95"
-                                    >
-                                        {slide.primaryBtn.text}
-                                    </Link>
-                                    <Link
-                                        href={slide.secondaryBtn.link}
-                                        className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-xl text-center hover:bg-white/20 transition-all active:scale-95"
-                                    >
-                                        {slide.secondaryBtn.text}
-                                    </Link>
+                                <div className={`flex ${index === 0 ? 'justify-center' : 'flex-col sm:flex-row'} gap-4`}>
+                                    {slide.primaryBtn.text && (
+                                        <Link
+                                            href={slide.primaryBtn.link}
+                                            className="px-8 py-4 bg-white text-primary font-bold rounded-xl text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95"
+                                        >
+                                            {slide.primaryBtn.text}
+                                        </Link>
+                                    )}
+                                    {slide.secondaryBtn.text && (
+                                        <Link
+                                            href={slide.secondaryBtn.link}
+                                            className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-xl text-center hover:bg-white/20 transition-all active:scale-95"
+                                        >
+                                            {slide.secondaryBtn.text}
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </div>
