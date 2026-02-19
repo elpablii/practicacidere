@@ -82,17 +82,17 @@ const HeroSlider = () => {
                                 className={`w-full h-full ${index === 0 ? 'object-contain md:object-cover' : 'object-cover'}`}
                             />
                         )}
-                        {/* OVERLAY PARA CONTRASTE */}
+
                         {index !== 0 && (
                             <div className="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-primary/95 md:via-primary/70 md:to-transparent"></div>
                         )}
                     </div>
 
-                    {/* CONTENIDO (TEXTO Y BOTONES) */}
+
                     <div className={`relative z-20 h-full flex ${index === 0 ? 'items-end justify-center pb-12 sm:pb-20' : 'items-center'}`}>
                         <div className={`w-full ${index === 0 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
                             <div className={`${index === 0 ? 'text-center' : 'max-w-3xl'}`}>
-                                {/* BADGE */}
+
                                 {slide.badge && (
                                     <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-6">
                                         <span className="text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest">
@@ -101,21 +101,20 @@ const HeroSlider = () => {
                                     </div>
                                 )}
 
-                                {/* TÍTULO */}
                                 {slide.title && (
                                     <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
                                     />
                                 )}
 
-                                {/* DESCRIPCIÓN */}
+
                                 {slide.desc && (
                                     <p className="text-sm sm:text-base md:text-xl text-gray-200 mb-10 leading-relaxed max-w-xl drop-shadow-md">
                                         {slide.desc}
                                     </p>
                                 )}
 
-                                {/* BOTONES */}
+
                                 <div className={`flex ${index === 0 ? 'justify-center' : 'flex-col sm:flex-row'} gap-4`}>
                                     {slide.primaryBtn.text && (
                                         <Link
@@ -140,7 +139,7 @@ const HeroSlider = () => {
                 </div>
             ))}
 
-            {/* CONTROLES (FLECHAS) */}
+
             <button
                 onClick={prevSlide}
                 className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10"
@@ -156,7 +155,6 @@ const HeroSlider = () => {
                 <ChevronRightIcon className="w-6 h-6" />
             </button>
 
-            {/* INDICADORES (DOTS) */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
                 {slides.map((_, i) => (
                     <button

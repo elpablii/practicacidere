@@ -42,7 +42,7 @@ const Footer = () => {
 
     return (
         <footer>
-            {/* Sección Principal (Fondo Azul Cidere) */}
+            {/* Sección Principal*/}
             <div className="bg-primary text-white pt-16 pb-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,7 +102,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Derechos (Fondo Negro) */}
+            {/* Sección de Derechos */}
             <div className="bg-black py-6 border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
                     <p className="text-gray-400 text-xs">
