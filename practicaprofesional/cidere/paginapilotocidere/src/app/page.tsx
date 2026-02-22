@@ -1,5 +1,7 @@
 import HeroSlider from "@/components/HeroSlider";
 import LogoMarquesina from "@/components/LogoMarquesina";
+import QuienesSomos from "@/components/QuienesSomos";
+import EjesEstrategicos from "@/components/EjesEstrategicos";
 import Identity from "@/components/identity";
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
       </div>
 
       <div className="bg-white py-20">
+        <QuienesSomos />
         <LogoMarquesina />
       </div>
 

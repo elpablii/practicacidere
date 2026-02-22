@@ -6,7 +6,6 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 const slides = [
     {
         id: 1,
-        // Sugerencia: Usa una foto de la región o una industrial de alta calidad
         image: "/images/slider/Slide1RDS.webp",
         badge: "",
         title: "",

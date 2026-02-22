@@ -110,7 +110,7 @@ const LogoMarquee = () => {
         <section className="py-12 bg-white overflow-hidden border-y border-gray-100">
             <div className="max-w-7xl mx-auto px-6 mb-8 flex justify-between items-end">
                 <div>
-                    <h2 className="text-primary text-3xl font-bold italic">Nuestros Socios</h2>
+                    <h2 className="text-primary text-3xl font-bold">Nuestros Socios</h2>
 
                 </div>
                 <a href="/socios" className="text-sm font-semibold text-gray-400 hover:text-primary transition-colors">

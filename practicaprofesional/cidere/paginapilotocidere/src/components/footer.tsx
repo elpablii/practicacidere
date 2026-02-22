@@ -57,7 +57,7 @@ const Footer = () => {
                                 className="brightness-0 invert opacity-90 transition-all hover:opacity-100"
                             />
                             <p className="text-gray-200 text-sm leading-relaxed max-w-xs">
-                                Fomentando el desarrollo industrial y el crecimiento sostenible de la Región de Coquimbo por 50 años.
+                                Fomentando el desarrollo industrial y el crecimiento sostenible de la Región de Coquimbo.
                             </p>
                         </div>
 

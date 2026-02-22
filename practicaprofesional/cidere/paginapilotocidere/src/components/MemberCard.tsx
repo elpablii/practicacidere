@@ -25,7 +25,7 @@ const MemberCard = ({ name, role, company, image }: MemberProps) => {
                     className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${isTouched ? 'scale-110' : ''}`}
                 />
 
-                {/* Overlay que aparece al hacer hover (opcional, para dar énfasis al texto de la empresa) */}
+                {/* Overlay que aparece al hacer hover*/}
                 <div className={`absolute inset-0 bg-primary/20 transition-opacity duration-300 group-hover:opacity-100 ${isTouched ? 'opacity-100' : 'opacity-0'}`} />
             </div>
 

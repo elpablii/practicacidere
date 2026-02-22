@@ -67,14 +67,6 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        <div className="mt-12">
-                            <a
-                                href="mailto:cidere@cidere.cl"
-                                className="inline-block px-10 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-light transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                            >
-                                ENVIAR
-                            </a>
-                        </div>
                     </div>
 
                     <div className="w-full h-[400px] lg:h-[500px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
