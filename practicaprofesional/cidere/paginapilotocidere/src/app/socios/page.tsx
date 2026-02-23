@@ -26,7 +26,7 @@ const SociosPage = () => {
         { name: "Enjoy Coquimbo", url: "https://www.enjoy.cl/", logo: "/images/socios/CASINO-DE-LA-BAHIA.webp" },
         { name: "CDN Ingeniería & Construcción", url: "https://cdningenieria.cl/", logo: "/images/socios/CDN.webp" },
         { name: "CEDUC UCN", url: "https://ceduc.cl/", logo: "/images/socios/CEDUC.webp" },
-        { name: "Celta", url: "https://ceduc.cl/", logo: "/images/socios/Celta.webp" },
+        { name: "Celta", url: "https://celta.cl/", logo: "/images/socios/Celta.webp" },
         { name: "Centro Médico del Trabajador", url: "https://www.cmtsalud.cl/", logo: "/images/socios/CENTRO-MEDICO.webp" },
         { name: "Chirino y Asociados", url: "https://www.chirino.cl/", logo: "/images/socios/CHIRINO.webp" },
         { name: "Concreces", url: "https://concreces.cl/", logo: "/images/socios/CONCRESES.webp" },
@@ -50,7 +50,6 @@ const SociosPage = () => {
         { name: "Hikza", url: "https://hikza.com/", logo: "/images/socios/Hikza.webp" },
         { name: "IGD Chile", url: "https://igdchile.com/", logo: "/images/socios/IGD.webp" },
         { name: "Imatec Salud", url: "https://www.imatecsalud.cl/", logo: "/images/socios/IMATEC.webp" },
-        { name: "Importadora Elqui", url: "https://www.importadoraelqui.cl/", logo: "/images/socios/Importadora.webp" },
         { name: "Inacap", url: "https://portal.inacap.cl/", logo: "/images/socios/INACAP.webp" },
         { name: "Innova4d", url: "https://innova4d.cl/", logo: "/images/socios/INNOVA.webp" },
         { name: "Isa", url: "https://interchilesa.com/es/", logo: "/images/socios/ISA.webp" },
@@ -74,22 +73,18 @@ const SociosPage = () => {
         { name: "Pillado Empresas", url: "https://www.pilladoempresas.cl/", logo: "/images/socios/PILLADO.webp" },
         { name: "Preomed", url: "https://www.preomed.cl/", logo: "/images/socios/Preomed-1.webp" },
         { name: "Preuniversitario Gauss", url: "https://www.preugauss.com/", logo: "/images/socios/preu-gauss.webp" },
-        { name: "Prime Energia", url: "https://prime-energia.com/", logo: "/images/socios/PRIME.webp" },
         { name: "Prowise", url: "https://www.prowise.cl/", logo: "/images/socios/PROWISE.webp" },
         { name: "Puerto Coquimbo", url: "https://puertocoquimbo.cl/", logo: "/images/socios/PUERTO-COQUIMBO.webp" },
         { name: "Rio Comunicaciones y Territorio", url: "https://riocomunicaciones.cl/", logo: "/images/socios/Rio.webp" },
         { name: "Buses Romani", url: "https://www.busesromani.cl/", logo: "/images/socios/ROMANI.webp" },
         { name: "SAE", url: "https://www.sae.cl/", logo: "/images/socios/SAE.webp" },
         { name: "Minera San Gerónimo", url: "https://www.cmsg.cl/nuestra-gente/", logo: "/images/socios/SAN-GERONIMO.webp" },
-        { name: "Sociedad Santa Valentina", url: "https://www.esantavalentina.cl/constructora", logo: "/images/socios/Santa-Valentina.webp" },
         { name: "Sercomp", url: "https://sercompruiz.cl/", logo: "/images/socios/Sercomp.webp" },
         { name: "Serena Golf", url: "https://www.serenagolf.cl/", logo: "/images/socios/Serena-Golf.webp" },
         { name: "Serena Suite Park Hotel WG", url: "https://www.serenasuiteparkhotelwg.com/", logo: "/images/socios/SERENA-SUITE.webp" },
         { name: "Inmobiliaria Serena", url: "https://www.iserena.cl/", logo: "/images/socios/Serena.webp" },
         { name: "Servicios Mod", url: "https://serviciosmod.cl/", logo: "/images/socios/Serv-Modulares.webp" },
-        { name: "Somos Inolvidable", url: "https://www.somosinolvidable.cl/", logo: "/images/socios/Somos-Inolvidable.webp" },
         { name: "Tabali", url: "https://tabali.com/", logo: "/images/socios/TABALI.webp" },
-        { name: "Teatro Centenario", url: "https://teatrocentenario.cl/", logo: "/images/socios/Teatro-Centenario.webp" },
         { name: "Teck", url: "https://www.teck.com/operations-es/chile-es/operaciones-es/carmen-de-andacollo-es/", logo: "/images/socios/teck-2.webp" },
         { name: "TPC", url: "https://tpc.cl/", logo: "/images/socios/TPC.webp" },
         { name: "Universidad Central", url: "https://www.ucentral.cl/", logo: "/images/socios/UCEN.webp" },
@@ -125,7 +120,7 @@ const SociosPage = () => {
                         Nuestros Socios
                     </h1>
                     <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto opacity-80 leading-relaxed">
-                        Conoce a las más de 90 empresas que colaboran para el desarrollo de la Región de Coquimbo.
+                        Conozca a las 94 empresas que colaboran con Cidere para el desarrollo de la Región de Coquimbo.
                     </p>
                 </div>
             </section>

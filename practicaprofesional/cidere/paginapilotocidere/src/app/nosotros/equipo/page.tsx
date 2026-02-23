@@ -13,37 +13,37 @@ const EquipoPage = () => {
         {
             name: "Ricardo Guerrero",
             role: "Gerente",
-            company: "CIDERE Coquimbo",
+            company: "Contacto: gerente@cidere.cl",
             image: "/images/equipo/gerente-ricardo.webp",
         },
         {
             name: "Fernanda Flores",
             role: "Encargada de Vinculación Empresarial",
-            company: "CIDERE Coquimbo",
+            company: "Contacto: fernanda@cidere.cl",
             image: "/images/equipo/encargada-vinculacion-empresarial-fernanda.webp",
         },
         {
             name: "Jacqueline Gallardo",
             role: "Encargada de TI y Administración",
-            company: "CIDERE Coquimbo",
+            company: "Contacto: jacqueline@cidere.cl",
             image: "/images/equipo/encargada-administracion-y-ti-jacqueline.webp",
         },
         {
             name: "Delfo Muñíz",
             role: "Encargado de Finanzas",
-            company: "CIDERE Coquimbo",
+            company: "Contacto: delfo@cidere.cl",
             image: "/images/equipo/encargado-finanzas-delfo.webp",
         },
         {
             name: "Valentina Rojas",
             role: "Coordinadora Articulación Público Privada",
-            company: "CIDERE Coquimbo",
+            company: "Contacto: valentina@cidere.cl",
             image: "/images/equipo/coordinadora-articulacion-publico-privada-valentina.webp",
         },
         {
             name: "Yanabel Muñoz",
             role: "Encargada de Comunicaciones",
-            company: "CIDERE Coquimbo",
+            company: "Contacto: yanabel@cidere.cl",
             image: "/images/equipo/encargada-comunicaciones-yanabel.webp",
         },
 

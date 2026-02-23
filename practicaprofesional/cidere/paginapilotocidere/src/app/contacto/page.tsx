@@ -52,7 +52,7 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900 mb-1">Teléfono:</h3>
-                                    <a href="tel:+56512223090" className="hover:text-primary transition-colors">051-2 223 090</a>
+                                    <a href="tel:+56512223090" className="hover:text-primary transition-colors">+56 9 5728 8408</a>
                                 </div>
                             </div>
 

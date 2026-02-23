@@ -5,7 +5,8 @@ import {
     UserGroupIcon,
     GlobeAmericasIcon,
     HandRaisedIcon,
-    MegaphoneIcon
+    MegaphoneIcon,
+    PuzzlePieceIcon
 } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
@@ -44,6 +45,12 @@ const ejes = [
         items: ["Páginas web CIDERE y RDS", "Posicionamiento en Redes Sociales", "Artículos en prensa escrita y digital"],
         icon: <MegaphoneIcon className="w-10 h-10" />,
     },
+    {
+        titulo: "Eje Transversal",
+        desc: "La unión de todos los ejes estratégicos de CIDERE para el desarrollo regional.",
+        items: ["Industria del Ocio", "Cultura", "Deporte", "Astronomía", "Gastronomía", "Diplomado", "Planificación Edificio Cidere"],
+        icon: <PuzzlePieceIcon className="w-10 h-10" />,
+    },
 ];
 
 const ObjetivosPage = () => {
@@ -53,12 +60,8 @@ const ObjetivosPage = () => {
             <section className="bg-primary pt-32 pb-20 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-white text-4xl md:text-6xl font-black mb-6">
-                        Objetivos
+                        Nuestros Objetivos
                     </h1>
-                    <p className="text-blue-100 text-lg opacity-80 leading-relaxed">
-                        Nuestros objetivos definen la ruta para liderar el desarrollo económico,
-                        social y medioambiental de la Región de Coquimbo.
-                    </p>
                 </div>
             </section>
 

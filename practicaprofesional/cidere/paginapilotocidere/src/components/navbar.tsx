@@ -93,7 +93,7 @@ const Navbar = () => {
                                     Hazte Socio
                                 </Link>
                                 <div className="border-t border-gray-100 my-3 mx-4"></div>
-                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100'}`}>Socios Asociados</Link>
+                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100'}`}>Nuestros Socios</Link>
                             </div>
                         </div>
 
@@ -153,10 +153,10 @@ const Navbar = () => {
                                 </div>
                             </div>
 
-                            <Link href="/socios#socios" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Socios Asociados</Link>
+                            <Link href="/socios#socios" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Nuestros Socios</Link>
                         </div>
                         <div className="mt-auto pt-6 border-t border-gray-100">
-                            <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg" onClick={closeAll}>Contacto Directo</Link>
+                            <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg" onClick={closeAll}>Contacto</Link>
                         </div>
                     </div>
                 </div>

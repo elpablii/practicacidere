@@ -34,7 +34,7 @@ const HazteSocio = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            {/* Hero Section */}
+
             <section className="bg-gradient-to-b from-primary to-[#001529] py-24 px-6 text-center text-white">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
