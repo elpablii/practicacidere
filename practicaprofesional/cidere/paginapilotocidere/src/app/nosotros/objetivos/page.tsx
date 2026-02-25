@@ -68,7 +68,7 @@ const ejes = [
         border: "hover:border-cyan-500/30",
         bgIcon: "bg-cyan-50",
         bullet: "bg-cyan-500",
-        image: "/images/slider/"
+        image: "/images/slider/Imagen9.webp"
     },
     {
         titulo: "Eje Transversal",

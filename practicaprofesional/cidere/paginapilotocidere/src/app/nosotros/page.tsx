@@ -9,16 +9,21 @@ export const metadata: Metadata = {
 
 export default function NosotrosPage() {
     return (
-        <div className="bg-white min-h-screen">
-            <section className="bg-primary py-20 px-4">
-                <div className="max-w-7xl mx-auto text-center">
-                    <h1 className="text-white text-4xl md:text-6xl font-extrabold mb-6">
-                        Nuestra Misión, Visión y Propuesta de Valor
+        <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+            {/* Header Institucional con Mesh Gradient */}
+            <section className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+                <div className="max-w-5xl mx-auto relative z-10">
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
+                        Nuestra <span className="text-secondary">Identidad</span>
                     </h1>
+                    <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+                        Conoce la esencia de CIDERE, el motor que impulsa el desarrollo sostenible de la Región de Coquimbo.
+                    </p>
                 </div>
             </section>
 
             <Identity />
-        </div>
+        </main>
     );
 }
