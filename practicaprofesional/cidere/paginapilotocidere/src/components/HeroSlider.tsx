@@ -48,6 +48,21 @@ const slides = [
         desc: "Conecta con proveedores de la Región de Coquimbo",
         primaryBtn: { text: "Sé parte del Espacio Industrial Minero", link: "https://www.espacioindustria.cl/" },
         secondaryBtn: { text: "", link: "" }
+    },
+    {
+        id: 5,
+        image: "/images/slider/Avenida-del-Mar-La-Serena.webp",
+        badge: "",
+        title: "50 Años de Trayectoria",
+        desc: "Desde 1976, liderando el desarrollo económico, social y medioambiental en la Región de Coquimbo.",
+        primaryBtn: {
+            text: "Ver nuestros Hitos",
+            link: "/nosotros/hitos"
+        },
+        secondaryBtn: {
+            text: "",
+            link: ""
+        }
     }
 ];
 
@@ -63,7 +78,7 @@ const HeroSlider = () => {
     }, [current]);
 
     return (
-        <section className="relative w-full h-[600px] md:h-[800px] bg-gray-900 overflow-hidden">
+        <section className="relative w-full max-w-[1920px] mx-auto h-[600px] md:h-[800px] bg-gray-900 overflow-hidden">
 
             {/* SLIDES */}
             {slides.map((slide, index) => (
