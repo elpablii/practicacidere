@@ -29,21 +29,19 @@ const config: Config = {
             },
 
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-
                 primary: {
                     DEFAULT: "#1F2A44",
-                    light: "#2C3B5E",
-                    dark: "#141B2D",
+                    dark: "#0F172A",
+                    light: "#2E3E5E",
                 },
                 secondary: {
-                    DEFAULT: "#1F2A44",
-                    foreground: "#FFFFFF",
+                    DEFAULT: "#00D1FF",
+                    neon: "#10B981",
                 },
                 accent: {
-                    DEFAULT: "#E5E7EB",
-                },
+                    slate: "#64748B",
+                    glass: "rgba(255, 255, 255, 0.03)",
+                }
             },
         },
     },
