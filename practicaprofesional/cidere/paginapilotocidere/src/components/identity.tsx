@@ -36,7 +36,7 @@ const Identity = () => {
     return (
         <section className="py-24 px-4 md:px-6 max-w-7xl mx-auto space-y-24 md:space-y-32">
 
-            {/* GRID MISIÓN Y VISIÓN */}
+            {/*MISIÓN Y VISIÓN */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
                 {data.map((item, index) => (
                     <div
@@ -44,7 +44,7 @@ const Identity = () => {
                         id={item.id}
                         className="scroll-mt-32 group relative flex flex-col rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-500"
                     >
-                        {/* Imagen Superior Cortada */}
+
                         <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden shrink-0">
                             <img
                                 src={item.image}
@@ -53,13 +53,13 @@ const Identity = () => {
                             />
                             <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
 
-                            {/* Icono Flotante */}
+                            {/* Icono*/}
                             <div className={`absolute -bottom-6 left-8 md:left-10 w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-[1.5rem] bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-500 z-10`}>
                                 {item.icon}
                             </div>
                         </div>
 
-                        {/* Contenido de Texto */}
+                        {/* Contenido del Texto */}
                         <div className="p-8 md:p-12 pt-12 md:pt-14 flex flex-col flex-grow">
                             <h2 className="text-3xl font-black text-slate-800 mb-6 uppercase tracking-tight">{item.title}</h2>
                             <p className="text-slate-600 text-lg leading-relaxed font-medium">
@@ -70,12 +70,11 @@ const Identity = () => {
                 ))}
             </div>
 
-            {/* SECCIÓN PROPUESTA DE VALOR (FULL WIDTH CON FOTO DE SECCIÓN) */}
             <div
                 id={propuesta.id}
                 className="scroll-mt-32 relative rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-slate-300/60"
             >
-                {/* Imagen de Fondo */}
+
                 <div className="absolute inset-0">
                     <img
                         src={propuesta.image}
@@ -85,7 +84,6 @@ const Identity = () => {
                     <div className="absolute inset-0 bg-gray-900/80 md:bg-gray-900/60 backdrop-blur-[2px]"></div>
                 </div>
 
-                {/* Contenido Superpuesto */}
                 <div className="relative z-10 p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
                     <div className="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">

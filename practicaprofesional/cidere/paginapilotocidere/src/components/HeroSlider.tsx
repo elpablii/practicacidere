@@ -54,7 +54,7 @@ const slides = [
         image: "/images/slider/Avenida-del-Mar-La-Serena.webp",
         badge: "",
         title: "50 Años de Trayectoria",
-        desc: "Desde 1976, liderando el desarrollo económico, social y medioambiental en la Región de Coquimbo.",
+        desc: "Desde 1976, lideramos el desarrollo económico, social y medioambiental en la Región de Coquimbo.",
         primaryBtn: {
             text: "Ver nuestros Hitos",
             link: "/nosotros/hitos"

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import logoCidere from "@/assets/logos/logo-full.png";
 
@@ -39,7 +40,12 @@ const Navbar = () => {
     }, [isMobileMenuOpen]);
 
     return (
-        <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <motion.nav
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
 
@@ -93,7 +99,7 @@ const Navbar = () => {
                                     Hazte Socio
                                 </Link>
                                 <div className="border-t border-gray-100 my-3 mx-4"></div>
-                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100'}`}>Nuestros Socios</Link>
+                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100'}`}>Nuestros Socios</Link>
                             </div>
                         </div>
 
@@ -161,7 +167,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 

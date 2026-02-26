@@ -41,10 +41,12 @@ const Footer = () => {
     ];
 
     return (
-        <footer>
+        <footer className="relative overflow-hidden">
             {/* Sección Principal*/}
-            <div className="bg-primary text-white pt-16 pb-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-br from-primary via-blue-900 to-[#0a192f] text-white pt-16 pb-16 relative z-10">
+                {/* Destello elegante de fondo */}
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                         {/* Columna 1: Identidad*/}
@@ -103,7 +105,7 @@ const Footer = () => {
             </div>
 
             {/* Sección de Derechos */}
-            <div className="bg-black py-6 border-t border-white/10">
+            <div className="bg-[#050b14] py-6 border-t border-white/10 relative z-20 shadow-inner">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
                     <p className="text-gray-400 text-xs">
                         © {new Date().getFullYear()} CIDERE Región de Coquimbo. Todos los derechos reservados.
