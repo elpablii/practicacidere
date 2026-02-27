@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import {
     CurrencyDollarIcon,
     UserGroupIcon,
@@ -85,10 +86,10 @@ const ejes = [
 
 const ObjetivosPage = () => {
     return (
-        <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+        <main className="min-h-screen bg-transparent overflow-x-hidden">
             {/* Header Institucional */}
-            <section className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+            <PageHeaderAnimator id="objetivos" bgImage="/images/slider/Imagen8.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-4xl mx-auto relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
                         Ejes <span className="text-secondary">Estratégicos</span>
@@ -97,7 +98,7 @@ const ObjetivosPage = () => {
                         Nuestra ruta para liderar el desarrollo sostenible en la Región de Coquimbo.
                     </p>
                 </div>
-            </section>
+            </PageHeaderAnimator>
 
             {/* Layout Alternado tipo "Feature" para que predominen las fotos */}
             <section className="py-24 px-4 md:px-6 max-w-7xl mx-auto space-y-32">

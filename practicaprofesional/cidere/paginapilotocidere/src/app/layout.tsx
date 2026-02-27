@@ -26,7 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen relative`}>
+        {/* Fondo Global Animado Institucional Premium */}
+        <div className="fixed inset-0 z-[-1] overflow-hidden bg-slate-50 pointer-events-none">
+          {/* Círculo Principal Arriba a la Derecha */}
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] mix-blend-multiply opacity-70 animate-blob"></div>
+          {/* Círculo Secundario Centro Izquierda */}
+          <div className="absolute top-1/4 -left-20 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[100px] mix-blend-multiply opacity-50 animate-blob animation-delay-2000"></div>
+          {/* Círculo de acento Abajo */}
+          <div className="absolute -bottom-32 left-1/3 w-[700px] h-[700px] bg-blue-200/20 rounded-full blur-[120px] mix-blend-multiply opacity-60 animate-blob animation-delay-4000"></div>
+          {/* Malla sutil overlay base */}
+          <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.015] mix-blend-overlay"></div>
+        </div>
+
         {/* El Navbar arriba de todo */}
         <Navbar />
 

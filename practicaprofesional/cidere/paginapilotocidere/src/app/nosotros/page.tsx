@@ -1,4 +1,5 @@
 import React from "react";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import Identity from "@/components/identity";
 import { Metadata } from "next";
 
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function NosotrosPage() {
     return (
-        <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+        <main className="min-h-screen bg-transparent overflow-x-hidden">
             {/* Header Institucional con Mesh Gradient */}
-            <section className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
-                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+            <PageHeaderAnimator id="mision" bgImage="/images/slider/Slide2VerSocios.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-5xl mx-auto relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
                         Nuestra <span className="text-secondary">Identidad</span>
@@ -21,7 +22,7 @@ export default function NosotrosPage() {
                         Conoce la esencia de CIDERE, el motor que impulsa el desarrollo sostenible de la Región de Coquimbo.
                     </p>
                 </div>
-            </section>
+            </PageHeaderAnimator>
 
             <Identity />
         </main>

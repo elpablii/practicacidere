@@ -1,4 +1,5 @@
 import React from "react";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,22 +9,13 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-transparent">
 
-            <section className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-primary">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-primary/70 z-10" />
-                    <img
-                        src="/images/slider/Avenida-del-Mar-La-Serena.webp"
-                        alt="Fondo Contacto"
-                        className="w-full h-full object-cover object-center"
-                    />
-                </div>
-
+            <PageHeaderAnimator bgImage="/images/slider/Avenida-del-Mar-La-Serena.webp" className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden bg-primary">
                 <h1 className="relative z-20 text-4xl md:text-6xl font-extrabold text-white tracking-wider drop-shadow-lg">
                     Contacto
                 </h1>
-            </section>
+            </PageHeaderAnimator>
 
             {/* Contenido */}
             <section className="container mx-auto px-6 py-16 md:py-24">

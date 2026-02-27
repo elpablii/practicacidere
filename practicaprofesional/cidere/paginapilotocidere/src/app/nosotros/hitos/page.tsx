@@ -1,4 +1,5 @@
 import React from "react";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 
 type Hito = {
     year: string;
@@ -62,10 +63,10 @@ const hitos: Hito[] = [
 
 const HitosPage = () => {
     return (
-        <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+        <main className="min-h-screen bg-transparent overflow-x-hidden">
 
             {/* Header Institucional */}
-            <section className="bg-primary pt-32 pb-24 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator bgImage="/images/slider/laserena-70s.webp" className="bg-primary pt-32 pb-24 px-6 text-center relative overflow-hidden">
                 {/* Decoración de fondo para estilo Next-Gen */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
                     <div className="absolute -top-24 -left-24 w-96 h-96 bg-secondary rounded-full blur-[120px]"></div>
@@ -79,7 +80,7 @@ const HitosPage = () => {
                         50 años liderando el progreso económico y social de la Región de Coquimbo.
                     </p>
                 </div>
-            </section>
+            </PageHeaderAnimator>
 
             {/* Línea de Tiempo*/}
             <section className="py-24 px-4 md:px-6 relative max-w-6xl mx-auto">

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 interface MemberProps {
     name: string;
@@ -13,7 +14,11 @@ const MemberCard = ({ name, role, company, image }: MemberProps) => {
     const [isTouched, setIsTouched] = useState(false);
 
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="group relative overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
             onClick={() => setIsTouched(!isTouched)}
         >
@@ -49,7 +54,7 @@ const MemberCard = ({ name, role, company, image }: MemberProps) => {
 
             {/* Detalle decorativo: línea inferior que se expande */}
             <div className={`absolute bottom-0 left-0 h-1 bg-primary transition-all duration-500 group-hover:w-full ${isTouched ? 'w-full' : 'w-0'}`} />
-        </div>
+        </motion.div>
     );
 };
 

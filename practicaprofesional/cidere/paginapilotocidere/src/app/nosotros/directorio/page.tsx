@@ -1,5 +1,6 @@
 import React from "react";
 import MemberCard from "@/components/MemberCard";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -54,10 +55,9 @@ const DirectorioPage = () => {
     ];
 
     return (
-        <div className="bg-white min-h-screen">
-            {/* Header Simple */}
-            <section className="bg-primary py-16 px-4">
-                <div className="max-w-7xl mx-auto text-center">
+        <div className="bg-transparent min-h-screen">
+            <PageHeaderAnimator id="directorio" bgImage="/images/slider/Imagen7.webp" className="bg-primary pt-32 pb-16 px-4">
+                <div className="max-w-7xl mx-auto text-center relative z-10">
                     <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-4">
                         Nuestro Directorio
                     </h1>
@@ -65,12 +65,11 @@ const DirectorioPage = () => {
                         Conoce a la mesa directiva de CIDERE Coquimbo.
                     </p>
                 </div>
-            </section>
+            </PageHeaderAnimator>
 
-            {/* Grilla Responsiva */}
+
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    {/* Cambiamos 'grid' por 'flex flex-wrap' y añadimos 'justify-center' */}
                     <div className="flex flex-wrap justify-center gap-8">
                         {directorioData.map((persona, index) => (
                             <div

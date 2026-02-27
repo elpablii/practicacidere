@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 
-// Definimos las variantes para el contenedor (el que orquesta el stagger)
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -14,7 +13,6 @@ const containerVariants = {
     },
 };
 
-// Definimos las variantes para cada ítem (el efecto individual)
 const itemVariants = {
     hidden: { y: 40, opacity: 0 },
     visible: {

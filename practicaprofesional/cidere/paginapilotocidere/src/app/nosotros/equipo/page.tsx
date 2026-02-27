@@ -1,5 +1,6 @@
 import React from "react";
 import MemberCard from "@/components/MemberCard";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -50,15 +51,15 @@ const EquipoPage = () => {
     ];
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-transparent min-h-screen">
             {/* Header de la Sección */}
-            <section className="bg-primary py-16 px-4">
-                <div className="max-w-7xl mx-auto text-center">
+            <PageHeaderAnimator id="equipo" bgImage="/images/slider/Imagen5.webp" className="bg-primary pt-32 pb-16 px-4">
+                <div className="max-w-7xl mx-auto text-center relative z-10">
                     <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-4">
                         Equipo CIDERE
                     </h1>
                 </div>
-            </section>
+            </PageHeaderAnimator>
 
             {/* Grilla del Equipo */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">

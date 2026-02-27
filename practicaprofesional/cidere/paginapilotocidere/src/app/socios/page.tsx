@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import Image from "next/image";
 import rdsLogo from "@/assets/logos/RDS - LOGO VERTICAL-03.png";
 import PartnerCard from "@/components/PartnerCard";
@@ -111,8 +112,8 @@ const SociosPage = () => {
     ];
 
     return (
-        <div className="bg-[#f8fafc] min-h-screen">
-            <section className="bg-gradient-to-br from-primary to-blue-900 py-28 px-6 relative overflow-hidden">
+        <div className="bg-transparent min-h-screen">
+            <PageHeaderAnimator id="socios" bgImage="/images/slider/Imagen4.webp" className="bg-gradient-to-br from-primary to-blue-900 pt-36 pb-20 px-6 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 pointer-events-none"
                     style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
                 <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -123,7 +124,7 @@ const SociosPage = () => {
                         Conozca a las 94 empresas que colaboran con Cidere para el desarrollo de la Región de Coquimbo.
                     </p>
                 </div>
-            </section>
+            </PageHeaderAnimator>
 
             <section className="py-20 px-6">
                 <div className="max-w-7xl mx-auto">
