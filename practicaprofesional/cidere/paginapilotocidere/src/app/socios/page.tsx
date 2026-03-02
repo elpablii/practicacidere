@@ -121,7 +121,7 @@ const SociosPage = () => {
                         Nuestros Socios
                     </h1>
                     <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto opacity-80 leading-relaxed">
-                        Conozca a las 94 empresas que colaboran con Cidere para el desarrollo de la Región de Coquimbo.
+                        Conozca a las <span className="font-bold text-white">{socios.length}</span> empresas que colaboran con Cidere para el desarrollo de la Región de Coquimbo.
                     </p>
                 </div>
             </PageHeaderAnimator>

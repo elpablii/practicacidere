@@ -1,5 +1,5 @@
 import React from "react";
-import ContactView from "./ContactView";
+import ContactView from "@/app/contacto/ContactView";
 import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import { Metadata } from "next";
 
@@ -19,9 +19,6 @@ export default function ContactPage() {
                     </h1>
                 </div>
             </PageHeaderAnimator>
-
-            {/* Contenido */}
-            {/* Contenido Dinámico con Animaciones */}
             <ContactView />
         </main>
     );

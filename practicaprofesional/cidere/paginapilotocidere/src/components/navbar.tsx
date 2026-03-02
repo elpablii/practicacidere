@@ -93,6 +93,7 @@ const Navbar = () => {
                                 <Link href="/nosotros/directorio#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Directorio</Link>
                                 <Link href="/nosotros/equipo#equipo" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Equipo CIDERE</Link>
                                 <Link href="/nosotros/objetivos#objetivos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Nuestros Ejes</Link>
+                                <Link href="/nosotros/hitos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Hitos Emblemáticos</Link>
                                 <Link
                                     href="/hazte-socio"
                                     onClick={closeAll}
@@ -155,6 +156,7 @@ const Navbar = () => {
                                         <Link href="/nosotros/directorio#directorio" className="block hover:text-primary" onClick={closeAll}>Directorio</Link>
                                         <Link href="/nosotros/equipo#equipo" className="block hover:text-primary" onClick={closeAll}>Equipo CIDERE</Link>
                                         <Link href="/nosotros/objetivos#objetivos" className="block hover:text-primary" onClick={closeAll}>Nuestros Ejes</Link>
+                                        <Link href="/nosotros/hitos" className="block hover:text-primary" onClick={closeAll}>Hitos Emblemáticos</Link>
                                         <Link href="/hazte-socio" className="block hover:text-primary" onClick={closeAll}>Hazte Socio</Link>
                                     </div>
                                 </div>
