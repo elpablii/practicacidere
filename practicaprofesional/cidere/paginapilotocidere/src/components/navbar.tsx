@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import logoCidere from "@/assets/logos/logo-full.png";
+import logoCidere from "@/assets/logos/CIDERE Región de Coquimbo.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -48,12 +48,12 @@ const Navbar = () => {
             className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
+                <div className="flex justify-between items-center h-20 md:h-24">
 
                     {/* Logo */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0 flex items-center h-full">
                         <Link href="/" onClick={closeAll}>
-                            <Image src={logoCidere} alt="Logo CIDERE" width={160} height={55} priority className="cursor-pointer" />
+                            <Image src={logoCidere} alt="Logo CIDERE" width={220} height={75} priority className="cursor-pointer w-[140px] md:w-[220px] h-auto" />
                         </Link>
                     </div>
 

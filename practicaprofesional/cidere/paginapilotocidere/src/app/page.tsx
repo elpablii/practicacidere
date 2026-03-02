@@ -4,7 +4,6 @@ import QuienesSomos from "@/components/QuienesSomos";
 import Link from "next/link";
 import { ClockIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
-// Importamos nuestros componentes animados con "use client"
 import { HomeContainer, HomeItem, FadeInHero } from "@/components/HomeClientAnimator";
 
 export default function Home() {
@@ -18,10 +17,9 @@ export default function Home() {
 
       {/* 2. Cuerpo de la página con Stagger al hacer scroll */}
       <HomeContainer>
-        {/* Fondo principal completo con gradientes sutiles y mallas */}
+
         <div className="bg-slate-50 relative overflow-hidden py-24">
 
-          {/* Esferas/Mallas Sutiles de Fondo */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
             <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-100/50 blur-[120px]"></div>
             <div className="absolute bottom-[20%] right-[-5%] w-[35%] h-[40%] rounded-full bg-blue-200/30 blur-[100px]"></div>

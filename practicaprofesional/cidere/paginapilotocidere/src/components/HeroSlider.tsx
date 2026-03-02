@@ -5,27 +5,15 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const slides = [
     {
-        id: 1,
-        image: "/images/slider/Slide1RDS.webp",
+        id: 5,
+        image: "/images/slider/Avenida-del-Mar-La-Serena.webp",
         badge: "",
-        title: "",
-        desc: "",
+        title: "50 Años de Trayectoria",
+        desc: "Desde 1976, lideramos el desarrollo económico, social y medioambiental en la Región de Coquimbo.",
         primaryBtn: {
-            text: "Ir a RDS",
-            link: "https://rdscidere.cl"
+            text: "Ver nuestros Hitos",
+            link: "/nosotros/hitos"
         },
-        secondaryBtn: {
-            text: "",
-            link: ""
-        }
-    },
-    {
-        id: 2,
-        image: "/images/slider/Slide2VerSocios.webp",
-        badge: "",
-        title: "Nuestros Socios",
-        desc: "Conoce a las empresas que forman parte de nuestra red de Cidere",
-        primaryBtn: { text: "Ver los Socios", link: "/socios" },
         secondaryBtn: {
             text: "",
             link: ""
@@ -41,6 +29,33 @@ const slides = [
         secondaryBtn: { text: "", link: "" }
     },
     {
+        id: 2,
+        image: "/images/slider/Slide2VerSocios.webp",
+        badge: "",
+        title: "Nuestros Socios",
+        desc: "Conoce a las empresas que forman parte de nuestra red de Cidere",
+        primaryBtn: { text: "Ver los Socios", link: "/socios" },
+        secondaryBtn: {
+            text: "",
+            link: ""
+        }
+    },
+    {
+        id: 1,
+        image: "/images/slider/Slide1RDS.webp",
+        badge: "",
+        title: "",
+        desc: "",
+        primaryBtn: {
+            text: "Ir a RDS",
+            link: "https://rdscidere.cl"
+        },
+        secondaryBtn: {
+            text: "",
+            link: ""
+        }
+    },
+    {
         id: 4,
         image: "/images/slider/Slide4EspacioIndustrialMinero.webp",
         badge: "",
@@ -49,21 +64,6 @@ const slides = [
         primaryBtn: { text: "Sé parte del Espacio Industrial Minero", link: "https://www.espacioindustria.cl/" },
         secondaryBtn: { text: "", link: "" }
     },
-    {
-        id: 5,
-        image: "/images/slider/Avenida-del-Mar-La-Serena.webp",
-        badge: "",
-        title: "50 Años de Trayectoria",
-        desc: "Desde 1976, lideramos el desarrollo económico, social y medioambiental en la Región de Coquimbo.",
-        primaryBtn: {
-            text: "Ver nuestros Hitos",
-            link: "/nosotros/hitos"
-        },
-        secondaryBtn: {
-            text: "",
-            link: ""
-        }
-    }
 ];
 
 const HeroSlider = () => {
@@ -93,19 +93,19 @@ const HeroSlider = () => {
                             <img
                                 src={slide.image}
                                 alt={`Slide ${slide.id}`}
-                                className={`w-full h-full ${index === 0 ? 'object-contain md:object-cover' : 'object-cover'}`}
+                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : 'object-cover'}`}
                             />
                         )}
 
-                        {index !== 0 && (
+                        {slide.id !== 1 && (
                             <div className="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-primary/95 md:via-primary/70 md:to-transparent"></div>
                         )}
                     </div>
 
 
-                    <div className={`relative z-20 h-full flex ${index === 0 ? 'items-end justify-center pb-12 sm:pb-20' : 'items-center'}`}>
-                        <div className={`w-full ${index === 0 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
-                            <div className={`${index === 0 ? 'text-center' : 'max-w-3xl'}`}>
+                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-12 sm:pb-20' : 'items-center'}`}>
+                        <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
+                            <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'}`}>
 
                                 {slide.badge && (
                                     <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-6">
@@ -116,20 +116,20 @@ const HeroSlider = () => {
                                 )}
 
                                 {slide.title && (
-                                    <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg"
+                                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-5 drop-shadow-lg"
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
                                     />
                                 )}
 
 
                                 {slide.desc && (
-                                    <p className="text-sm sm:text-base md:text-xl text-gray-200 mb-10 leading-relaxed max-w-xl drop-shadow-md">
+                                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-8 leading-relaxed max-w-xl drop-shadow-md">
                                         {slide.desc}
                                     </p>
                                 )}
 
 
-                                <div className={`flex ${index === 0 ? 'justify-center' : 'flex-col sm:flex-row'} gap-4`}>
+                                <div className={`flex ${slide.id === 1 ? 'justify-center' : 'flex-col sm:flex-row'} gap-4`}>
                                     {slide.primaryBtn.text && (
                                         <Link
                                             href={slide.primaryBtn.link}

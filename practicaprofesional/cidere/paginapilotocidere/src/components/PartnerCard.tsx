@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface PartnerProps {
     logo: string;
@@ -8,10 +10,14 @@ interface PartnerProps {
 
 const PartnerCard = ({ logo, url, name }: PartnerProps) => {
     return (
-        <a
+        <motion.a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="group relative flex items-center justify-center 
                        p-3 md:p-6 bg-white border border-gray-100 
                        rounded-2xl transition-all duration-500 
@@ -29,7 +35,7 @@ const PartnerCard = ({ logo, url, name }: PartnerProps) => {
                                md:group-hover:scale-110"
                 />
             </div>
-        </a>
+        </motion.a>
     );
 };
 

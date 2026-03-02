@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 
 type Hito = {
@@ -89,7 +91,14 @@ const HitosPage = () => {
 
                 <div className="space-y-24">
                     {hitos.map((hito, index) => (
-                        <div key={index} className="relative flex items-center">
+                        <motion.div
+                            key={index}
+                            className="relative flex items-center"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                        >
 
                             {/* Contenedor del Hito */}
                             <div className={`flex flex-col md:flex-row w-full items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
@@ -126,7 +135,7 @@ const HitosPage = () => {
                                 </div>
 
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>

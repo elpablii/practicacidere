@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 export default function NosotrosPage() {
     return (
         <main className="min-h-screen bg-transparent overflow-x-hidden">
-            {/* Header Institucional con Mesh Gradient */}
             <PageHeaderAnimator id="mision" bgImage="/images/slider/Slide2VerSocios.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-5xl mx-auto relative z-10">

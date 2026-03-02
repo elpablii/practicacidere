@@ -113,20 +113,20 @@ const LogoMarquee = () => {
                 </a>
             </div>
 
-            <div className="relative flex overflow-x-hidden group">
+            <div className="relative flex overflow-x-hidden group" style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}>
                 {/* Primera Fila de Logos */}
-                <div className="flex animate-marquee whitespace-nowrap gap-12 items-center">
+                <div className="flex animate-marquee whitespace-nowrap gap-16 md:gap-24 items-center">
                     {sociosLogos.map((logo, index) => (
-                        <div key={index} className="w-40 h-20 flex-shrink-0 flex items-center justify-center grayscale-0 opacity-100 hover:scale-110 transition-transform duration-300">
+                        <div key={index} className="w-56 h-32 md:w-80 md:h-40 flex-shrink-0 flex items-center justify-center grayscale-0 opacity-100 hover:scale-110 transition-transform duration-300">
                             <img src={logo} alt="Socio" className="max-w-full max-h-full object-contain" />
                         </div>
                     ))}
                 </div>
 
                 {/* Copia de la Fila para el efecto infinito */}
-                <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap gap-12 items-center h-full">
+                <div className="absolute top-0 flex animate-marquee2 whitespace-nowrap gap-16 md:gap-24 items-center h-full">
                     {sociosLogos.map((logo, index) => (
-                        <div key={`copy-${index}`} className="w-40 h-20 flex-shrink-0 flex items-center justify-center grayscale-0 opacity-100 hover:scale-110 transition-transform duration-300">
+                        <div key={`copy-${index}`} className="w-56 h-32 md:w-80 md:h-40 flex-shrink-0 flex items-center justify-center grayscale-0 opacity-100 hover:scale-110 transition-transform duration-300">
                             <img src={logo} alt="Socio" className="max-w-full max-h-full object-contain" />
                         </div>
                     ))}

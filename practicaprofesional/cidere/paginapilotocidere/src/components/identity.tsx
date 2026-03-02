@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import {
     FlagIcon,
     EyeIcon,
@@ -39,7 +41,11 @@ const Identity = () => {
             {/*MISIÓN Y VISIÓN */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
                 {data.map((item, index) => (
-                    <div
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
                         key={item.id}
                         id={item.id}
                         className="scroll-mt-32 group relative flex flex-col rounded-[2.5rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-500"
@@ -66,11 +72,15 @@ const Identity = () => {
                                 {item.desc}
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 
-            <div
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 id={propuesta.id}
                 className="scroll-mt-32 relative rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-slate-300/60"
             >
@@ -103,7 +113,7 @@ const Identity = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
 
         </section>
     );
