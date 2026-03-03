@@ -9,6 +9,14 @@ interface PartnerProps {
 }
 
 const PartnerCard = ({ logo, url, name }: PartnerProps) => {
+    const l = logo.toLowerCase();
+    const isOversized = l.includes('brac') || l.includes('caplab') || l.includes('notaria');
+    const isUndersized = l.includes('falernia') || l.includes('phillips') || l.includes('red-salud');
+
+    let sizeClasses = 'max-w-[95%] max-h-[95%] md:max-w-[125%] md:max-h-[125%]';
+    if (isOversized) sizeClasses = 'max-w-[70%] max-h-[70%] md:max-w-[85%] md:max-h-[85%]';
+    else if (isUndersized) sizeClasses = 'max-w-[120%] max-h-[120%] md:max-w-[135%] md:max-h-[135%] scale-110 md:scale-125';
+
     return (
         <motion.a
             href={url}
@@ -27,12 +35,7 @@ const PartnerCard = ({ logo, url, name }: PartnerProps) => {
                 <img
                     src={logo}
                     alt={`Logo de ${name}`}
-                    className="w-auto h-auto max-w-[95%] max-h-[95%] 
-                               md:max-w-[125%] md:max-h-[125%] 
-                               object-contain transition-all duration-500 ease-in-out
-                               /* Móvil: Color y Opacidad total */
-                               grayscale-0 opacity-100
-                               md:group-hover:scale-110"
+                    className={`w-auto h-auto object-contain transition-all duration-500 ease-in-out grayscale-0 opacity-100 md:group-hover:scale-110 ${sizeClasses}`}
                 />
             </div>
         </motion.a>

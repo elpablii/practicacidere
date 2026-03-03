@@ -6,13 +6,13 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 const slides = [
     {
         id: 5,
-        image: "/images/slider/Avenida-del-Mar-La-Serena.webp",
+        image: "/images/slider/banner-pagina-web-nueva.webp",
         badge: "",
-        title: "50 Años de Trayectoria",
-        desc: "Desde 1976, lideramos el desarrollo económico, social y medioambiental en la Región de Coquimbo.",
+        title: "",
+        desc: "",
         primaryBtn: {
-            text: "Ver nuestros Hitos",
-            link: "/nosotros/hitos"
+            text: "",
+            link: ""
         },
         secondaryBtn: {
             text: "",
@@ -93,11 +93,11 @@ const HeroSlider = () => {
                             <img
                                 src={slide.image}
                                 alt={`Slide ${slide.id}`}
-                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : 'object-cover'}`}
+                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-contain' : 'object-cover'}`}
                             />
                         )}
 
-                        {slide.id !== 1 && (
+                        {slide.id !== 1 && slide.id !== 5 && (
                             <div className="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-primary/95 md:via-primary/70 md:to-transparent"></div>
                         )}
                     </div>

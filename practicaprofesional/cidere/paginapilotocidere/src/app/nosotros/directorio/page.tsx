@@ -56,15 +56,21 @@ const DirectorioPage = () => {
 
     return (
         <div className="bg-transparent min-h-screen">
-            <PageHeaderAnimator id="directorio" bgImage="/images/slider/Imagen7.webp" className="bg-primary pt-32 pb-16 px-4">
-                <div className="max-w-7xl mx-auto text-center relative z-10">
-                    <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-4">
-                        Nuestro Directorio
+            <PageHeaderAnimator id="directorio" bgImage="/images/slider/Imagen7.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
+                <div className="max-w-5xl mx-auto relative z-10">
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
+                        Nuestro <span className="text-secondary">Directorio</span>
                     </h1>
-                    <p className="text-blue-100 text-lg opacity-80 max-w-2xl mx-auto">
-                        Conoce a la mesa directiva de CIDERE Coquimbo.
+                    <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+                        Conoce a los líderes que conforman la mesa directiva de CIDERE Coquimbo y guían nuestra visión corporativa.
                     </p>
                 </div>
+                {/* Estilo local para forzar a Imagen7 a no cortar cabezas (usando la clase child targeter o inyectando estilos) */}
+                <style dangerouslySetInnerHTML={{
+                    __html: `
+                    #directorio img { object-position: center 30% !important; }
+                `}} />
             </PageHeaderAnimator>
 
 

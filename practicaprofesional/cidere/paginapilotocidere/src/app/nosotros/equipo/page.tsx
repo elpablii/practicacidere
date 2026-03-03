@@ -53,12 +53,17 @@ const EquipoPage = () => {
     return (
         <div className="bg-transparent min-h-screen">
             {/* Header de la Sección */}
-            <PageHeaderAnimator id="equipo" bgImage="/images/slider/Imagen5.webp" className="bg-primary pt-32 pb-16 px-4">
+            <PageHeaderAnimator id="equipo" bgImage="/images/slider/equipocidere.webp" className="bg-primary pt-32 pb-16 px-4 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto text-center relative z-10">
                     <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-4">
                         Equipo CIDERE
                     </h1>
                 </div>
+                {/* Estilo local para forzar a equipocidere.webp a no cortar cabezas (enfoca los rostros) */}
+                <style dangerouslySetInnerHTML={{
+                    __html: `
+                    #equipo img { object-position: center 30% !important; }
+                `}} />
             </PageHeaderAnimator>
 
             {/* Grilla del Equipo */}

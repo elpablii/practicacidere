@@ -25,7 +25,7 @@ export const PageHeaderAnimator: React.FC<PageHeaderAnimatorProps> = ({ children
                     <img
                         src={bgImage}
                         alt="Fondo Cabecera"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-[center_70%]"
                     />
                 </div>
             )}

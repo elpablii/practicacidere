@@ -10,7 +10,7 @@ const AboutBrief = () => {
             icon: <CalendarDaysIcon className="w-10 h-10 text-secondary" />,
         },
         {
-            label: "94 Empresas",
+            label: "97 Empresas",
             title: "Fuerza Multisectorial",
             desc: "Nuestra red integra socios de minería, agro, servicios y la academia.",
             icon: <UserGroupIcon className="w-10 h-10 text-secondary" />,
