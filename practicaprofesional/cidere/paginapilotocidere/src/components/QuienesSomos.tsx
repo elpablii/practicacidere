@@ -6,19 +6,19 @@ const AboutBrief = () => {
         {
             label: "Desde 1976",
             title: "Trayectoria Regional",
-            desc: "Más de 50 años liderando el desarrollo sostenible en la Región de Coquimbo.",
+            desc: "La Corporación Industrial para el Desarrollo de la Región de Coquimbo es una organización privada sin fines de lucro que nace hace 50 años formada por un grupo de empresarios regionales.",
             icon: <CalendarDaysIcon className="w-10 h-10 text-secondary" />,
         },
         {
-            label: "97 Empresas",
+            label: "97 Entidades",
             title: "Fuerza Multisectorial",
-            desc: "Nuestra red integra socios de minería, agro, servicios y la academia.",
+            desc: "Representamos al sector privado a través de una red multisectorial que integra industrias estratégicas como la educación, salud, minería, construcción, entre otros.",
             icon: <UserGroupIcon className="w-10 h-10 text-secondary" />,
         },
         {
             label: "Propósito",
             title: "Asociatividad Real",
-            desc: "Vinculamos al sector público y privado para crear impacto económico y social.",
+            desc: "Liderar desde la corporación el desarrollo económico, social y medioambiental de la Región de Coquimbo, por medio de la asociatividad y colaboración entre el sector público, privado y la academia.",
             icon: <RocketLaunchIcon className="w-10 h-10 text-secondary" />,
         },
     ];

@@ -15,7 +15,7 @@ const hitos: Hito[] = [
     {
         year: "1976",
         title: "Fundación de CIDERE",
-        description: "Nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
+        description: "El 30 de marzo de 1976 Cidere nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
         image: "/images/slider/laserena-70s.webp"
     },
     {
@@ -27,7 +27,7 @@ const hitos: Hito[] = [
     {
         year: "Años 80",
         title: "La Recova",
-        description: "Cidere fue partícipe de la reinauguración de La Recova en 1981, centro importante del comercio local.",
+        description: "Cidere fue partícipe de la inauguración de La Recova en 1981, centro importante del comercio local.",
         image: "/images/slider/la-recova-la-serena.webp"
     },
     {
@@ -69,17 +69,16 @@ const HitosPage = () => {
 
             {/* Header Institucional */}
             <PageHeaderAnimator bgImage="/images/slider/laserena-70s.webp" className="bg-primary pt-32 pb-24 px-6 text-center relative overflow-hidden">
-                {/* Decoración de fondo para estilo Next-Gen */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
                     <div className="absolute -top-24 -left-24 w-96 h-96 bg-secondary rounded-full blur-[120px]"></div>
                 </div>
 
                 <div className="relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
-                        Hitos Históricos de CIDERE
+                        Hitos de Nuestra Historia
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl max-w-2xl mx-auto font-medium">
-                        50 años liderando el progreso económico y social de la Región de Coquimbo.
+                        50 años creando región
                     </p>
                 </div>
             </PageHeaderAnimator>

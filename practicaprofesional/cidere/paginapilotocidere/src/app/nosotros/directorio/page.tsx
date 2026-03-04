@@ -63,7 +63,7 @@ const DirectorioPage = () => {
                         Nuestro <span className="text-secondary">Directorio</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto">
-                        Conoce a los líderes que conforman la mesa directiva de CIDERE Coquimbo y guían nuestra visión corporativa.
+                        Conoce a los líderes que conforman la mesa directiva de CIDERE, quienes se han comprometido a contribuir activamente al buen desempeño de la corporación.
                     </p>
                 </div>
                 {/* Estilo local para forzar a Imagen7 a no cortar cabezas (usando la clase child targeter o inyectando estilos) */}

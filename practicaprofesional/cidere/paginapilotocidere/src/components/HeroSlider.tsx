@@ -24,7 +24,7 @@ const slides = [
         image: "/images/slider/Slide3QuieresSerSocio.webp",
         badge: "",
         title: "¿Quieres ser Socio?",
-        desc: "Empieza tu proceso de ingreso y pronto serás parte de nosotros",
+        desc: "Empieza tu proceso de ingreso y postula para ser parte del desarrollo regional",
         primaryBtn: { text: "Hazte Socio", link: "/hazte-socio" },
         secondaryBtn: { text: "", link: "" }
     },
@@ -33,8 +33,8 @@ const slides = [
         image: "/images/slider/Slide2VerSocios.webp",
         badge: "",
         title: "Nuestros Socios",
-        desc: "Conoce a las empresas que forman parte de nuestra red de Cidere",
-        primaryBtn: { text: "Ver los Socios", link: "/socios" },
+        desc: "Conoce a las organizaciones que forman parte de nuestra red de socios",
+        primaryBtn: { text: "Revísalos aquí", link: "/socios" },
         secondaryBtn: {
             text: "",
             link: ""
@@ -47,7 +47,7 @@ const slides = [
         title: "",
         desc: "",
         primaryBtn: {
-            text: "Ir a RDS",
+            text: "Descubre RDS",
             link: "https://rdscidere.cl"
         },
         secondaryBtn: {

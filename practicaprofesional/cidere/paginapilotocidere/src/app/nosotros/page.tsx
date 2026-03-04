@@ -18,7 +18,7 @@ export default function NosotrosPage() {
                         Nuestra <span className="text-secondary">Identidad</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto">
-                        Conoce la esencia de CIDERE, el motor que impulsa el desarrollo sostenible de la Región de Coquimbo.
+                        Conoce los lineamientos estratégicos que rigen nuestra organización y sus asociados.
                     </p>
                 </div>
             </PageHeaderAnimator>

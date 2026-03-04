@@ -15,7 +15,7 @@ export default function ContactPage() {
             <PageHeaderAnimator bgImage="/images/slider/Avenida-del-Mar-La-Serena.webp" className="relative w-full h-[40vh] md:h-[50vh] overflow-hidden bg-primary">
                 <div className="w-full h-full flex items-center justify-center">
                     <h1 className="text-4xl md:text-6xl font-black text-white text-center tracking-wider drop-shadow-lg relative z-20">
-                        Contacto
+                        Trabajemos Juntos Creando Región
                     </h1>
                 </div>
             </PageHeaderAnimator>
