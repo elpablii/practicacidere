@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = {
     title: "Nuestros Ejes - CIDERE",
-    description: "Objetivos y ejes estratégicos de Cidere para el desarrollo regional.",
+    description: "Objetivos y ejes estratégicos de CIDERE para el desarrollo regional.",
 };
 
 const ejes = [
@@ -54,10 +54,10 @@ const ejes = [
         desc: "Promover redes de colaboración entre los socios de CIDERE y su interacción estratégica con autoridades, academia y gremios regionales.",
         items: ["Participaciones en mesas de trabajo y comisiones", "Vinculación con autoridades", "Plataforma RDS"],
         icon: <HandRaisedIcon className="w-10 h-10" />,
-        color: "text-violet-500",
-        border: "hover:border-violet-500/30",
-        bgIcon: "bg-violet-50",
-        bullet: "bg-violet-500",
+        color: "text-cyan-500",
+        border: "hover:border-cyan-500/30",
+        bgIcon: "bg-cyan-50",
+        bullet: "bg-cyan-500",
         image: "/images/slider/Imagen7.webp"
     },
     {
@@ -65,10 +65,10 @@ const ejes = [
         desc: "Lineamientos estratégicos que orientan la comunicación institucional de CIDERE para visibilizar su aporte al desarrollo regional.",
         items: ["Páginas web CIDERE y RDS", "Posicionamiento en Redes", "Artículos en prensa"],
         icon: <MegaphoneIcon className="w-10 h-10" />,
-        color: "text-cyan-500",
-        border: "hover:border-cyan-500/30",
-        bgIcon: "bg-cyan-50",
-        bullet: "bg-cyan-500",
+        color: "text-violet-500",
+        border: "hover:border-violet-500/30",
+        bgIcon: "bg-violet-50",
+        bullet: "bg-violet-500",
         image: "/images/slider/Imagen9.webp"
     },
     {
@@ -91,8 +91,8 @@ const ObjetivosPage = () => {
             <PageHeaderAnimator id="objetivos" bgImage="/images/slider/Imagen8.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-4xl mx-auto relative z-10">
-                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
-                        Ejes <span className="text-secondary">Estratégicos</span>
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        Ejes <span className="text-blue-500">Estratégicos</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-2xl mx-auto">
                         Nuestra ruta para liderar el desarrollo sostenible en la Región de Coquimbo.

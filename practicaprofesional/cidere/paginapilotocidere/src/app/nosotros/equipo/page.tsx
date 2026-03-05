@@ -47,8 +47,10 @@ const EquipoPage = () => {
             company: "yanabel@cidere.cl",
             image: "/images/equipo/encargada-comunicaciones-yanabel.webp",
         },
-
     ];
+
+    const gerenciaData = equipoData.slice(0, 2);
+    const restoEquipoData = equipoData.slice(2);
 
     return (
         <div className="bg-transparent min-h-screen">
@@ -68,11 +70,24 @@ const EquipoPage = () => {
 
             {/* Grilla del Equipo */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-auto space-y-16">
+                    {/* Fila 1: Gerencia (Ricardo y Fernanda) */}
                     <div className="flex flex-wrap justify-center gap-10">
-                        {equipoData.map((persona, index) => (
+                        {gerenciaData.map((persona, index) => (
                             <div
-                                key={index}
+                                key={`gerencia-${index}`}
+                                className="w-full sm:w-[calc(50%-2.5rem)] md:w-[calc(33.33%-2.5rem)] lg:w-[calc(25%-2.5rem)] max-w-[300px]"
+                            >
+                                <MemberCard {...persona} />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Fila 2: Resto del Equipo (Los 4 restantes) */}
+                    <div className="flex flex-wrap justify-center gap-10">
+                        {restoEquipoData.map((persona, index) => (
+                            <div
+                                key={`equipo-${index}`}
                                 className="w-full sm:w-[calc(50%-2.5rem)] md:w-[calc(33.33%-2.5rem)] lg:w-[calc(25%-2.5rem)] max-w-[300px]"
                             >
                                 <MemberCard {...persona} />

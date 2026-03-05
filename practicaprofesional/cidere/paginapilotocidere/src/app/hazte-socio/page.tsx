@@ -48,8 +48,8 @@ const HazteSocio = () => {
             <PageHeaderAnimator id="hazte-socio" bgImage="/images/slider/Imagen16.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-4xl mx-auto relative z-10">
-                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
-                        Hazte <span className="text-secondary">Socio</span>
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        Hazte <span className="text-blue-500">Socio</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
                         Sé parte de esta red de empresas e instituciones que buscan aportar al desarrollo de la región de Coquimbo.

@@ -70,7 +70,7 @@ const ContactView = () => {
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.578631166688!2d-71.25471492445107!3d-29.904230674994275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691ca7096738935%3A0x629555543036417!2sManuel%20Antonio%20Matta%20461%2C%20La%20Serena%2C%20Coquimbo!5e0!3m2!1ses!2scl!4v1709123456789!5m2!1ses!2scl-"
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Mapa de Ubicación Cidere"
+                        title="Mapa de Ubicación CIDERE"
                         className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                     ></iframe>
                 </motion.div>

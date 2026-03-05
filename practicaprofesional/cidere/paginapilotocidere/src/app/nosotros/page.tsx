@@ -14,8 +14,8 @@ export default function NosotrosPage() {
             <PageHeaderAnimator id="mision" bgImage="/images/slider/Slide2VerSocios.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-5xl mx-auto relative z-10">
-                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
-                        Nuestra <span className="text-secondary">Identidad</span>
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        Nuestra <span className="text-blue-500">Identidad</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto">
                         Conoce los lineamientos estratégicos que rigen nuestra organización y sus asociados.

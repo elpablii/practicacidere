@@ -15,50 +15,50 @@ const hitos: Hito[] = [
     {
         year: "1976",
         title: "Fundación de CIDERE",
-        description: "El 30 de marzo de 1976 Cidere nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
+        description: "El 30 de marzo de 1976 CIDERE nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
         image: "/images/slider/laserena-70s.webp"
     },
     {
         year: "Años 80",
         title: "Avenida del Mar",
-        description: "La construcción de la Avenida del Mar en La Serena entre 1980 y 1981 es una de las obras más emblemáticas en las que Cidere ha estado involucrado.",
+        description: "La construcción de la Avenida del Mar en La Serena entre 1980 y 1981 es una de las obras más emblemáticas en las que CIDERE ha estado involucrado.",
         image: "/images/slider/Avenida-del-Mar-La-Serena.webp"
     },
     {
         year: "Años 80",
         title: "La Recova",
-        description: "Cidere fue partícipe de la inauguración de La Recova en 1981, centro importante del comercio local.",
+        description: "CIDERE fue partícipe de la inauguración de La Recova en 1981, centro importante del comercio local.",
         image: "/images/slider/la-recova-la-serena.webp"
     },
     {
         year: "Años 80",
         title: "Terminal Pesquero de La Serena",
-        description: "Cidere con recursos propios financió la construcción del Terminal Pesquero de La Serena.",
+        description: "CIDERE con recursos propios financió la construcción del Terminal Pesquero de La Serena.",
         image: "/images/slider/terminal-pesquero-la-serena.webp"
     },
     {
         year: "Años 80",
         title: "Ruta al Cerro Grande",
-        description: "El primer camino que permitió acceder al Cerro Grande fue financiado por Cidere.",
+        description: "El primer camino que permitió acceder al Cerro Grande fue financiado por CIDERE.",
         image: "/images/slider/camino-cerro-grande.webp"
     },
     {
         year: "Años 80",
         title: "Aeropuerto La Florida",
-        description: "Después de un intenso temporal a mediados de la década de 1980, Cidere con ayuda de la Cámara Chilena de la Construcción, colaboró en la construcción de una pista alternativa en el Aeropuerto La Florida.",
+        description: "Después de un intenso temporal a mediados de la década de 1980, CIDERE con ayuda de la Cámara Chilena de la Construcción, colaboró en la construcción de una pista alternativa en el Aeropuerto La Florida.",
         image: "/images/slider/aeropuerto-la-florida.webp"
     },
     {
         year: "2024",
-        title: "Transformación Digital de Cidere",
-        description: "Se lanzó el primer piloto de la plataforma Red de Socios Cidere (RDS), permitiendo que los socios puedan fortalecer su colaboración para el desarrollo de la región.",
+        title: "Transformación Digital de CIDERE",
+        description: "Se lanzó el primer piloto de la plataforma Red de Socios CIDERE (RDS), permitiendo que los socios puedan fortalecer su colaboración para el desarrollo de la región.",
         image: "/assets/logos/RDS-LOGO-VERTICAL-01.png",
         isLogo: true
     },
     {
         year: "2026",
         title: "50 Aniversario",
-        description: "Cidere cumple Medio siglo de presencia en la región, con 94 empresas socias y una visión clara hacia el desarrollo sostenible de la región.",
+        description: "CIDERE cumple Medio siglo de presencia en la región, con 94 empresas socias y una visión clara hacia el desarrollo sostenible de la región.",
         image: "/images/slider/Slide2VerSocios.webp"
     }
 ];
@@ -74,8 +74,8 @@ const HitosPage = () => {
                 </div>
 
                 <div className="relative z-10">
-                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 italic uppercase tracking-tighter">
-                        Hitos de Nuestra Historia
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+                        Hitos <span className="text-blue-500">Históricos</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl max-w-2xl mx-auto font-medium">
                         50 años creando región
