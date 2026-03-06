@@ -8,9 +8,10 @@ interface MemberProps {
     role: string;
     company: string;
     image?: string;
+    imageClass?: string;
 }
 
-const MemberCard = ({ name, role, company, image }: MemberProps) => {
+const MemberCard = ({ name, role, company, image, imageClass = "" }: MemberProps) => {
     const [isTouched, setIsTouched] = useState(false);
 
     return (
@@ -27,7 +28,7 @@ const MemberCard = ({ name, role, company, image }: MemberProps) => {
                 <img
                     src={image || "https://via.placeholder.com/400x500?text=Foto+Proximamente"}
                     alt={name}
-                    className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${isTouched ? 'scale-110' : ''}`}
+                    className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${isTouched ? 'scale-110' : ''} ${imageClass}`}
                 />
 
                 {/* Overlay que aparece al hacer hover*/}

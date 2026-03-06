@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logoCidere from "@/assets/logos/logo-full.png";
+import logoCidere from "@/assets/logos/LOGOS CIDERE SIN PALA-02.png";
 
 const Footer = () => {
 
@@ -43,28 +43,36 @@ const Footer = () => {
     return (
         <footer className="relative overflow-hidden">
             {/* Sección Principal*/}
-            <div className="bg-gradient-to-br from-primary via-blue-900 to-[#0a192f] text-white pt-16 pb-16 relative z-10">
+            <div className="bg-gradient-to-br from-primary via-blue-900 to-[#0a192f] text-white pt-8 pb-8 relative z-10">
                 {/* Destello elegante de fondo */}
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                         {/* Columna 1: Identidad*/}
-                        <div className="space-y-6">
+                        <div className="space-y-6 flex flex-col items-start justify-center h-full">
                             <Image
                                 src={logoCidere}
                                 alt="CIDERE Coquimbo"
-                                width={160}
-                                height={57}
-                                className="brightness-0 invert opacity-90 transition-all hover:opacity-100"
+                                width={400}
+                                height={400}
+                                className="brightness-0 invert opacity-90 transition-all hover:opacity-100 w-[180px] md:w-[240px] lg:w-[320px] xl:w-[360px] h-auto object-contain"
                             />
-                            <p className="text-gray-200 text-sm leading-relaxed max-w-xs">
-                                Fomentando el desarrollo industrial y el crecimiento sostenible de la Región de Coquimbo.
-                            </p>
                         </div>
 
-                        {/* Columna 2: Contacto */}
-                        <div>
+                        {/* Columna 2: Sitios de Interés*/}
+                        <div className="lg:pl-8">
+                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Sitios de Interés</h3>
+                            <ul className="space-y-4 text-sm text-gray-200">
+                                <li><Link href="https://rdscidere.cl" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200"><span className="text-secondary mr-2">›</span>Red de Socios CIDERE</Link></li>
+                                <li><Link href="https://www.sofofa.cl/" target="_blank" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200"><span className="text-secondary mr-2">›</span>SOFOFA</Link></li>
+                                <li><Link href="https://www.gorecoquimbo.cl/" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200"><span className="text-secondary mr-2">›</span>GORE Coquimbo</Link></li>
+                                <li><Link href="https://espacioindustria.cl/" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200"><span className="text-secondary mr-2">›</span>Espacio Industrial Minero</Link></li>
+                            </ul>
+                        </div>
+
+                        {/* Columna 3: Contacto */}
+                        <div className="lg:pl-4">
                             <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Contacto</h3>
                             <ul className="space-y-4 text-sm text-gray-200">
                                 <li className="flex items-start">
@@ -73,17 +81,17 @@ const Footer = () => {
                                 </li>
                                 <li className="flex items-center">
                                     <span className="text-secondary mr-3">📞</span>
-                                    <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">{contactInfo.phone}</a>
+                                    <span>{contactInfo.phone}</span>
                                 </li>
                                 <li className="flex items-center">
                                     <span className="text-secondary mr-3">✉️</span>
-                                    <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">{contactInfo.email}</a>
+                                    <span>{contactInfo.email}</span>
                                 </li>
                             </ul>
                         </div>
 
-                        {/* Columna 3: Redes Sociales*/}
-                        <div className="lg:pl-8">
+                        {/* Columna 4: Redes Sociales*/}
+                        <div className="lg:pl-4">
                             <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Redes Sociales</h3>
                             <div className="flex flex-wrap gap-4">
                                 {socialLinks.map((social) => (

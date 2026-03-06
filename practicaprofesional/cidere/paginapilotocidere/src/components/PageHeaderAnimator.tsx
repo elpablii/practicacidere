@@ -8,9 +8,10 @@ interface PageHeaderAnimatorProps {
     className?: string;
     id?: string;
     bgImage?: string;
+    imagePosition?: string;
 }
 
-export const PageHeaderAnimator: React.FC<PageHeaderAnimatorProps> = ({ children, className = "", id, bgImage }) => {
+export const PageHeaderAnimator: React.FC<PageHeaderAnimatorProps> = ({ children, className = "", id, bgImage, imagePosition = "object-[center_70%]" }) => {
     return (
         <motion.section
             id={id}
@@ -25,7 +26,7 @@ export const PageHeaderAnimator: React.FC<PageHeaderAnimatorProps> = ({ children
                     <img
                         src={bgImage}
                         alt="Fondo Cabecera"
-                        className="w-full h-full object-cover object-[center_70%]"
+                        className={`w-full h-full object-cover ${imagePosition}`}
                     />
                 </div>
             )}

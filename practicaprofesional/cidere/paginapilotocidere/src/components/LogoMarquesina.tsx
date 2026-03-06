@@ -11,7 +11,7 @@ const sociosLogos = [
     "/images/socios/Angela.webp",
     "/images/socios/Barrick.webp",
     "/images/socios/BOHON.webp",
-    "/images/socios/brac.webp",
+    "/images/socios/BRAC.webp",
     "/images/socios/CA.webp",
     "/images/socios/CAHO.webp",
     "/images/socios/CALLEGARI.webp",
@@ -59,7 +59,7 @@ const sociosLogos = [
     "/images/socios/NAPOLEON.webp",
     "/images/socios/Norte-Verde-1.webp",
     "/images/socios/NORTH.webp",
-    "/images/socios/notaria-henriquez.webp",
+    "/images/socios/NOTARIA-HENRIQUEZ.webp",
     "/images/socios/Nutriser.webp",
     "/images/socios/OLMUE.webp",
     "/images/socios/OPTICA.webp",
@@ -105,8 +105,8 @@ const sociosLogos = [
 
 const LogoMarquee = () => {
     return (
-        <section className="py-12 bg-white overflow-hidden border-y border-gray-100">
-            <div className="max-w-7xl mx-auto px-6 mb-8 flex justify-between items-end">
+        <section className="pt-12 pb-4 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 mb-6 flex justify-between items-end">
                 <div>
                     <h2 className="text-primary text-3xl font-bold">Nuestros Socios</h2>
 
@@ -116,7 +116,7 @@ const LogoMarquee = () => {
                 </a>
             </div>
 
-            <div className="relative flex overflow-x-hidden group" style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}>
+            <div className="bg-white py-8 border-y border-gray-100 relative flex overflow-x-hidden group" style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}>
                 {/* Primera Fila de Logos */}
                 <div className="flex animate-marquee whitespace-nowrap gap-16 md:gap-24 items-center">
                     {sociosLogos.map((logo, index) => (

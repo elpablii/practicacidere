@@ -59,10 +59,7 @@ const Identity = () => {
                             />
                             <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
 
-                            {/* Icono*/}
-                            <div className={`absolute -bottom-6 left-8 md:left-10 w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-[1.5rem] bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform duration-500 z-10`}>
-                                {item.icon}
-                            </div>
+                            {/* Icono Removido */}
                         </div>
 
                         {/* Contenido del Texto */}
@@ -97,9 +94,7 @@ const Identity = () => {
                 <div className="relative z-10 p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
                     <div className="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-                        <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-xl transform -rotate-3 group-hover:rotate-0 transition-transform duration-500">
-                            {propuesta.icon}
-                        </div>
+                        {/* Icono Removido */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-tight">
                             Propuesta <br className="hidden lg:block" /> de Valor
                         </h2>

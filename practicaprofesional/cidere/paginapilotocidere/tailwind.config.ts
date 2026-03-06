@@ -8,6 +8,10 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['var(--font-body)', 'sans-serif'],
+                title: ['var(--font-title)', 'sans-serif'],
+            },
             keyframes: {
                 'slow-zoom': {
                     '0%': { transform: 'scale(1)' },

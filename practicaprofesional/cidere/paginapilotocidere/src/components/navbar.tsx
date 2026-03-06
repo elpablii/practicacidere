@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import logoCidere from "@/assets/logos/CIDERE Región de Coquimbo.png";
+import logoCidere from "@/assets/logos/LOGOS CIDERE SIN PALA_Mesa de trabajo 1.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -53,7 +53,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center h-full">
                         <Link href="/" onClick={closeAll}>
-                            <Image src={logoCidere} alt="Logo CIDERE" width={220} height={75} priority className="cursor-pointer w-[140px] md:w-[220px] h-auto" />
+                            <Image src={logoCidere} alt="Logo CIDERE" width={260} height={85} priority className="cursor-pointer w-[160px] md:w-[260px] h-auto" />
                         </Link>
                     </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             href="/"
-                            className={`font-medium transition-colors ${isActive('/') ? 'text-primary' : 'text-primary hover:text-primary/80'}`}
+                            className={`font-bold transition-colors ${isActive('/') ? 'text-primary' : 'text-primary hover:text-primary/80'}`}
                         >
                             Inicio
                         </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
                                     e.preventDefault();
                                     setIsDropdownOpen(!isDropdownOpen);
                                 }}
-                                className={`flex items-center font-medium transition-colors py-2 focus:outline-none group text-primary`}
+                                className={`flex items-center font-bold transition-colors py-2 focus:outline-none group text-primary`}
                             >
                                 <span className="relative">
                                     Quiénes Somos
@@ -88,23 +88,20 @@ const Navbar = () => {
                                 </svg>
                             </button>
 
-                            <div className={`absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-4 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
-                                <Link href="/nosotros#mision" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Lineamientos estratégicos</Link>
-                                <Link href="/nosotros/directorio#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Directorio</Link>
-                                <Link href="/nosotros/equipo#equipo" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Equipo</Link>
-                                <Link href="/nosotros/objetivos#objetivos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Nuestros ejes</Link>
-                                <Link href="/nosotros/hitos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">Hitos emblemáticos</Link>
-                                <Link
-                                    href="/hazte-socio"
-                                    onClick={closeAll}
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100">
-                                    Hazte socio
-                                </Link>
-                                <div className="border-t border-gray-100 my-3 mx-4"></div>
-                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm font-medium ${isActive('/socios') ? 'text-primary' : 'text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-semibold border-t border-gray-100'}`}>Nuestros socios</Link>
+                            <div className={`absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-2xl py-3 transition-all duration-300 ${isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
+                                <Link href="/nosotros#mision" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1 transition-all duration-200 font-semibold rounded-lg mx-2 mb-1">Lineamientos estratégicos</Link>
+                                <Link href="/nosotros/directorio#directorio" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1 transition-all duration-200 font-semibold rounded-lg mx-2 mb-1">Directorio</Link>
+                                <Link href="/nosotros/equipo#equipo" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1 transition-all duration-200 font-semibold rounded-lg mx-2 mb-1">Equipo</Link>
+                                <Link href="/nosotros/objetivos#objetivos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1 transition-all duration-200 font-semibold rounded-lg mx-2 mb-1">Nuestros ejes</Link>
+                                <Link href="/nosotros/hitos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1 transition-all duration-200 font-semibold rounded-lg mx-2">Hitos emblemáticos</Link>
+                                <div className="border-t border-gray-100 my-2 mx-4"></div>
+                                <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm transition-all duration-200 font-semibold rounded-lg mx-2 ${isActive('/socios') ? 'text-primary bg-primary/10' : 'text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1'}`}>Nuestros socios</Link>
                             </div>
                         </div>
 
+                        <Link href="/hazte-socio" className={`px-5 py-2 rounded-full font-bold transition-all shadow-sm border-2 ${isActive('/hazte-socio') ? 'border-primary bg-primary text-white' : 'border-primary text-primary hover:bg-primary hover:text-white'}`}>
+                            Hazte socio
+                        </Link>
                         <Link href="/contacto" className={`px-6 py-2.5 rounded-full font-semibold transition-all shadow-md ${isActive('/contacto') ? 'bg-primary text-white' : 'bg-primary/10 text-primary hover:bg-primary hover:text-white'}`}>
                             Contacto
                         </Link>
@@ -135,7 +132,7 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className="flex-1 space-y-2 overflow-y-auto pr-2">
-                            <Link href="/" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Inicio</Link>
+                            <Link href="/" className={`block px-4 py-3 rounded-xl font-bold ${isActive('/') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Inicio</Link>
 
                             <div className="space-y-1">
                                 <button
@@ -144,27 +141,27 @@ const Navbar = () => {
                                         e.stopPropagation();
                                         setIsMobileDropdownOpen(!isMobileDropdownOpen);
                                     }}
-                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-medium transition-all select-none ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
+                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-bold transition-all select-none ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
                                 >
                                     Quiénes Somos
                                     <svg className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ${isMobileDropdownOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                    <div className="pl-6 py-2 space-y-4 text-sm text-gray-600">
-                                        <Link href="/nosotros#mision" className="block hover:text-primary" onClick={closeAll}>Lineamientos estratégicos</Link>
-                                        <Link href="/nosotros/directorio#directorio" className="block hover:text-primary" onClick={closeAll}>Directorio</Link>
-                                        <Link href="/nosotros/equipo#equipo" className="block hover:text-primary" onClick={closeAll}>Equipo</Link>
-                                        <Link href="/nosotros/objetivos#objetivos" className="block hover:text-primary" onClick={closeAll}>Nuestros ejes</Link>
-                                        <Link href="/nosotros/hitos" className="block hover:text-primary" onClick={closeAll}>Hitos emblemáticos</Link>
-                                        <Link href="/hazte-socio" className="block hover:text-primary" onClick={closeAll}>Hazte socio</Link>
+                                    <div className="pl-4 py-2 space-y-1 text-sm text-gray-600">
+                                        <Link href="/nosotros#mision" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Lineamientos estratégicos</Link>
+                                        <Link href="/nosotros/directorio#directorio" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Directorio</Link>
+                                        <Link href="/nosotros/equipo#equipo" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Equipo</Link>
+                                        <Link href="/nosotros/objetivos#objetivos" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros ejes</Link>
+                                        <Link href="/nosotros/hitos" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Hitos emblemáticos</Link>
                                     </div>
                                 </div>
                             </div>
 
                             <Link href="/socios#socios" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Nuestros socios</Link>
                         </div>
-                        <div className="mt-auto pt-6 border-t border-gray-100">
+                        <div className="mt-auto pt-6 space-y-3 border-t border-gray-100">
+                            <Link href="/hazte-socio" className="w-full block text-center border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors py-3 rounded-xl font-bold shadow-sm" onClick={closeAll}>Hazte socio</Link>
                             <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg" onClick={closeAll}>Contacto</Link>
                         </div>
                     </div>

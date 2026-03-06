@@ -57,9 +57,12 @@ const EquipoPage = () => {
             {/* Header de la Sección */}
             <PageHeaderAnimator id="equipo" bgImage="/images/slider/equipocidere.webp" className="bg-primary pt-32 pb-16 px-4 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto text-center relative z-10">
-                    <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-4">
+                    <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
                         Equipo
                     </h1>
+                    <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+                        Equipo multidisciplinario comprometido con la excelencia y el desarrollo regional.
+                    </p>
                 </div>
                 {/* Estilo local para forzar a equipocidere.webp a no cortar cabezas (enfoca los rostros) */}
                 <style dangerouslySetInnerHTML={{

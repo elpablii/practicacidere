@@ -15,12 +15,14 @@ const DirectorioPage = () => {
             role: "Presidente",
             company: "Grupo El Día",
             image: "/images/directorio/presidente-franciscopuga.webp",
+            imageClass: "scale-[1.0] translate-y-0",
         },
         {
             name: "Luis Carmona Amenábar",
             role: "Vicepresidente",
             company: "West Rent a Car",
             image: "/images/directorio/vicepresidente-luiscarmona.webp",
+            imageClass: "scale-[1.2] translate-y-6",
         },
         {
             name: "Gastón Yver Hudson",
@@ -45,12 +47,13 @@ const DirectorioPage = () => {
             role: "Director",
             company: "Dalbosco Hermanos y Cia Ltda.",
             image: "/images/directorio/director-francodalbosco.webp",
+            imageClass: "scale-[1.0] translate-y-0",
         },
     ];
 
     return (
         <div className="bg-transparent min-h-screen">
-            <PageHeaderAnimator id="directorio" bgImage="/images/slider/Imagen7.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator id="directorio" bgImage="/images/slider/foto-banner-directorio-1.webp" imagePosition="object-[center_30%]" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-5xl mx-auto relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">

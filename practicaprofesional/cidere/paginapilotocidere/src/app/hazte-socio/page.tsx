@@ -8,6 +8,7 @@ import {
     ShieldCheckIcon,
     GlobeAltIcon
 } from "@heroicons/react/24/outline";
+import { socios } from "@/data/socios";
 
 export const metadata: Metadata = {
     title: "Hazte Socio - CIDERE",
@@ -18,7 +19,7 @@ const HazteSocio = () => {
     const pilares = [
         {
             title: "Fuerza Asociativa Regional",
-            desc: "Intégrese a una red consolidada de 97 empresas que participan en la productividad de Coquimbo.",
+            desc: `Intégrese a una red consolidada de ${socios.length} empresas que participan en la productividad de Coquimbo.`,
             icon: <ShieldCheckIcon className="w-8 h-8" />,
             image: "/images/slider/Imagen17.webp"
         },
@@ -45,7 +46,7 @@ const HazteSocio = () => {
     return (
         <div className="bg-white min-h-screen">
 
-            <PageHeaderAnimator id="hazte-socio" bgImage="/images/slider/Imagen16.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator id="hazte-socio" bgImage="/images/slider/foto-banner-directorio-2.webp" imagePosition="object-center" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-4xl mx-auto relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
