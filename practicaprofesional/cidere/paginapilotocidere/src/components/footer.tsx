@@ -7,7 +7,7 @@ const Footer = () => {
 
     const contactInfo = {
         address: "Matta 461, oficina 103, La Serena",
-        phone: "+56 9 5728 8408",
+        phone: "+5651-2 223 090",
         email: "cidere@cidere.cl",
         whatsapp: "https://wa.me/56957288408"
     };

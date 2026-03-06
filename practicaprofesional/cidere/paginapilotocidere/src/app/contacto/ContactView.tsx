@@ -38,7 +38,7 @@ const ContactView = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-slate-900 mb-1 text-xl">Teléfono:</h3>
-                                    <a href="tel:+56512223090" className="hover:text-primary transition-colors block">+56 9 5728 8408</a>
+                                    <a href="tel:+56512223090" className="hover:text-primary transition-colors block">+5651-2 223 090</a>
                                 </div>
                             </div>
 

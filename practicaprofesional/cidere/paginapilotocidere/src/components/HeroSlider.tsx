@@ -78,7 +78,7 @@ const HeroSlider = () => {
     }, [current]);
 
     return (
-        <section className="relative w-full max-w-[1920px] mx-auto h-[400px] md:h-[525px] lg:h-[600px] bg-gray-900 overflow-hidden">
+        <section className="relative w-full max-w-[1920px] mx-auto h-[240px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] bg-gray-900 overflow-hidden">
 
             {/* SLIDES */}
             {slides.map((slide, index) => (
@@ -93,7 +93,7 @@ const HeroSlider = () => {
                             <img
                                 src={slide.image}
                                 alt={`Slide ${slide.id}`}
-                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-cover object-bottom' : 'object-cover'}`}
+                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-cover object-center md:object-bottom md:scale-100' : 'object-cover'}`}
                             />
                         )}
 
@@ -103,12 +103,12 @@ const HeroSlider = () => {
                     </div>
 
 
-                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-8 lg:pb-12 xl:pb-16' : 'items-center'}`}>
+                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-4 sm:pb-12 lg:pb-20 xl:pb-24' : 'items-center'}`}>
                         <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
                             <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'}`}>
 
                                 {slide.badge && (
-                                    <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-6">
+                                    <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-3 sm:mb-6">
                                         <span className="text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest">
                                             {slide.badge}
                                         </span>
@@ -116,24 +116,24 @@ const HeroSlider = () => {
                                 )}
 
                                 {slide.title && (
-                                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-5 drop-shadow-lg"
+                                    <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-2 sm:mb-5 drop-shadow-lg"
                                         dangerouslySetInnerHTML={{ __html: slide.title }}
                                     />
                                 )}
 
 
                                 {slide.desc && (
-                                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-8 leading-relaxed max-w-xl drop-shadow-md">
+                                    <p className="text-xs sm:text-base md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-8 leading-relaxed max-w-xl drop-shadow-md">
                                         {slide.desc}
                                     </p>
                                 )}
 
 
-                                <div className={`flex ${slide.id === 1 ? 'justify-center' : 'flex-col sm:flex-row'} gap-4`}>
+                                <div className={`flex ${slide.id === 1 ? 'justify-center' : 'flex-col sm:flex-row'} gap-2 sm:gap-4`}>
                                     {slide.primaryBtn.text && (
                                         <Link
                                             href={slide.primaryBtn.link}
-                                            className="px-8 py-4 bg-white text-primary font-bold rounded-xl text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95"
+                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white text-primary font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95"
                                         >
                                             {slide.primaryBtn.text}
                                         </Link>
@@ -141,7 +141,7 @@ const HeroSlider = () => {
                                     {slide.secondaryBtn.text && (
                                         <Link
                                             href={slide.secondaryBtn.link}
-                                            className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-xl text-center hover:bg-white/20 transition-all active:scale-95"
+                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-white/20 transition-all active:scale-95"
                                         >
                                             {slide.secondaryBtn.text}
                                         </Link>
