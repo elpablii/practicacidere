@@ -78,7 +78,7 @@ const HeroSlider = () => {
     }, [current]);
 
     return (
-        <section className="relative w-full max-w-[1920px] mx-auto h-[600px] md:h-[800px] bg-gray-900 overflow-hidden">
+        <section className="relative w-full max-w-[1920px] mx-auto h-[400px] md:h-[525px] lg:h-[600px] bg-gray-900 overflow-hidden">
 
             {/* SLIDES */}
             {slides.map((slide, index) => (
@@ -93,7 +93,7 @@ const HeroSlider = () => {
                             <img
                                 src={slide.image}
                                 alt={`Slide ${slide.id}`}
-                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-contain' : 'object-cover'}`}
+                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-cover object-bottom' : 'object-cover'}`}
                             />
                         )}
 
@@ -103,7 +103,7 @@ const HeroSlider = () => {
                     </div>
 
 
-                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-12 sm:pb-20' : 'items-center'}`}>
+                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-8 lg:pb-12 xl:pb-16' : 'items-center'}`}>
                         <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
                             <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'}`}>
 
