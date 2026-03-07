@@ -8,8 +8,8 @@ import { socios } from "@/data/socios";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Socios Asociados - CIDERE",
-    description: "Red de empresas asociadas a CIDERE Región de Coquimbo.",
+    title: "Nuestros socios - CIDERE",
+    description: "Explora las empresas que forman parte de la Red de Socios CIDERE.",
 };
 
 const SociosPage = () => {

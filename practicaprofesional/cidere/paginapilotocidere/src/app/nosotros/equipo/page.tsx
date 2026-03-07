@@ -4,7 +4,7 @@ import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Equipo CIDERE - CIDERE",
+    title: "Equipo - CIDERE",
     description: "Conoce al equipo profesional y administrativo que lidera la gestión de CIDERE.",
 };
 

@@ -7,7 +7,8 @@ const Footer = () => {
 
     const contactInfo = {
         address: "Matta 461, oficina 103, La Serena",
-        phone: "+5651-2 223 090",
+        phone1: "+5651-2 223 090",
+        phone2: "+56 9 5728 8408",
         email: "cidere@cidere.cl",
         whatsapp: "https://wa.me/56957288408"
     };
@@ -81,7 +82,11 @@ const Footer = () => {
                                 </li>
                                 <li className="flex items-center">
                                     <span className="text-secondary mr-3">📞</span>
-                                    <span>{contactInfo.phone}</span>
+                                    <span>{contactInfo.phone1}</span>
+                                </li>
+                                <li className="flex items-center">
+                                    <span className="text-secondary mr-3">📞</span>
+                                    <span>{contactInfo.phone2}</span>
                                 </li>
                                 <li className="flex items-center">
                                     <span className="text-secondary mr-3">✉️</span>

@@ -96,6 +96,7 @@ const Navbar = () => {
                                 <Link href="/nosotros/hitos" onClick={closeAll} className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1 transition-all duration-200 font-semibold rounded-lg mx-2">Hitos emblemáticos</Link>
                                 <div className="border-t border-gray-100 my-2 mx-4"></div>
                                 <Link href="/socios" onClick={closeAll} className={`block px-4 py-2 text-sm transition-all duration-200 font-semibold rounded-lg mx-2 ${isActive('/socios') ? 'text-primary bg-primary/10' : 'text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1'}`}>Nuestros socios</Link>
+                                <Link href="/rds" onClick={closeAll} className={`block px-4 py-2 text-sm transition-all duration-200 font-semibold rounded-lg mx-2 ${isActive('/rds') ? 'text-primary bg-primary/10' : 'text-gray-600 hover:text-primary hover:bg-primary/5 hover:translate-x-1'}`}>Plataforma RDS</Link>
                             </div>
                         </div>
 
@@ -154,6 +155,8 @@ const Navbar = () => {
                                         <Link href="/nosotros/equipo#equipo" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Equipo</Link>
                                         <Link href="/nosotros/objetivos#objetivos" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros ejes</Link>
                                         <Link href="/nosotros/hitos" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Hitos emblemáticos</Link>
+                                        <Link href="/socios" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros socios</Link>
+                                        <Link href="/rds" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Plataforma RDS</Link>
                                     </div>
                                 </div>
                             </div>

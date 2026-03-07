@@ -4,8 +4,8 @@ import Identity from "@/components/identity";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Misión, Visión y Propuesta de Valor - CIDERE",
-    description: "Conoce la misión, visión y propuesta de valor de CIDERE Región de Coquimbo.",
+    title: "Lineamientos estratégicos - CIDERE",
+    description: "Conoce los lineamientos estratégicos que rigen nuestra organización.",
 };
 
 export default function NosotrosPage() {

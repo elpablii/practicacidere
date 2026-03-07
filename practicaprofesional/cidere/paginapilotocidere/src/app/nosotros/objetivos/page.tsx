@@ -1,5 +1,6 @@
-import React from "react";
-import { Metadata } from "next";
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
 import {
     CurrencyDollarIcon,
@@ -9,11 +10,6 @@ import {
     MegaphoneIcon,
     PuzzlePieceIcon
 } from "@heroicons/react/24/outline";
-
-export const metadata: Metadata = {
-    title: "Nuestros Ejes - CIDERE",
-    description: "Objetivos y ejes estratégicos de CIDERE para el desarrollo regional.",
-};
 
 const ejes = [
     {
@@ -85,6 +81,8 @@ const ejes = [
 ];
 
 const ObjetivosPage = () => {
+    const [activeCardId, setActiveCardId] = useState<string | null>(null);
+
     return (
         <main className="min-h-screen bg-transparent overflow-x-hidden">
             {/* Header Institucional */}
@@ -100,49 +98,59 @@ const ObjetivosPage = () => {
                 </div>
             </PageHeaderAnimator>
 
-            {/* Layout Alternado tipo "Feature" para que predominen las fotos */}
-            <section className="py-24 px-4 md:px-6 max-w-7xl mx-auto space-y-32">
-                {ejes.map((eje, index) => (
-                    <div key={index} className={`flex flex-col gap-12 items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                        {/* IMAGEN (50%) */}
-                        <div className="w-full lg:w-1/2">
-                            <div className="relative group overflow-hidden rounded-[2.5rem] shadow-2xl shadow-slate-300/50 aspect-[4/3]">
-                                <img
-                                    src={eje.image}
-                                    alt={eje.titulo}
-                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                />
-                                {/* Gradiente Oscuro Superpuesto para el título inferior */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Layout Grid de Tarjetas Animadas Overlay */}
+            <section className="py-24 px-4 md:px-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    {ejes.map((eje, index) => {
+                        const isActive = activeCardId === eje.titulo;
+                        return (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                                key={index}
+                                onClick={() => setActiveCardId(isActive ? null : eje.titulo)}
+                                className={`group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] hover:shadow-2xl`}
+                            >
+                                {/* IMAGEN DE FONDO (Fija, se oscurece al abrir) */}
+                                <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                                    <img
+                                        src={eje.image}
+                                        alt={eje.titulo}
+                                        className={`w-full h-full object-cover transition-transform duration-1000 ${isActive ? "scale-110" : "scale-100 lg:group-hover:scale-110"}`}
+                                    />
+                                    {/* Overlay base oscuro inferior */}
+                                    <div className={`absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/30 to-transparent transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-100 lg:group-hover:opacity-0"}`}></div>
+                                    {/* Overlay Blur Fuerte (Aparece encima) */}
+                                    <div className={`absolute inset-0 bg-slate-900/85 backdrop-blur-md transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0 lg:group-hover:opacity-100"}`}></div>
+                                </div>
 
-                            </div>
-                        </div>
+                                {/* Título/Icono Base (Visibles en modo reposo, desaparecen en hover/click) */}
+                                <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 lg:group-hover:opacity-0 lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"}`}>
+                                    <div className={`mb-4 w-14 h-14 rounded-2xl flex items-center justify-center ${eje.bgIcon} ${eje.color} shadow-lg shrink-0`}>
+                                        {eje.icon}
+                                    </div>
+                                    <h2 className="text-3xl font-black text-white uppercase tracking-tight drop-shadow-md">
+                                        {eje.titulo}
+                                    </h2>
+                                </div>
 
-                        {/* CONTENIDO (50%) */}
-                        <div className="w-full lg:w-1/2 lg:px-8">
-                            <div className={`mb-8 w-20 h-20 rounded-2xl flex items-center justify-center ${eje.bgIcon} ${eje.color} shadow-sm group-hover:-translate-y-2 transition-transform duration-500`}>
-                                {eje.icon}
-                            </div>
-
-                            <h4 className="text-2xl font-bold text-slate-800 mb-6 uppercase tracking-tight">{eje.titulo}</h4>
-                            <p className="text-slate-600 text-lg mb-10 leading-relaxed font-medium">
-                                {eje.desc}
-                            </p>
-
-                            <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/40">
-                                <h5 className="text-sm font-black text-slate-400 uppercase tracking-widest mb-6">Iniciativas Destacadas</h5>
-                                <ul className="space-y-5">
-                                    {eje.items.map((item, i) => (
-                                        <li key={i} className="flex items-start text-slate-700 font-semibold md:text-lg">
-                                            <span className={`w-3.5 h-3.5 rounded-full mt-1.5 mr-4 flex-shrink-0 ${eje.bullet} shadow-md`}></span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                                {/* Contenido Descriptivo Overlay (Aparece centrado sobre el blur) */}
+                                <div className={`absolute inset-0 w-full h-full flex flex-col justify-center p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"}`}>
+                                    <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight shrink-0 drop-shadow-md">
+                                        {eje.titulo}
+                                    </h2>
+                                    <div className="overflow-y-auto pr-2 custom-scrollbar">
+                                        <p className="text-blue-50 text-base md:text-lg leading-relaxed font-medium text-justify drop-shadow-sm">
+                                            {eje.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
+                </div>
             </section>
         </main>
     );
