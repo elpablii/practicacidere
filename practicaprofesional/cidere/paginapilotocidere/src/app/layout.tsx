@@ -27,6 +27,14 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className={`${montserrat.variable} ${outfit.variable} font-sans antialiased flex flex-col min-h-screen relative`}>
+        {/* Enlace de Salto Global (A11y) */}
+        <a
+          href="#main-content"
+          className="absolute -translate-y-full focus:translate-y-0 z-[100] bg-primary text-white font-bold p-4 px-6 rounded-br-2xl shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-secondary transition-transform duration-300 left-0 top-0 hidden sm:block"
+        >
+          Saltar al contenido
+        </a>
+
         {/* Fondo Global Animado Institucional Premium */}
         <div className="fixed inset-0 z-[-1] overflow-hidden bg-slate-50 pointer-events-none">
           {/* Círculo Principal Arriba a la Derecha */}
@@ -43,7 +51,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* El contenido principal que "empuja" al footer hacia abajo si hay poco texto */}
-        <main className="flex-grow pt-20">
+        <main id="main-content" className="flex-grow pt-20 focus:outline-none" tabIndex={-1}>
           {children}
         </main>
 

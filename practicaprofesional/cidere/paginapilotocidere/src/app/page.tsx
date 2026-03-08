@@ -41,7 +41,7 @@ export default function Home() {
 
             {/* 3. Tarjeta de Invitación a Hitos Históricos */}
             <HomeItem className="max-w-4xl mx-auto px-4 md:px-6">
-              <Link href="/nosotros/hitos">
+              <Link href="/nosotros/hitos" className="block focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-white rounded-[2rem]">
                 <div className="group relative overflow-hidden rounded-[2rem] px-8 py-16 md:px-12 md:py-20 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 border border-blue-900/30 flex flex-col md:flex-row items-center gap-8 min-h-[350px] md:min-h-[400px]">
 
                   <div className="absolute inset-0 z-0">

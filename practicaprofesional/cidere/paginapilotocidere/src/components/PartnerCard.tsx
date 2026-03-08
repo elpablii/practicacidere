@@ -26,7 +26,7 @@ const PartnerCard = ({ logo, url, name }: PartnerProps) => {
         className: `group relative flex items-center justify-center 
                     p-3 md:p-6 bg-white border border-gray-100 
                     rounded-2xl transition-all duration-500 
-                    hover:shadow-2xl hover:-translate-y-2 active:scale-95 shadow-sm overflow-hidden
+                    hover:shadow-2xl hover:-translate-y-2 active:scale-95 shadow-sm overflow-hidden focus:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2
                     ${url ? 'cursor-pointer' : 'cursor-default'}`
     };
 

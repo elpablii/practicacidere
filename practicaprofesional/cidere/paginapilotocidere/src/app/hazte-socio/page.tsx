@@ -81,7 +81,7 @@ const HazteSocio = () => {
                         Sea parte de una red consolidada de {socios.length} empresas que participan en el desarrollo de la Región de Coquimbo.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="https://rdscidere.cl" target="_blank" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1">
+                        <Link href="https://rdscidere.cl" target="_blank" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary">
                             Postula aquí
                         </Link>
                     </div>
@@ -107,8 +107,17 @@ const HazteSocio = () => {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                                 key={index}
+                                role="button"
+                                tabIndex={0}
+                                aria-expanded={isActive}
                                 onClick={() => setActiveCardId(isActive ? null : item.title)}
-                                className={`group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] hover:shadow-2xl`}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        setActiveCardId(isActive ? null : item.title);
+                                    }
+                                }}
+                                className={`group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2`}
                             >
                                 {/* IMAGEN DE FONDO (Fija, se oscurece al abrir) */}
                                 <div className={`absolute inset-0 w-full h-full z-0 overflow-hidden ${item.isLogo ? 'bg-slate-100 flex items-center justify-center p-10 md:p-14' : ''}`}>
@@ -186,8 +195,8 @@ const HazteSocio = () => {
                                 Súmate a la principal red empresarial de la Región de Coquimbo. Completa el formulario de postulación a través de nuestra Plataforma RDS.
                             </p>
 
-                            <Link href="https://rdscidere.cl" target="_blank" className="bg-white text-primary hover:bg-slate-100 hover:text-blue-700 font-black text-xl py-5 px-12 md:px-16 rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-2xl">
-                                Postula aquí
+                            <Link href="https://rdscidere.cl" target="_blank" className="bg-white text-primary hover:bg-slate-100 hover:text-blue-700 font-black text-xl py-5 px-12 md:px-16 rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary">
+                                Postula Aquí
                             </Link>
                         </div>
                     </motion.div>

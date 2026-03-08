@@ -60,8 +60,17 @@ const Identity = () => {
                             transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
                             key={item.id}
                             id={item.id}
+                            role="button"
+                            tabIndex={0}
+                            aria-expanded={isActive}
                             onClick={() => setActiveCardId(isActive ? null : item.id)}
-                            className={`scroll-mt-32 group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] lg:h-[32rem] hover:shadow-2xl`}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    setActiveCardId(isActive ? null : item.id);
+                                }
+                            }}
+                            className={`scroll-mt-32 group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] lg:h-[32rem] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2`}
                         >
                             {/* IMAGEN DE FONDO (Fija, se oscurece al abrir) */}
                             <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">

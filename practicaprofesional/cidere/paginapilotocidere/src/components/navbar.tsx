@@ -61,7 +61,7 @@ const Navbar = () => {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
                             href="/"
-                            className={`font-bold transition-colors ${isActive('/') ? 'text-primary' : 'text-primary hover:text-primary/80'}`}
+                            className={`font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 rounded-md px-1 py-0.5 ${isActive('/') ? 'text-primary' : 'text-primary hover:text-primary/80'}`}
                         >
                             Inicio
                         </Link>
@@ -77,13 +77,15 @@ const Navbar = () => {
                                     e.preventDefault();
                                     setIsDropdownOpen(!isDropdownOpen);
                                 }}
-                                className={`flex items-center font-bold transition-colors py-2 focus:outline-none group text-primary`}
+                                aria-haspopup="true"
+                                aria-expanded={isDropdownOpen}
+                                className={`flex items-center font-bold transition-colors py-2 px-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 rounded-md group text-primary`}
                             >
                                 <span className="relative">
                                     Quiénes Somos
                                     <span className={`absolute left-0 -bottom-1.5 h-[2px] w-full bg-primary transition-transform duration-300 ease-out origin-left ${isDropdownActiveState ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                                 </span>
-                                <svg className={`ml-1.5 w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg aria-hidden="true" className={`ml-1.5 w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
@@ -100,21 +102,26 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <Link href="/hazte-socio" className={`px-5 py-2 rounded-full font-bold transition-all shadow-sm border-2 ${isActive('/hazte-socio') ? 'border-primary bg-primary text-white' : 'border-primary text-primary hover:bg-primary hover:text-white'}`}>
+                        <Link href="/hazte-socio" className={`px-5 py-2 rounded-full font-bold transition-all shadow-sm border-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${isActive('/hazte-socio') ? 'border-primary bg-primary text-white' : 'border-primary text-primary hover:bg-primary hover:text-white'}`}>
                             Hazte socio
                         </Link>
-                        <Link href="/contacto" className={`px-6 py-2.5 rounded-full font-semibold transition-all shadow-md ${isActive('/contacto') ? 'bg-primary text-white' : 'bg-primary/10 text-primary hover:bg-primary hover:text-white'}`}>
+                        <Link href="/contacto" className={`px-6 py-2.5 rounded-full font-semibold transition-all shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${isActive('/contacto') ? 'bg-primary text-white' : 'bg-primary/10 text-primary hover:bg-primary hover:text-white'}`}>
                             Contacto
                         </Link>
                     </div>
 
                     {/* Botón Menú Móvil */}
                     <div className="md:hidden">
-                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-primary p-2 focus:outline-none relative z-50">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-expanded={isMobileMenuOpen}
+                            aria-label="Alternar menú de navegación"
+                            className="text-primary p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-md relative z-50"
+                        >
                             {isMobileMenuOpen ? (
-                                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                                <svg aria-hidden="true" className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                             ) : (
-                                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                                <svg aria-hidden="true" className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16m-7 6h7" /></svg>
                             )}
                         </button>
                     </div>
@@ -128,8 +135,8 @@ const Navbar = () => {
                     <div className="p-6 flex flex-col h-full">
                         <div className="mb-8 flex justify-between items-center border-b border-gray-100 pb-4">
                             <span className="text-xl font-bold text-primary">Navegación</span>
-                            <button onClick={closeAll} className="text-primary">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                            <button onClick={closeAll} className="text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md p-1">
+                                <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                             </button>
                         </div>
                         <div className="flex-1 space-y-2 overflow-y-auto pr-2">
@@ -142,10 +149,12 @@ const Navbar = () => {
                                         e.stopPropagation();
                                         setIsMobileDropdownOpen(!isMobileDropdownOpen);
                                     }}
-                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-bold transition-all select-none ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
+                                    aria-haspopup="true"
+                                    aria-expanded={isMobileDropdownOpen}
+                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-bold transition-all select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
                                 >
                                     Quiénes Somos
-                                    <svg className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                                    <svg aria-hidden="true" className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ${isMobileDropdownOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>

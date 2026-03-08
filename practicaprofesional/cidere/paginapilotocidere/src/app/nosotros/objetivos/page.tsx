@@ -110,8 +110,17 @@ const ObjetivosPage = () => {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                                 key={index}
+                                role="button"
+                                tabIndex={0}
+                                aria-expanded={isActive}
                                 onClick={() => setActiveCardId(isActive ? null : eje.titulo)}
-                                className={`group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] hover:shadow-2xl`}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        setActiveCardId(isActive ? null : eje.titulo);
+                                    }
+                                }}
+                                className={`group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2`}
                             >
                                 {/* IMAGEN DE FONDO (Fija, se oscurece al abrir) */}
                                 <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">

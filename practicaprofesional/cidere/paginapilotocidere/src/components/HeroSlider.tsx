@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const slides = [
@@ -90,10 +91,12 @@ const HeroSlider = () => {
                     {/* IMAGEN DE FONDO */}
                     <div className="absolute inset-0">
                         {slide.image && (
-                            <img
+                            <Image
                                 src={slide.image}
-                                alt={`Slide ${slide.id}`}
-                                className={`w-full h-full ${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-cover object-center md:object-bottom md:scale-100' : 'object-cover'}`}
+                                alt={slide.title ? `Imagen de fondo para: ${slide.title.replace(/<\/?[^>]+(>|$)/g, "")}` : ""}
+                                fill
+                                priority={index === 0}
+                                className={`${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-cover object-center md:object-bottom md:scale-100' : 'object-cover'}`}
                             />
                         )}
 
@@ -133,7 +136,7 @@ const HeroSlider = () => {
                                     {slide.primaryBtn.text && (
                                         <Link
                                             href={slide.primaryBtn.link}
-                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white text-primary font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95"
+                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white text-primary font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                                         >
                                             {slide.primaryBtn.text}
                                         </Link>
@@ -141,7 +144,7 @@ const HeroSlider = () => {
                                     {slide.secondaryBtn.text && (
                                         <Link
                                             href={slide.secondaryBtn.link}
-                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-white/20 transition-all active:scale-95"
+                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-white/20 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                                         >
                                             {slide.secondaryBtn.text}
                                         </Link>
@@ -156,15 +159,15 @@ const HeroSlider = () => {
 
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10"
-                aria-label="Anterior"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
+                aria-label="Anterior slide"
             >
                 <ChevronLeftIcon className="w-6 h-6" />
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10"
-                aria-label="Siguiente"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
+                aria-label="Siguiente slide"
             >
                 <ChevronRightIcon className="w-6 h-6" />
             </button>
@@ -174,7 +177,7 @@ const HeroSlider = () => {
                     <button
                         key={i}
                         onClick={() => setCurrent(i)}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${current === i ? "w-8 bg-white" : "w-2 bg-white/30"
+                        className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${current === i ? "w-8 bg-white" : "w-2 bg-white/30"
                             }`}
                         aria-label={`Ir a slide ${i + 1}`}
                     />

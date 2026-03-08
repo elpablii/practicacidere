@@ -15,26 +15,62 @@ const hitos: Hito[] = [
     {
         year: "1976",
         title: "Fundación de CIDERE",
-        description: "El 30 de marzo de 1976 CIDERE nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
+        description: "El 30 de marzo de 1976, CIDERE nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
         image: "/images/slider/laserena-70s.webp"
     },
     {
-        year: "Años 80",
+        year: "1978",
         title: "Avenida del Mar",
-        description: "La construcción de la Avenida del Mar en La Serena entre 1980 y 1981 es una de las obras más emblemáticas en las que CIDERE ha estado involucrado.",
+        description: "Con el objetivo de mejorar el turismo en La Serena, CIDERE fue parte de la articulación que permitió avanzar en un tramo clave de la Avenida del Mar",
         image: "/images/slider/Avenida-del-Mar-La-Serena.webp"
     },
     {
-        year: "Años 80",
+        year: "1980",
+        title: "Algas Marinas",
+        description: "CIDERE en 1980 asesoró a a la Cooperativa Algamar en el aspecto tecnológico, en la elaboración de proyectos destinados a diversificar su acción como el cultivo de Mitildos, así como la creación de Talleres Artesanales.",
+        image: "/images/slider/"
+    },
+    {
+        year: "1980-1981",
+        title: "Camarón de Río",
+        description: "CIDERE asesoró la instalación de 6 estaciones de cultivo de camarones en las provincias de Elqui y Limarí.",
+        image: "/images/slider/"
+    },
+    {
+        year: "1981",
         title: "La Recova",
-        description: "CIDERE fue partícipe de la inauguración de La Recova en 1981, centro importante del comercio local.",
+        description: "CIDERE mediante una articulación público-privada, fue partícipe de la construcción de La Recova, centro importante del comercio local.",
         image: "/images/slider/la-recova-la-serena.webp"
     },
     {
-        year: "Años 80",
+        year: "1982-1983",
         title: "Terminal Pesquero de La Serena",
         description: "CIDERE con recursos propios financió la construcción del Terminal Pesquero de La Serena.",
         image: "/images/slider/terminal-pesquero-la-serena.webp"
+    },
+    {
+        year: "1983",
+        title: "Programa de Desarrollo Caprino",
+        description: "CIDERE con un rol articulador clave, contribuyó a elevar los estándares sanitarios de la industria caprina.",
+        image: "/images/slider/"
+    },
+    {
+        year: "1983",
+        title: "Almacenaje de Productos Agrícolas de Ovalle",
+        description: "CIDERE ayudó a la gestión de la Sociedad Feria Libre de Ovalle S.A., contribuyendo a los proyectos de factibilidad y de construcción, adjudicándose la respectiva propuesta.",
+        image: "/images/slider/"
+    },
+    {
+        year: "1983-1984",
+        title: "Fondo de Forestación Regional",
+        description: "CIDERE fue encargado de publicitar el proyecto y de recaudar fondos del sector privado para su realización.",
+        image: "/images/slider/"
+    },
+    {
+        year: "Años 80",
+        title: "Aeropuerto La Florida",
+        description: "Después de un intenso temporal a mediados de la década de 1980, CIDERE con ayuda de la Cámara Chilena de la Construcción, colaboró en la construcción de una pista alternativa en el Aeropuerto La Florida.",
+        image: "/images/slider/aeropuerto-la-florida.webp"
     },
     {
         year: "Años 80",
@@ -43,10 +79,52 @@ const hitos: Hito[] = [
         image: "/images/slider/camino-cerro-grande.webp"
     },
     {
-        year: "Años 80",
-        title: "Aeropuerto La Florida",
-        description: "Después de un intenso temporal a mediados de la década de 1980, CIDERE con ayuda de la Cámara Chilena de la Construcción, colaboró en la construcción de una pista alternativa en el Aeropuerto La Florida.",
-        image: "/images/slider/aeropuerto-la-florida.webp"
+        year: "1987-1989",
+        title: "Participación en proyectos de actividades productivas",
+        description: "CIDERE en ese periodo fue parte de varios proyectos productivos como Proyecto Chochas, Aprovechamiento de Alga Ulva, Proyecto Aceites Escenciales, Proyecto Cultivo de Camarón de Río de Embalses, Proyecto Alga Lessonia y Proyecto Higuerilla.",
+        image: "/images/slider/"
+    },
+    {
+        year: "1989-1990",
+        title: "Proyectos y estudios financiados por CIDERE en ese periodo",
+        description: "CIDERE financió sea en conjunto con empresas o por si mismo proyectos y estudios como el proyecto de cultivo de camarón de roca, proyecto diseño y construcción de río-bomba, proyecto catastro de empresas de la IV Región, y el estudio de necesidades de insumos y disposición de desechos naturales.",
+        image: "/images/slider/"
+    },
+    {
+        year: "1996",
+        title: "Edificio Empresarial",
+        description: "CIDERE apuntó a la construcción de un edificio empresarial ubicado en la calle Cienfuegos en La Serena, ayudando a crecer el patrimonio de la institución.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2013",
+        title: "Alianza Estratégica entre CIDERE y la Asociación de Industriales de Antofagasta",
+        description: "En junio de 2013, CIDERE firmó un importante acuerdo con Sicep (Sistema de Calificación de Empresas Proveedoras), permitiendo que empresas de la región desarrollen nuevos negocios y dinamizen su industria.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2013",
+        title: "Rueda de Negocios Proveedores de la Minería",
+        description: "En septiembre de 2013, CIDERE organizó por cuarta vez consecutiva en conjunto con Minera Los Pelambres y Corminco la Rueda de Negocios Proveedores de la Minería, con el objetivo de buscar un espacio de acercamiento entre la demanda de las compañias mineras regionales y la oferta disponible de los proveedores.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2013",
+        title: "Acuerdo entre CIDERE y la Cámara de Comercio y Turismo de Chile",
+        description: "En diciembre de 2013, ambas organizaciones firmaron un importante acuerdo de cooperación estratégica.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2015",
+        title: "Acuerdo entre Universidad Bolivariana y CIDERE",
+        description: "La Universidad Bolivariana y CIDERE firmaron un convenio de beneficios en matrícula y aranceles para los trabajadores de los socios asociados y sus familias.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2015",
+        title: "Acuerdo entre Tronwell La Serena y CIDERE",
+        description: "Tronwell La Serena y CIDERE firmaron un convenio para los trabajadores de los socios asociados y sus familias que permite recibir capacitaciones en el idioma inglés.",
+        image: "/images/slider/"
     },
     {
         year: "2024",

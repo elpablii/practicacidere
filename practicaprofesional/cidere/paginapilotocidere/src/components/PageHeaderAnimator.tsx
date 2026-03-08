@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import Image from "next/image";
 
 interface PageHeaderAnimatorProps {
     children: React.ReactNode;
@@ -23,10 +24,13 @@ export const PageHeaderAnimator: React.FC<PageHeaderAnimatorProps> = ({ children
             {bgImage && (
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-primary/70 z-10" />
-                    <img
+                    {/* <Image> con priority para solucionar el NO_LCP */}
+                    <Image
                         src={bgImage}
-                        alt="Fondo Cabecera"
-                        className={`w-full h-full object-cover ${imagePosition}`}
+                        alt=""
+                        fill
+                        priority
+                        className={`object-cover ${imagePosition}`}
                     />
                 </div>
             )}

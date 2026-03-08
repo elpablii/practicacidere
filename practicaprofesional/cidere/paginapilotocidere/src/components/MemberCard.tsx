@@ -20,14 +20,24 @@ const MemberCard = ({ name, role, company, image, imageClass = "" }: MemberProps
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="group relative overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+            className="group relative overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2"
+            role="button"
+            tabIndex={0}
+            aria-expanded={isTouched}
+            onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsTouched(!isTouched);
+                }
+            }}
             onClick={() => setIsTouched(!isTouched)}
         >
             {/* Contenedor de Imagen */}
             <div className="aspect-[4/5] w-full overflow-hidden bg-gray-200">
                 <img
                     src={image || "https://via.placeholder.com/400x500?text=Foto+Proximamente"}
-                    alt={name}
+                    alt=""
+                    aria-hidden="true"
                     className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${isTouched ? 'scale-110' : ''} ${imageClass}`}
                 />
 

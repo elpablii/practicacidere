@@ -39,7 +39,7 @@ const RDSPage = () => {
                         Transforma tu experiencia como Socio CIDERE. Acceso exclusivo a la Red de Socios para vinculación empresarial e innovación continua.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="https://rdscidere.cl" target="_blank" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1">
+                        <Link href="https://rdscidere.cl" target="_blank" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white">
                             Ingresar a RDS
                         </Link>
                     </div>
