@@ -97,6 +97,18 @@ const hitos: Hito[] = [
         image: "/images/slider/"
     },
     {
+        year: "2008",
+        title: "Convenio La Serena-Hangzhou",
+        description: "En septiembre de 2008, CIDERE fue partícipe del acuerdo entre la ciudad de La Serena y la ciudad de Hangzhou, perteneciente a la República Popular China, con el propósito de generar convenios que permitan mayores oportunidades del desarrollo y la generación de nuevos negocios para los emprendedores locales.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2012",
+        title: "Lanzamiento Nodo Tecnológico CIDERE",
+        description: "A fines de 2012, CIDERE apoyado con la Corfo inauguró el programa Nodo Tecnológico CIDERE, promoviendo la innovación y asociatividad de las empresas, accediendo a fuentes de información, redes y soluciones tecnológicas.",
+        image: "/images/slider/"
+    },
+    {
         year: "2013",
         title: "Alianza Estratégica entre CIDERE y la Asociación de Industriales de Antofagasta",
         description: "En junio de 2013, CIDERE firmó un importante acuerdo con Sicep (Sistema de Calificación de Empresas Proveedoras), permitiendo que empresas de la región desarrollen nuevos negocios y dinamizen su industria.",
@@ -115,6 +127,12 @@ const hitos: Hito[] = [
         image: "/images/slider/"
     },
     {
+        year: "2013-2014",
+        title: "Primer programa de postgrados en la Región de Coquimbo",
+        description: "CIDERE en conjunto con Executive Business School ayudó a que La Serena fuera hogar de la impartición de los primeros programas de postgrado de la Región de Coquimbo.",
+        image: "/images/slider/"
+    },
+    {
         year: "2015",
         title: "Acuerdo entre Universidad Bolivariana y CIDERE",
         description: "La Universidad Bolivariana y CIDERE firmaron un convenio de beneficios en matrícula y aranceles para los trabajadores de los socios asociados y sus familias.",
@@ -125,6 +143,66 @@ const hitos: Hito[] = [
         title: "Acuerdo entre Tronwell La Serena y CIDERE",
         description: "Tronwell La Serena y CIDERE firmaron un convenio para los trabajadores de los socios asociados y sus familias que permite recibir capacitaciones en el idioma inglés.",
         image: "/images/slider/"
+    },
+    {
+        year: "2016-2017",
+        title: "CIDERE y SOFOFA",
+        description: "En busca de tener un mayor protagonismo a nivel nacional, CIDERE en 2016 se unió a la Sociedad de Fomento Fabril (SOFOFA). En 2017, CIDERE logró un hito histórico al formar parte del Comité Ejecutivo de SOFOFA.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2017",
+        title: "Fondo de Innovación para la Competitividad Regional",
+        description: "Por medio del fondo mencionado, CIDERE junto con la Corporación Regional del Desarrollo Produvtivo ejecutó el proyecto Desarrollo de Estudio de Prospección del Encadenamiento Productivo del Sector Industrial-Minero a través de una Estrategia de Fomento de Empresas Proveedoras Locales.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2018",
+        title: "Proyecto Bien Público Estratégico para la Competitividad",
+        description: "CIDERE presentó este proyecto de nombre Plataforma para el Ecosistema Industrial Minero de la Región de Coquimbo, con el propósito de mejorar el desarrollo económico local entre empresas proveedoras de varios sectores y las compañias mineras, constructoras e industriales.",
+        image: "/images/slider/"
+    },
+    {
+        year: "2019",
+        title: "Creación del Espacio Industrial Minero",
+        description: "La gobernanza Espacio Industrial Minero es una iniciativa público-privada conformada en 2019 integrada por CIDERE, CRDP, Minera Los Pelambres, Teck y CMP.",
+        image: "/assets/logos/",
+        isLogo: true
+    },
+    {
+        year: "2023",
+        title: "Creación de la Red Asociativa y Crecimiento",
+        description: "Durante el año se ejecutaron con éxito cuatro grandes proyectos en colaboración con CORFO, consolidando la posición de CIDERE. Además, el número de empresas asociadas creció un 11% albergando a 81 socios, y se empezó a impulsar prácticas para estudiantes de liceos técnicos profesionales y universidades.",
+        image: "/assets/logos/LOGOS CIDERE SIN PALA-04.png",
+        isLogo: true
+    },
+    {
+        year: "2023",
+        title: "Participación Estratégica en SOFOFA",
+        description: "CIDERE mantuvo una participación activa en SOFOFA desempeñando un papel destacado en la Macrozona Norte, estrechando vínculos institucionales con ASINDA y CORPROA para fortalecer la presencia en la comunidad empresarial nacional.",
+        image: "/assets/logos/LOGOS RED ASOCIATIVA-11.png",
+        isLogo: true
+    },
+    {
+        year: "2023",
+        title: "Articulación Pública-Privada y Gobernanza",
+        description: "Se formalizaron acuerdos con los municipios y el SII para fortalecer el trabajo colaborativo de la mano de 13 seremías. También se reforzó la gobernanza del Espacio Industrial Minero junto a las compañías mineras Teck, CMP y Minera Los Pelambres.",
+        image: "/assets/logos/ESPACIO INDUSTRIAL.png",
+        isLogo: true
+    },
+    {
+        year: "2023",
+        title: "Piloto Sello Regional",
+        description: "Se estableció el Sello de Proveedores Región de Coquimbo por CIDERE y la UCN, con el objetivo principal de promover el desarrollo de empresas regionales, facilitar su encadenamiento y localización de nuevas empresas.",
+        image: "/assets/logos/",
+        isLogo: true
+    },
+    {
+        year: "2024",
+        title: "Compromiso Regional",
+        description: "CIDERE en Junio de 2024 patrocinó conversatorios organizados por el Diario El Día sobre el consumo humano de agua en la región.",
+        image: "/assets/logos/",
+        isLogo: true
     },
     {
         year: "2024",
