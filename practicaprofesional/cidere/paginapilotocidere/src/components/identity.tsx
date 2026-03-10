@@ -30,7 +30,14 @@ const Identity = () => {
         {
             id: "valores",
             title: "Nuestros Valores",
-            desc: "Ingresa aquí los valores corporativos de CIDERE (Ej: Integridad, Innovación, Compromiso Regional, Colaboración y Sostenibilidad).",
+            desc: "",
+            valoresList: [
+                { nombre: "Igualdad", descripcion: "Promovemos la equidad y la inclusión en todas nuestras acciones, asegurando que las diferencias de género, cultura, edad o condición socioeconómica sean respetadas y valoradas como parte de nuestra riqueza institucional." },
+                { nombre: "Respeto", descripcion: "Fomentamos relaciones basadas en la dignidad, la empatía y la consideración hacia cada persona, reconociendo el aporte individual y colectivo en la construcción de un ambiente sano y colaborativo." },
+                { nombre: "Transparencia", descripcion: "Actuamos con claridad y honestidad en cada proceso y decisión, generando confianza entre nuestros socios, colaboradores y la comunidad, y garantizando la rendición de cuentas como principio fundamental." },
+                { nombre: "Trabajo en equipo", descripcion: "Creemos en la colaboración como motor del desarrollo. Impulsamos la cooperación entre nuestros integrantes y aliados estratégicos para alcanzar objetivos comunes y generar impacto positivo en la región." },
+                { nombre: "Creatividad e innovación", descripcion: "Valoramos las ideas nuevas y el pensamiento crítico como herramientas para encontrar soluciones efectivas. Promovemos la innovación como un medio para mejorar continuamente y responder de manera responsable a los desafíos del entorno." }
+            ],
             icon: <StarIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />,
             image: "/images/slider/Slide3QuieresSerSocio.webp",
             color: "from-emerald-500 to-emerald-300"
@@ -48,9 +55,9 @@ const Identity = () => {
     return (
         <section className="py-24 px-4 md:px-6 max-w-7xl mx-auto space-y-24 md:space-y-32">
 
-            {/*MISIÓN, VISIÓN Y VALORES */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
-                {data.map((item, index) => {
+            {/*MISIÓN y VISIÓN */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                {data.slice(0, 2).map((item, index) => {
                     const isActive = activeCardId === item.id;
                     return (
                         <motion.div
@@ -70,7 +77,7 @@ const Identity = () => {
                                     setActiveCardId(isActive ? null : item.id);
                                 }
                             }}
-                            className={`scroll-mt-32 group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[24rem] sm:h-[28rem] lg:h-[32rem] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2`}
+                            className={`scroll-mt-32 group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[28rem] sm:h-[32rem] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2`}
                         >
                             {/* IMAGEN DE FONDO (Fija, se oscurece al abrir) */}
                             <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -106,6 +113,76 @@ const Identity = () => {
                                     <p className="text-blue-50 text-base md:text-lg leading-relaxed font-medium text-justify drop-shadow-sm">
                                         {item.desc}
                                     </p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    );
+                })}
+            </div>
+
+            {/* VALORES */}
+            <div className="w-full mt-4 md:mt-0">
+                {data.slice(2, 3).map((item, index) => {
+                    const isActive = activeCardId === item.id;
+                    return (
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                            key={item.id}
+                            id={item.id}
+                            role="button"
+                            tabIndex={0}
+                            aria-expanded={isActive}
+                            onClick={() => setActiveCardId(isActive ? null : item.id)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    setActiveCardId(isActive ? null : item.id);
+                                }
+                            }}
+                            className={`scroll-mt-32 w-full group relative flex flex-col rounded-[2.5rem] bg-slate-900 border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden transition-all duration-500 cursor-pointer h-[32rem] sm:h-[36rem] lg:h-[36rem] xl:h-[28rem] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2`}
+                        >
+                            {/* IMAGEN DE FONDO (Fija, se oscurece al abrir) */}
+                            <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className={`w-full h-full object-cover transition-transform duration-1000 ${isActive ? "scale-110" : "scale-100 lg:group-hover:scale-110"
+                                        }`}
+                                />
+                                <div className={`absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-opacity duration-700 ${isActive ? "opacity-0" : "opacity-100 lg:group-hover:opacity-0"
+                                    }`}></div>
+                                <div className={`absolute inset-0 bg-slate-900/80 backdrop-blur-md transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0 lg:group-hover:opacity-100"
+                                    }`}></div>
+                            </div>
+
+                            {/* Título Flotante Base (Desaparece al abrir la info) */}
+                            <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 lg:group-hover:opacity-0 lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"
+                                }`}>
+                                <h2 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tight drop-shadow-md text-center lg:text-left mx-auto max-w-6xl w-full">
+                                    {item.title}
+                                </h2>
+                            </div>
+
+                            {/* Contenido Descriptivo (Aparece centrado sobre la imagen atenuada) */}
+                            <div className={`absolute inset-0 w-full h-full flex flex-col p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+                                }`}>
+                                <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 lg:mb-8 uppercase tracking-tight shrink-0 drop-shadow-md md:text-center w-full max-w-6xl mx-auto">
+                                    {item.title}
+                                </h2>
+                                <div className="overflow-y-auto pr-2 custom-scrollbar w-full flex-grow flex items-start justify-center pt-2 pb-6">
+                                    {item.valoresList && (
+                                        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-sm text-blue-50 leading-relaxed font-medium text-left drop-shadow-sm w-full max-w-6xl mx-auto h-max">
+                                            {item.valoresList.map((val, i) => (
+                                                <li key={i} className={`bg-white/5 p-4 md:p-5 rounded-2xl border border-white/5 backdrop-blur-sm ${i === 3 ? "lg:col-start-1" : ""} ${i === 4 ? "lg:col-start-2" : ""}`}>
+                                                    <strong className="text-white text-base md:text-lg block mb-2">{val.nombre}</strong>
+                                                    <span className="text-blue-100/90">{val.descripcion}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
