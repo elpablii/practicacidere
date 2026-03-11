@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PageHeaderAnimator } from "@/components/PageHeaderAnimator";
+import { socios } from "@/data/socios";
 
 type Hito = {
     year: string;
@@ -11,6 +12,7 @@ type Hito = {
     isLogo?: boolean;
     imageScale?: string; // Clases Tailwind para zoom, ej: "scale-110", "scale-125", "scale-150"
     objectPosition?: string; // Clases Tailwind para posición, ej: "object-top", "object-bottom", "object-[50%_20%]"
+    socios?: number;
 };
 
 const hitos: Hito[] = [
@@ -165,26 +167,36 @@ const hitos: Hito[] = [
         image: "/images/linea de tiempo/Imagen58.webp"
     },
     {
-        year: "2019",
+        year: "2020",
         title: "Creación del Espacio Industrial Minero",
-        description: "La gobernanza Espacio Industrial Minero es una iniciativa público-privada conformada en 2019 integrada por CIDERE, CRDP, Minera Los Pelambres, Teck y CMP.",
-        image: "/images/linea de tiempo/Imagen59.webp",
+        description: "La gobernanza Espacio Industrial Minero es una iniciativa público-privada conformada en 2020 integrada por CIDERE, CRDP, Minera Los Pelambres, Teck y CMP.",
+        image: "/images/linea de tiempo/espacio-industrial-minero.webp",
         isLogo: true,
-        imageScale: "scale-[175%]"
+        imageScale: "scale-[150%]"
     },
     {
         year: "2023",
-        title: "Conformación Mesa Mujer",
-        description: "CIDERE con empresarias de la región formaron la Mesa Mujer, con el propósito de aportar las brechas que limitan la incorporación de mujeres en el mundo del trabajo, emprendimiento y la actividad empresarial.",
-        image: "/images/linea de tiempo/Imagen50.webp"
+        title: "Creación de la Red Asociativa y Crecimiento de la Corporación",
+        description: "Durante el año se ejecutaron con éxito cuatro grandes proyectos en colaboración con CORFO, consolidando la posición de CIDERE. Además, el número de empresas asociadas creció un 11% albergando a 81 socios.",
+        image: "/images/linea de tiempo/red asociativa.webp",
+        isLogo: true,
+        imageScale: "scale-[225%]"
     },
     {
         year: "2023",
-        title: "Creación de la Red Asociativa y Crecimiento",
-        description: "Durante el año se ejecutaron con éxito cuatro grandes proyectos en colaboración con CORFO, consolidando la posición de CIDERE. Además, el número de empresas asociadas creció un 11% albergando a 81 socios, y se empezó a impulsar prácticas para estudiantes de liceos técnicos profesionales y universidades.",
-        image: "/images/linea de tiempo/Imagen56.webp",
+        title: "Potenciando las experiencias laborales",
+        description: "Desde 2023, CIDERE empezó a hacer colaboraciones significativas con universidades, institutos técnico-profesionales y liceos técnicos, impulsando prácticas para estudiantes en las áreas de comunicaciones, administración, economía e informática.",
+        image: "/images/linea de tiempo/",
         isLogo: true,
-        imageScale: "scale-[175%]"
+        imageScale: "scale-[100%]"
+    },
+    {
+        year: "2023",
+        title: "Programa de Difusión Tecnológica para la Sustentabilidad y Circularidad de las Empresas",
+        description: "Programa que capacitó a empresas locales mediante talleres y mentorías para diseñar modelos de negocio innovadores y sustentables con impacto económico, social y ambiental.",
+        image: "/images/linea de tiempo/programa-difusion-tecnologica.webp",
+        isLogo: true,
+        imageScale: "scale-[180%]"
     },
     {
         year: "2023",
@@ -196,9 +208,9 @@ const hitos: Hito[] = [
     },
     {
         year: "2023",
-        title: "Articulación Pública-Privada y Gobernanza",
-        description: "Se formalizaron acuerdos con los municipios y el SII para fortalecer el trabajo colaborativo de la mano de 13 seremías. También se reforzó la gobernanza del Espacio Industrial Minero junto a las compañías mineras Teck, CMP y Minera Los Pelambres.",
-        image: "/images/linea de tiempo/Imagen54.webp",
+        title: "Tercera Cumbre Espacio Industrial Minera",
+        description: "En julio de 2023, se realizó la tercera Cumbre Espacio Industrial Minera, reuniendo a más de 140 proveedores locales y grandes compañías mineras como MLP, Teck y CMP, con el fin de impulsar el desarrollo regional. El evento incluyó más de 100 ruedas de negocios, vitrinas comerciales y seminarios centrados en la vinculación, innovación y sostenibilidad del sector.",
+        image: "/images/linea de tiempo/.webp",
         isLogo: true,
         imageScale: "scale-[185%]"
     },
@@ -212,8 +224,14 @@ const hitos: Hito[] = [
     },
     {
         year: "2024",
+        title: "Conformación Mesa Mujer",
+        description: "CIDERE con empresarias de la región formaron la Mesa Mujer, con el propósito de aportar las brechas que limitan la incorporación de mujeres en el mundo del trabajo, emprendimiento y la actividad empresarial.",
+        image: "/images/linea de tiempo/Imagen50.webp"
+    },
+    {
+        year: "2024",
         title: "Compromiso Regional",
-        description: "CIDERE en Junio de 2024 patrocinó conversatorios organizados por el Diario El Día sobre el consumo humano de agua en la región.",
+        description: "Desde el 2024, CIDERE dió inicio al ciclo de desayunos Compromiso Regional, liderado por Diario El Día, Minera Los Pelambres y la Universidad Católica del Norte. Espacios donde se abordaron temáticas de interés regional y proyección, generando espacios de encuentro con alta participación de autoridades, el mundo empresarial, la academia y la comunidad en general.",
         image: "/images/linea de tiempo/Imagen52.webp",
         isLogo: true,
         imageScale: "scale-[150%]"
@@ -222,42 +240,20 @@ const hitos: Hito[] = [
         year: "2024",
         title: "Encuentro RedColaborAcción",
         description: "En Julio de 2024, CIDERE ayudó a la ejecución del Encuentro RedColaborAcción: Conecta y Crece, juntando a muchos emprendedores e innovadores.",
-        image: "/images/linea de tiempo/Imagen61.webp",
+        image: "/images/linea de tiempo/foto evento dinamiza red colaboraccion.webp",
         isLogo: true,
-        imageScale: "scale-[149.5%]"
-    },
-    {
-        year: "2024",
-        title: "Corporación Coquimbo 2030",
-        description: "A fines de 2024, CIDERE puso su apoyo en esta futura corporación, que tiene como objetivo mejorar la calidad de vida de los coquimbanos, y convertir Coquimbo en la ciudad más importante del norte de Chile.",
-        image: "/images/linea de tiempo/Imagen37.webp",
-        isLogo: true,
-        imageScale: "scale-[190%]"
-    },
-    {
-        year: "2024",
-        title: "Seminario de Cumplimiento Normativo",
-        description: "En Diciembre de 2024, CIDERE a través de la gobernanza Espacio Industrial Minero y la empresa Norte Verde, tuvieron como iniciativa realizar un seminario de cumplimiento normativo para la industria minera, con el objetivo de informar a las empresas sobre la Ley de Delitos Económicos y su impacto en las personas y empresas.",
-        image: "/images/linea de tiempo/Imagen38.webp",
-        isLogo: true,
-        imageScale: "scale-[175%]"
+        imageScale: "scale-[185%]"
     },
     {
         year: "2025",
-        title: "Acuerdo entre CIDERE y Asociación de AFP",
-        description: "CIDERE y la Asociación de Administradores de Fondos de Pensiones (AAFP) firmaron un convenio que permite fomentar y desarrollar la educación previsional en la Región de Coquimbo.",
-        image: "/images/linea de tiempo/Imagen49.webp"
-    },
-    {
-        year: "2025",
-        title: "Cumbre Gastronómica",
-        description: "CIDERE con el apoyo de la Cámara de Comercio Región de Coquimbo, la Corfo y la alianza Chile Te Quiero Comer coejecutaron el evento Cumbre Gastronómica, reuniendo a emprendedores, chefs y estudiantes del rubro gastronómico.",
-        image: "/images/linea de tiempo/Imagen48.webp"
+        title: "Primera Cumbre Gastronómica EIQF",
+        description: "El evento se realizó en el Hotel Club La Serena y reunió a chefs, startups, emprendedores, grandes empresas, centros tecnológicos, restaurantes y a más de 30 speakers nacionales e internacionales.",
+        image: "/images/linea de tiempo/cumbre-gastronomica.webp"
     },
     {
         year: "2026",
         title: "50 Aniversario",
-        description: "CIDERE cumple Medio siglo de presencia en la región, con 94 empresas socias y una visión clara hacia el desarrollo sostenible de la región.",
+        description: `CIDERE cumple medio siglo de presencia en la región, con ${socios.length} empresas socias y una visión clara hacia el desarrollo sostenible de la región.`,
         image: "/images/slider/Slide2VerSocios.webp"
     }
 ];
@@ -332,8 +328,8 @@ const HitosPage = () => {
                                                     setIsDropdownOpen(false);
                                                 }}
                                                 className={`w-full text-left px-6 py-4 font-bold text-base md:text-lg transition-colors border-l-4 ${selectedDecade === decade
-                                                        ? "bg-blue-50 text-blue-600 border-blue-500"
-                                                        : "bg-white text-gray-500 hover:bg-gray-50 hover:text-blue-500 border-transparent"
+                                                    ? "bg-blue-50 text-blue-600 border-blue-500"
+                                                    : "bg-white text-gray-500 hover:bg-gray-50 hover:text-blue-500 border-transparent"
                                                     }`}
                                             >
                                                 {decade}
@@ -372,7 +368,7 @@ const HitosPage = () => {
 
                                                 <div className="relative z-10">
                                                     <h3 className="text-primary text-2xl font-bold mb-4 uppercase leading-tight">{hito.title}</h3>
-                                                    <p className="text-gray-500 leading-relaxed text-sm font-medium">
+                                                    <p className="text-gray-500 leading-relaxed text-sm font-medium text-justify">
                                                         {hito.description}
                                                     </p>
                                                 </div>

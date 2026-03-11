@@ -53,7 +53,7 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center h-full">
                         <Link href="/" onClick={closeAll}>
-                            <Image src={logoCidere} alt="Logo CIDERE" width={260} height={85} priority className="cursor-pointer w-[160px] md:w-[260px] h-auto" />
+                            <Image src={logoCidere} alt="Logo CIDERE" width={300} height={98} priority className="cursor-pointer w-[190px] md:w-[300px] h-auto" />
                         </Link>
                     </div>
 

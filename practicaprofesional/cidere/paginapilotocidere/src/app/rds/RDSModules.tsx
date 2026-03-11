@@ -49,7 +49,7 @@ export default function RDSModules() {
         },
         {
             title: "Directorio de Socios",
-            desc: "Explora la red completa de miembros adheridos. Encuentra el perfil de grandes corporaciones, pymes e instituciones de educación.",
+            desc: "Explora la red completa de miembros adheridos a la corporación.",
             icon: <UserGroupIcon className="w-8 h-8 md:w-10 md:h-10" />,
             image: "/images/slider/Imagen65.webp",
             color: "from-teal-600 to-teal-400",
@@ -60,7 +60,7 @@ export default function RDSModules() {
         },
         {
             title: "Vinculación Comercial",
-            desc: "Encuentra oportunidades de servicios formando alianzas estratégicas inmediatas.",
+            desc: "Conecta con las oportunidades comerciales que te brinda la Red de Socios. Oferta y conoce los bienes y servicios de los socios.",
             icon: <BuildingStorefrontIcon className="w-8 h-8 md:w-10 md:h-10" />,
             image: "/images/slider/Imagen67.webp",
             color: "from-sky-600 to-sky-400",
@@ -71,7 +71,7 @@ export default function RDSModules() {
         },
         {
             title: "Material y Documentación",
-            desc: "Revisa actas, estatutos, normativas corporativas, material de inducción y contenidos de interés en nuestra plataforma.",
+            desc: "Revisa información de interés recabada por la corporación.",
             icon: <FolderOpenIcon className="w-8 h-8 md:w-10 md:h-10" />,
             image: "/images/slider/Imagen63.webp",
             color: "from-violet-600 to-violet-400",
@@ -136,7 +136,7 @@ export default function RDSModules() {
                                     {mod.title}
                                 </h3>
                             </div>
-                            <p className="text-white/95 leading-relaxed font-medium mt-auto text-justify hyphens-auto drop-shadow-sm">
+                            <p className="text-white/95 leading-relaxed font-medium mt-auto text-justify drop-shadow-sm">
                                 {mod.desc}
                             </p>
                         </div>

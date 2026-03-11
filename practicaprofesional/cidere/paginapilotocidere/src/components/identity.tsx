@@ -45,7 +45,7 @@ const Identity = () => {
     ];
 
     const propuesta = {
-        id: "valores",
+        id: "propuesta",
         title: "Propuesta de Valor",
         desc: "CIDERE impulsa la conexión y visibilidad del ecosistema empresarial con la academia y el sector público de la Región de Coquimbo, entregando a sus socios información oportuna, redes y espacios de encuentro que fortalecen su posicionamiento, oportunidades de crecimiento y vínculo con el territorio. Nuestra trayectoria, junto a un equipo multidisciplinario comprometido con la excelencia y una base de socios multisectoriales, nos permiten generar iniciativas de alto impacto que promueven la colaboración, la innovación y la sostenibilidad para contribuir al desarrollo integral y a la mejora en la calidad de vida de quienes habitan nuestra región.",
         icon: <StarIcon className="w-10 h-10 text-primary" />,
@@ -178,7 +178,7 @@ const Identity = () => {
                                             {item.valoresList.map((val, i) => (
                                                 <li key={i} className={`bg-white/5 p-4 md:p-5 rounded-2xl border border-white/5 backdrop-blur-sm ${i === 3 ? "lg:col-start-1" : ""} ${i === 4 ? "lg:col-start-2" : ""}`}>
                                                     <strong className="text-white text-base md:text-lg block mb-2">{val.nombre}</strong>
-                                                    <p className="text-blue-100/90 text-justify hyphens-auto">{val.descripcion}</p>
+                                                    <p className="text-blue-100/90 text-justify">{val.descripcion}</p>
                                                 </li>
                                             ))}
                                         </ul>
@@ -196,21 +196,31 @@ const Identity = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 id={propuesta.id}
-                className="scroll-mt-32 relative rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-slate-300/60"
+                tabIndex={0}
+                role="button"
+                aria-expanded={activeCardId === propuesta.id}
+                onClick={() => setActiveCardId(activeCardId === propuesta.id ? null : propuesta.id)}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setActiveCardId(activeCardId === propuesta.id ? null : propuesta.id);
+                    }
+                }}
+                className="scroll-mt-32 relative rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-slate-300/60 cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
 
                 <div className="absolute inset-0">
                     <img
                         src={propuesta.image}
                         alt={propuesta.title}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        className={`w-full h-full object-cover transition-transform duration-1000 lg:group-hover:scale-105 lg:group-focus:scale-105 ${activeCardId === propuesta.id ? 'scale-105' : 'scale-100'}`}
                     />
                     <div className="absolute inset-0 bg-gray-900/80 md:bg-gray-900/60 backdrop-blur-[2px]"></div>
                 </div>
 
                 <div className="relative z-10 p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
-                    <div className="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start text-center lg:text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl" tabIndex={0}>
+                    <div className="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start text-center lg:text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl">
                         {/* Icono Removido */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-tight">
                             Propuesta <br className="hidden lg:block" /> de Valor
@@ -218,8 +228,8 @@ const Identity = () => {
                         <div className="mt-8 w-24 h-2 bg-gradient-to-r from-secondary to-transparent rounded-full opacity-80"></div>
                     </div>
 
-                    <div className="w-full lg:w-2/3 bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white" tabIndex={0}>
-                        <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-sm text-justify">
+                    <div className="w-full lg:w-2/3 bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white lg:group-hover:bg-white/20 transition-colors duration-700" tabIndex={0}>
+                        <p className={`text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-sm text-justify transition-all duration-700 lg:group-hover:blur-none lg:group-hover:opacity-100 lg:group-focus:blur-none lg:group-focus:opacity-100 ${activeCardId === propuesta.id ? 'blur-none opacity-100' : 'blur-md opacity-40'}`}>
                             {propuesta.desc}
                         </p>
                     </div>

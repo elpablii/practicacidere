@@ -44,7 +44,7 @@ const RDSPage = () => {
                             ¿Qué es <span className="text-blue-500">RDS?</span>
                         </h2>
                         <p className="text-justify text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0">
-                            Red de Socios CIDERE (RDS) es una plataforma digital exclusiva para los socios de CIDERE, creado para conectar, fortalecer y potenciar los lazos dentro de una comunidad comprometida con el desarrollo de la Región de Coquimbo.
+                            RDS significa Red de Socios CIDERE, el cual es una plataforma digital exclusiva para los socios de la corporación, creado para conectar, fortalecer y potenciar los lazos dentro de una comunidad comprometida con el desarrollo de la Región de Coquimbo.
                         </p>
                     </div>
 
