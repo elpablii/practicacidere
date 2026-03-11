@@ -106,7 +106,7 @@ const HeroSlider = () => {
                     </div>
 
 
-                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-4 sm:pb-12 lg:pb-20 xl:pb-24' : 'items-center'}`}>
+                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-8 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-[3.5rem]' : 'items-center'}`}>
                         <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
                             <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'}`}>
 
@@ -136,7 +136,7 @@ const HeroSlider = () => {
                                     {slide.primaryBtn.text && (
                                         <Link
                                             href={slide.primaryBtn.link}
-                                            className="px-4 py-2 sm:px-8 sm:py-4 bg-white text-primary font-bold rounded-lg sm:rounded-xl text-xs sm:text-base text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+                                            className={`bg-white text-primary font-bold text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary whitespace-nowrap ${slide.id === 1 ? 'px-3 py-1.5 text-xs rounded-lg sm:px-8 sm:py-4 sm:text-base sm:rounded-xl lg:px-6 lg:py-3 lg:text-sm xl:text-base' : 'px-4 py-2 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl text-xs sm:text-base'}`}
                                         >
                                             {slide.primaryBtn.text}
                                         </Link>

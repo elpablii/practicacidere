@@ -175,8 +175,9 @@ const HazteSocio = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="bg-primary rounded-[3rem] p-10 md:p-16 lg:p-20 text-center shadow-2xl flex flex-col items-center border border-primary-light/20 relative overflow-hidden"
+                        className="bg-gradient-to-br from-slate-900 via-blue-950 to-primary rounded-[3rem] p-10 md:p-16 lg:p-20 text-center shadow-2xl flex flex-col items-center border border-primary-light/20 relative overflow-hidden"
                     >
+
                         {/* Patron de fondo sutil */}
                         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat"></div>
 
