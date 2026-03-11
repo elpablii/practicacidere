@@ -54,7 +54,7 @@ const AboutBrief = () => {
                             <h3 className="text-xl font-bold text-primary mb-4 uppercase drop-shadow-sm">
                                 {stat.title}
                             </h3>
-                            <p className="text-slate-600 leading-relaxed text-sm font-medium">
+                            <p className="text-justify text-slate-600 leading-relaxed text-sm font-medium">
                                 {stat.desc}
                             </p>
                         </div>

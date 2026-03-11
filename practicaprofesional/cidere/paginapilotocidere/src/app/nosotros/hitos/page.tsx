@@ -308,6 +308,9 @@ const HitosPage = () => {
                 {/* Filtro de Décadas (Menú Desplegable) */}
                 <div className="flex justify-center mb-20 relative z-40">
                     <div className="relative w-64 md:w-80">
+                        <label className="block text-center text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider">
+                            Selecciona el periodo a ver
+                        </label>
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             className="w-full flex items-center justify-between px-6 py-3 rounded-2xl bg-white border border-gray-200 shadow-lg text-primary font-bold text-lg transition-all hover:border-blue-300 focus:outline-none focus:ring-4 focus:ring-blue-100"
@@ -363,7 +366,7 @@ const HitosPage = () => {
                                         }`}>
 
                                         {/* 1. Parte del Contenido (Texto) */}
-                                        <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${index % 2 === 0 ? "md:pr-8 lg:pr-12" : "md:pl-8 lg:pl-12"}`}>
+                                        <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${index % 2 === 0 ? "md:pr-8 lg:pr-12" : "md:pl-8 lg:pl-12"}`}>
                                             <div className={`p-8 rounded-[2rem] bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 group relative ${index % 2 === 0 ? "md:text-right" : "md:text-left"
                                                 }`}>
 
@@ -384,7 +387,7 @@ const HitosPage = () => {
                                         </div>
 
                                         {/* 3. Parte de la Imagen */}
-                                        <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${index % 2 === 0 ? "md:pl-8 lg:pl-12 mt-8 md:mt-0" : "md:pr-8 lg:pr-12 mt-8 md:mt-0"}`}>
+                                        <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${index % 2 === 0 ? "md:pl-8 lg:pl-12 mt-8 md:mt-0" : "md:pr-8 lg:pr-12 mt-8 md:mt-0"}`}>
                                             <div className={`relative group overflow-hidden rounded-[2rem] aspect-video md:aspect-square lg:aspect-video shadow-lg ${hito.isLogo ? 'bg-white p-8 md:p-12 flex items-center justify-center' : ''}`}>
                                                 <div className={`w-full h-full transition-transform duration-700 ${hito.imageScale || ''}`}>
                                                     <img

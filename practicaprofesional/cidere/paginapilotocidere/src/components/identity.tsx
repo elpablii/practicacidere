@@ -174,11 +174,11 @@ const Identity = () => {
                                 </h2>
                                 <div className="overflow-y-auto pr-2 custom-scrollbar w-full flex-grow flex items-start justify-center pt-2 pb-6">
                                     {item.valoresList && (
-                                        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-sm text-blue-50 leading-relaxed font-medium text-left drop-shadow-sm w-full max-w-6xl mx-auto h-max">
+                                        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-sm text-blue-50 leading-relaxed font-medium drop-shadow-sm w-full max-w-6xl mx-auto h-max">
                                             {item.valoresList.map((val, i) => (
                                                 <li key={i} className={`bg-white/5 p-4 md:p-5 rounded-2xl border border-white/5 backdrop-blur-sm ${i === 3 ? "lg:col-start-1" : ""} ${i === 4 ? "lg:col-start-2" : ""}`}>
                                                     <strong className="text-white text-base md:text-lg block mb-2">{val.nombre}</strong>
-                                                    <span className="text-blue-100/90">{val.descripcion}</span>
+                                                    <p className="text-blue-100/90 text-justify hyphens-auto">{val.descripcion}</p>
                                                 </li>
                                             ))}
                                         </ul>

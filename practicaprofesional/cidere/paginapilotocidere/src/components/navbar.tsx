@@ -170,7 +170,7 @@ const Navbar = () => {
                                 </div>
                             </div>
 
-                            <Link href="/socios#socios" className={`block px-4 py-3 rounded-xl font-medium ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Nuestros socios</Link>
+                            <Link href="/socios#socios" className={`block px-4 py-3 rounded-xl font-bold ${isActive('/socios') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Nuestros socios</Link>
                         </div>
                         <div className="mt-auto pt-6 space-y-3 border-t border-gray-100">
                             <Link href="/hazte-socio" className="w-full block text-center border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors py-3 rounded-xl font-bold shadow-sm" onClick={closeAll}>Hazte socio</Link>

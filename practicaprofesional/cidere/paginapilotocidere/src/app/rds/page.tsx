@@ -15,7 +15,7 @@ const RDSPage = () => {
     return (
         <main className="min-h-screen bg-gradient-to-br from-slate-50 via-[#f8fafc] to-blue-50/50 overflow-x-hidden">
             {/* Header Animado */}
-            <PageHeaderAnimator id="rds-header" bgImage="/images/slider/Imagen1.webp" imagePosition="object-center" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator id="rds-header" bgImage="/images/slider/Imagen1.webp" imagePosition="object-center" className="bg-primary pt-32 pb-20 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
 
                 <div className="max-w-4xl mx-auto relative z-10">
@@ -43,7 +43,7 @@ const RDSPage = () => {
                         <h2 className="text-3xl md:text-5xl font-black text-primary uppercase tracking-tight mb-6 relative inline-block">
                             ¿Qué es <span className="text-blue-500">RDS?</span>
                         </h2>
-                        <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0">
+                        <p className="text-justify text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0">
                             Red de Socios CIDERE (RDS) es una plataforma digital exclusiva para los socios de CIDERE, creado para conectar, fortalecer y potenciar los lazos dentro de una comunidad comprometida con el desarrollo de la Región de Coquimbo.
                         </p>
                     </div>
@@ -95,7 +95,7 @@ const RDSPage = () => {
                                 ¿Aún no eres parte?
                             </h2>
                             <p className="text-blue-50 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto font-medium opacity-90">
-                                Forma parte de la corporación gremial más importante de la Región de Coquimbo. Obtén exposición, alianzas de alto nivel y entra directamente a la <span className="text-blue-300 font-bold">Red de Socios</span>.
+                                Forma parte de la corporación gremial más importante de la Región de Coquimbo. Obtén exposición, alianzas de alto nivel y postula a la <span className="text-blue-300 font-bold">Red de Socios CIDERE</span>.
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <Link href="/hazte-socio" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-full shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl">
