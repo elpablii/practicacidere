@@ -15,8 +15,8 @@ const ContactView = () => {
                     transition={{ duration: 0.7, ease: "easeOut" }}
                     className="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl shadow-blue-900/5 border border-slate-100 flex flex-col justify-center relative overflow-hidden group hover:shadow-blue-900/10 transition-shadow duration-500"
                 >
-                    <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-800 mb-10 leading-tight tracking-tight">
+                    <div className="relative z-10 mb-8 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-800 leading-tight tracking-tight">
                             Información de <br />
                             <span className="text-primary">contacto</span>
                         </h2>

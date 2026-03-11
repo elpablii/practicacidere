@@ -35,7 +35,7 @@ export const PageHeaderAnimator: React.FC<PageHeaderAnimatorProps> = ({ children
                 </div>
             )}
             {/* Contenedor relativo para que el contenido no quede detrás de la imagen */}
-            <div className="relative z-20 h-full w-full">
+            <div className="relative z-20 h-full w-full" tabIndex={0}>
                 {children}
             </div>
         </motion.section>

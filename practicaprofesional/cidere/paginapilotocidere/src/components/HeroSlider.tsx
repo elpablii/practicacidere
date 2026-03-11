@@ -85,6 +85,7 @@ const HeroSlider = () => {
             {slides.map((slide, index) => (
                 <div
                     key={slide.id}
+                    aria-hidden={index !== current}
                     className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
                         }`}
                 >
@@ -108,7 +109,7 @@ const HeroSlider = () => {
 
                     <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-8 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-[3.5rem]' : 'items-center'}`}>
                         <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
-                            <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'}`}>
+                            <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl`} tabIndex={0}>
 
                                 {slide.badge && (
                                     <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-3 sm:mb-6">

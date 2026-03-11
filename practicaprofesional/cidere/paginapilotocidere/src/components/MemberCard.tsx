@@ -36,8 +36,7 @@ const MemberCard = ({ name, role, company, image, imageClass = "" }: MemberProps
             <div className="aspect-[4/5] w-full overflow-hidden bg-gray-200">
                 <img
                     src={image || "https://via.placeholder.com/400x500?text=Foto+Proximamente"}
-                    alt=""
-                    aria-hidden="true"
+                    alt={`Foto de ${name}, ${role}`}
                     className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${isTouched ? 'scale-110' : ''} ${imageClass}`}
                 />
 
@@ -49,7 +48,7 @@ const MemberCard = ({ name, role, company, image, imageClass = "" }: MemberProps
             <div className="p-5 text-center h-28 flex flex-col justify-center bg-white relative">
 
                 {/* Estado Normal: Nombre y Cargo */}
-                <div className={`transition-all duration-300 group-hover:opacity-0 group-hover:invisible ${isTouched ? 'opacity-0 invisible' : ''}`}>
+                <div className={`transition-all duration-300 group-hover:opacity-0 group-hover:invisible ${isTouched ? 'opacity-0 invisible' : 'opacity-100 visible'}`}>
                     <h3 className="text-lg font-bold text-primary leading-tight mb-1">{name}</h3>
                     <p className="text-sm text-gray-500 font-medium">{role}</p>
                 </div>

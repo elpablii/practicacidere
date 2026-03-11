@@ -29,7 +29,7 @@ const AboutBrief = () => {
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="flex flex-col items-center justify-center mb-16 gap-6 text-center">
-                    <div className="max-w-4xl text-center">
+                    <div className="max-w-4xl text-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
                         <h1 className="text-primary text-4xl md:text-5xl lg:text-6xl font-black mt-4 uppercase drop-shadow-sm">
                             Impulsando el futuro de la Región de Coquimbo
                         </h1>

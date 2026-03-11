@@ -308,7 +308,7 @@ const HitosPage = () => {
                 {/* Filtro de Décadas (Menú Desplegable) */}
                 <div className="flex justify-center mb-20 relative z-40">
                     <div className="relative w-64 md:w-80">
-                        <label className="block text-center text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider">
+                        <label className="block text-center text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
                             Selecciona el periodo a ver
                         </label>
                         <button
@@ -367,8 +367,8 @@ const HitosPage = () => {
 
                                         {/* 1. Parte del Contenido (Texto) */}
                                         <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${index % 2 === 0 ? "md:pr-8 lg:pr-12" : "md:pl-8 lg:pl-12"}`}>
-                                            <div className={`p-8 rounded-[2rem] bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 group relative ${index % 2 === 0 ? "md:text-right" : "md:text-left"
-                                                }`}>
+                                            <div className={`p-8 rounded-[2rem] bg-white border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 group relative focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary ${index % 2 === 0 ? "md:text-right" : "md:text-left"
+                                                }`} tabIndex={0}>
 
                                                 <div className="relative z-10">
                                                     <h3 className="text-primary text-2xl font-bold mb-4 uppercase leading-tight">{hito.title}</h3>
@@ -392,7 +392,7 @@ const HitosPage = () => {
                                                 <div className={`w-full h-full transition-transform duration-700 ${hito.imageScale || ''}`}>
                                                     <img
                                                         src={hito.image}
-                                                        alt={hito.title}
+                                                        alt={`Hito: ${hito.title}`}
                                                         className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${hito.isLogo ? 'object-contain' : 'object-cover'} ${hito.objectPosition || 'object-center'}`}
                                                     />
                                                 </div>

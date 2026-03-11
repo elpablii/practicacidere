@@ -39,7 +39,7 @@ const RDSPage = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-[2.5rem] p-10 md:p-16 shadow-2xl shadow-blue-900/5 border border-blue-50 mb-20 relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 pointer-events-none transition-transform duration-700 group-hover:scale-110"></div>
 
-                    <div className="md:w-3/5 md:pr-12 relative z-10 mb-10 md:mb-0 text-center md:text-left">
+                    <div className="md:w-3/5 md:pr-12 relative z-10 mb-10 md:mb-0 text-center md:text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
                         <h2 className="text-3xl md:text-5xl font-black text-primary uppercase tracking-tight mb-6 relative inline-block">
                             ¿Qué es <span className="text-blue-500">RDS?</span>
                         </h2>
@@ -61,7 +61,7 @@ const RDSPage = () => {
 
                 {/* Título Intermedio Animado */}
                 <MotionSection>
-                    <div className="text-center mb-16 px-4">
+                    <div className="text-center mb-16 px-4 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
                         <h2 className="text-3xl md:text-5xl font-black text-primary uppercase tracking-tight mb-4 drop-shadow-sm">
                             ¿Qué <span className="text-blue-500">encontrarás</span> en la Plataforma RDS?
                         </h2>
@@ -86,7 +86,7 @@ const RDSPage = () => {
                             <img src="/assets/logos/RDS - LOGO SEPARADO-01.png" alt="watermark" className="w-[500px] h-[500px] object-contain" />
                         </div>
 
-                        <div className="relative z-10">
+                        <div className="relative z-10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl" tabIndex={0}>
                             <div className="bg-white p-6 rounded-3xl inline-block mb-10 shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                                 <img src="/assets/logos/RDS-LOGO HORIZONTAL-01.png" alt="Logo RDS" className="h-16 md:h-20 w-auto object-contain drop-shadow-sm" />
                             </div>

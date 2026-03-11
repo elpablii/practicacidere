@@ -38,7 +38,7 @@ const SociosPage = () => {
 
                     {/* BLOQUE HAZTE SOCIO */}
                     <div className="mt-32 bg-white rounded-[3rem] p-8 md:p-16 shadow-xl border border-gray-100 flex flex-col md:flex-row items-center gap-10">
-                        <div className="flex-1 text-center md:text-left">
+                        <div className="flex-1 text-center md:text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
                             <h2 className="text-primary text-3xl md:text-4xl font-black mb-4">¿Tu empresa aún no es parte?</h2>
                             <p className="text-gray-600 text-lg mb-8">
                                 Únete a la corporación multisectorial con más trayectoria de la región accediendo a la Red de Socios Cidere para potenciar tus conexiones estratégicas.

@@ -135,7 +135,7 @@ const Navbar = () => {
                     <div className="p-6 flex flex-col h-full">
                         <div className="mb-8 flex justify-between items-center border-b border-gray-100 pb-4">
                             <span className="text-xl font-bold text-primary">Navegación</span>
-                            <button onClick={closeAll} className="text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md p-1">
+                            <button onClick={closeAll} aria-label="Cerrar menú" className="text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md p-1">
                                 <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
                             </button>
                         </div>

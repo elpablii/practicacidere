@@ -51,7 +51,7 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                         {/* Columna 1: Identidad*/}
-                        <div className="space-y-6 flex flex-col items-start justify-center h-full">
+                        <div className="space-y-6 flex flex-col items-start justify-center h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-xl" tabIndex={0} aria-label="Logo Corporativo CIDERE">
                             <Image
                                 src={logoCidere}
                                 alt="CIDERE Coquimbo"
@@ -63,7 +63,7 @@ const Footer = () => {
 
                         {/* Columna 2: Sitios de Interés*/}
                         <div className="lg:pl-8">
-                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Sitios de Interés</h3>
+                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-sm" tabIndex={0}>Sitios de Interés</h3>
                             <ul className="space-y-4 text-sm text-gray-200">
                                 <li><Link href="https://rdscidere.cl" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b14]"><span className="text-secondary mr-2">›</span>Red de Socios CIDERE</Link></li>
                                 <li><Link href="https://www.sofofa.cl/" target="_blank" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b14]"><span className="text-secondary mr-2">›</span>SOFOFA</Link></li>
@@ -74,7 +74,7 @@ const Footer = () => {
 
                         {/* Columna 3: Contacto */}
                         <div className="lg:pl-4">
-                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Contacto</h3>
+                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-sm" tabIndex={0}>Contacto</h3>
                             <ul className="space-y-4 text-sm text-gray-200" aria-label="Información de contacto">
                                 <li className="flex items-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b14] rounded-md" tabIndex={0}>
                                     <span className="text-secondary mr-3 mt-1" aria-hidden="true">📍</span>
@@ -97,7 +97,7 @@ const Footer = () => {
 
                         {/* Columna 4: Redes Sociales*/}
                         <div className="lg:pl-4">
-                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block">Redes Sociales</h3>
+                            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-sm" tabIndex={0}>Redes Sociales</h3>
                             <div className="flex flex-wrap gap-4">
                                 {socialLinks.map((social) => (
                                     <Link
@@ -120,7 +120,7 @@ const Footer = () => {
             {/* Sección de Derechos */}
             <div className="bg-[#050b14] py-6 border-t border-white/10 relative z-20 shadow-inner">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
-                    <p className="text-gray-400 text-xs">
+                    <p className="text-gray-400 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b14] rounded-sm" tabIndex={0}>
                         © {new Date().getFullYear()} CIDERE Región de Coquimbo. Todos los derechos reservados.
                     </p>
                 </div>

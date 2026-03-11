@@ -90,7 +90,7 @@ const HazteSocio = () => {
 
             {/* Beneficios de Ser Socio (Estilo Overlay) */}
             <section className="py-24 px-6 max-w-7xl mx-auto">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
                     <h2 className="text-3xl md:text-5xl font-black text-slate-800 uppercase tracking-tight mb-4">¿Por qué ser parte de CIDERE?</h2>
                     <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto">
                         Al ser parte de esta red de empresas e instituciones que buscan aportar al desarrollo de la región de Coquimbo, tendrás acceso a estos beneficios exclusivos:
@@ -141,14 +141,14 @@ const HazteSocio = () => {
                                 </div>
 
                                 {/* Título Base (Visible en modo reposo, desaparece en hover/click) */}
-                                <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 lg:group-hover:opacity-0 lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"}`}>
+                                <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 invisible pointer-events-none translate-y-4" : "opacity-100 visible lg:group-hover:opacity-0 lg:group-hover:invisible lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"}`}>
                                     <h2 className="text-3xl font-black text-white uppercase tracking-tight drop-shadow-md">
                                         {item.title}
                                     </h2>
                                 </div>
 
                                 {/* Contenido Descriptivo Overlay (Aparece centrado sobre el blur) */}
-                                <div className={`absolute inset-0 w-full h-full flex flex-col justify-center p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"}`}>
+                                <div className={`absolute inset-0 w-full h-full flex flex-col justify-center p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-8 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0"}`}>
                                     <h2 className="text-3xl font-black text-white mb-6 uppercase tracking-tight shrink-0 drop-shadow-md">
                                         {item.title}
                                     </h2>
@@ -181,7 +181,7 @@ const HazteSocio = () => {
                         {/* Patron de fondo sutil */}
                         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat"></div>
 
-                        <div className="relative z-10 flex flex-col items-center">
+                        <div className="relative z-10 flex flex-col items-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl" tabIndex={0}>
                             {/* Logo de RDS Blanco */}
                             <img
                                 src="/assets/logos/RDS-LOGO HORIZONTAL-01.png"

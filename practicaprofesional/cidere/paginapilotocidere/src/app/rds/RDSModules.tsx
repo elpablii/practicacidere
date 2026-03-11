@@ -117,7 +117,7 @@ export default function RDSModules() {
                         </div>
 
                         {/* Estado Base (Desaparece al hacer hover) */}
-                        <div className={`absolute inset-0 p-8 md:p-10 flex flex-col justify-end items-start transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 lg:group-hover:opacity-0 lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"}`}>
+                        <div className={`absolute inset-0 p-8 md:p-10 flex flex-col justify-end items-start transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 invisible pointer-events-none translate-y-4" : "opacity-100 visible lg:group-hover:opacity-0 lg:group-hover:invisible lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"}`}>
                             <div className={`p-4 bg-white/95 ${mod.textColor} backdrop-blur-sm rounded-2xl mb-6 shadow-xl border border-white/20 transition-transform duration-500 group-hover:scale-110`}>
                                 {mod.icon}
                             </div>
@@ -127,7 +127,7 @@ export default function RDSModules() {
                         </div>
 
                         {/* Contenido Revelado (Aparece en Hover) */}
-                        <div className={`relative p-8 md:p-10 flex flex-col h-full flex-grow transition-all duration-500 ease-in-out z-20 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"}`}>
+                        <div className={`relative p-8 md:p-10 flex flex-col h-full flex-grow transition-all duration-500 ease-in-out z-20 ${isActive ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-8 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0"}`}>
                             <div className="flex flex-col mb-4">
                                 <div className={`p-4 bg-white/20 text-white backdrop-blur-md rounded-2xl mb-6 shadow-sm border border-white/30 w-max`}>
                                     {mod.icon}

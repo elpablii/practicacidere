@@ -96,7 +96,7 @@ const Identity = () => {
                             </div>
 
                             {/* Título Flotante Base (Desaparece al abrir la info) */}
-                            <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 lg:group-hover:opacity-0 lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"
+                            <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 invisible pointer-events-none translate-y-4" : "opacity-100 visible lg:group-hover:opacity-0 lg:group-hover:invisible lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"
                                 }`}>
                                 <h2 className="text-3xl lg:text-4xl font-black text-white uppercase tracking-tight drop-shadow-md">
                                     {item.title}
@@ -104,7 +104,7 @@ const Identity = () => {
                             </div>
 
                             {/* Contenido Descriptivo (Aparece centrado sobre la imagen atenuada) */}
-                            <div className={`absolute inset-0 w-full h-full flex flex-col justify-center p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+                            <div className={`absolute inset-0 w-full h-full flex flex-col justify-center p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-8 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0"
                                 }`}>
                                 <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 uppercase tracking-tight shrink-0 drop-shadow-md">
                                     {item.title}
@@ -159,7 +159,7 @@ const Identity = () => {
                             </div>
 
                             {/* Título Flotante Base (Desaparece al abrir la info) */}
-                            <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 pointer-events-none translate-y-4" : "opacity-100 lg:group-hover:opacity-0 lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"
+                            <div className={`absolute bottom-0 left-0 w-full p-8 md:p-10 flex flex-col justify-end transition-all duration-500 ease-in-out z-10 ${isActive ? "opacity-0 invisible pointer-events-none translate-y-4" : "opacity-100 visible lg:group-hover:opacity-0 lg:group-hover:invisible lg:group-hover:translate-y-4 lg:group-hover:pointer-events-none"
                                 }`}>
                                 <h2 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tight drop-shadow-md text-center lg:text-left mx-auto max-w-6xl w-full">
                                     {item.title}
@@ -167,7 +167,7 @@ const Identity = () => {
                             </div>
 
                             {/* Contenido Descriptivo (Aparece centrado sobre la imagen atenuada) */}
-                            <div className={`absolute inset-0 w-full h-full flex flex-col p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
+                            <div className={`absolute inset-0 w-full h-full flex flex-col p-8 md:p-12 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] z-20 ${isActive ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-8 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:translate-y-0"
                                 }`}>
                                 <h2 className="text-3xl lg:text-4xl font-black text-white mb-6 lg:mb-8 uppercase tracking-tight shrink-0 drop-shadow-md md:text-center w-full max-w-6xl mx-auto">
                                     {item.title}
@@ -210,7 +210,7 @@ const Identity = () => {
 
                 <div className="relative z-10 p-8 md:p-16 lg:p-24 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
-                    <div className="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+                    <div className="w-full lg:w-1/3 flex flex-col justify-center items-center lg:items-start text-center lg:text-left focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl" tabIndex={0}>
                         {/* Icono Removido */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter leading-tight">
                             Propuesta <br className="hidden lg:block" /> de Valor
@@ -218,7 +218,7 @@ const Identity = () => {
                         <div className="mt-8 w-24 h-2 bg-gradient-to-r from-secondary to-transparent rounded-full opacity-80"></div>
                     </div>
 
-                    <div className="w-full lg:w-2/3 bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+                    <div className="w-full lg:w-2/3 bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white" tabIndex={0}>
                         <p className="text-white text-lg md:text-xl leading-relaxed font-medium drop-shadow-sm text-justify">
                             {propuesta.desc}
                         </p>
