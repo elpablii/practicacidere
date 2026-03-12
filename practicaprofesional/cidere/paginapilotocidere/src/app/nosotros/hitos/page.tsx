@@ -157,7 +157,7 @@ const hitos: Hito[] = [
     {
         year: "2017",
         title: "Fondo de Innovación para la Competitividad Regional",
-        description: "Por medio del fondo mencionado, CIDERE junto con la Corporación Regional del Desarrollo Productivo ejecutó el proyecto Desarrollo de Estudio de Prospección del Encadenamiento Productivo del Sector Industrial-Minero a través de una Estrategia de Fomento de Empresas Proveedoras Locales.",
+        description: "Por medio del fondo mencionado, CIDERE junto con la Corporación Regional del Desarrollo Productivo (CRDP) ejecutó el proyecto Desarrollo de Estudio de Prospección del Encadenamiento Productivo del Sector Industrial-Minero a través de una Estrategia de Fomento de Empresas Proveedoras Locales.",
         image: "/images/linea de tiempo/Imagen49.webp"
     },
     {
@@ -175,20 +175,28 @@ const hitos: Hito[] = [
         imageScale: "scale-[150%]"
     },
     {
+        year: "2021",
+        title: "Primera Cumbre Industrial Minera",
+        description: "Entre el 7 y 9 de julio CIDERE y la Corporación Regional de Desarrollo Productivo (CRDP) realizaron en modalidad online la primera Cumbre Industrial Minera de la Región de Coquimbo, apuntando a generar encuentros para la visibilización y vinculación entre la minería, la industria y los proveedores de la región de Coquimbo, a través de diversas actividades y reuniones.",
+        image: "/images/linea de tiempo/Primera-cumbre-espacio-industrial-minero.webp",
+        isLogo: true,
+        imageScale: "scale-[150%]"
+    },
+    {
         year: "2023",
-        title: "Creación de la Red Asociativa y Crecimiento de la Corporación",
-        description: "Durante el año se ejecutaron con éxito cuatro grandes proyectos en colaboración con CORFO, consolidando la posición de CIDERE. Además, el número de empresas asociadas creció un 11% albergando a 81 socios.",
+        title: "Creación de la Red Asociativa",
+        description: "CIDERE junto con Corfo, Empresa Millan y West Rent a Car, crearon la Red Asociativa por medio del Espacio Industrial Minero, que tiene como objetivo aumentar la competitividad de un grupo de empresas proveedoras de servicios mineros de la Región de Coquimbo, a través de una estrategia asociativa que permita la incorporación de un modelo de negocios colaborativo, generando redes de carácter productivo, comercial y de innovación.",
         image: "/images/linea de tiempo/red asociativa.webp",
         isLogo: true,
         imageScale: "scale-[225%]"
     },
     {
         year: "2023",
-        title: "Potenciando las experiencias laborales",
-        description: "Desde 2023, CIDERE empezó a hacer colaboraciones significativas con universidades, institutos técnico-profesionales y liceos técnicos, impulsando prácticas para estudiantes en las áreas de comunicaciones, administración, economía e informática.",
-        image: "/images/linea de tiempo/",
+        title: "Crecimiento de la corporación en socios y prácticas",
+        description: "En 2023, la cantidad de socios llegó a 81, lo que representó un crecimiento del 11% en el número de empresas asociadas, regionales y multisectoriales. Así mismo, CIDERE empezó a hacer colaboraciones significativas con universidades, institutos técnico-profesionales y liceos técnicos, impulsando prácticas para estudiantes en las áreas de comunicaciones, administración, economía, diseño e informática.",
+        image: "/images/linea de tiempo/alumnos-practica.webp",
         isLogo: true,
-        imageScale: "scale-[100%]"
+        imageScale: "scale-[150%]"
     },
     {
         year: "2023",
@@ -199,20 +207,20 @@ const hitos: Hito[] = [
         imageScale: "scale-[180%]"
     },
     {
-        year: "2023",
-        title: "Participación Estratégica en SOFOFA",
-        description: "CIDERE mantuvo una participación activa en SOFOFA desempeñando un papel destacado en la Macrozona Norte, estrechando vínculos institucionales con ASINDA y CORPROA para fortalecer la presencia en la comunidad empresarial nacional.",
-        image: "/images/linea de tiempo/Imagen60.webp",
+        year: "2022",
+        title: "Participación Estratégica: Macrozona Norte",
+        description: "CIDERE forma parte de los gremios de la macrozona norte junto con la Asociación de Industriales de Arica (ASINDA), Asociación de Industriales de Iquique (AII), Asociación de Industriales de Antofagasta (AIA) y la Corporación para el Desarrollo de la Región de Atacama (CORPROA). Estas entidades se agrupan para defender intereses comunes, promover el desarrollo interregional y abordar desafíos conjuntos como infraestructura, inversión, permisos y leyes sectoriales, con acuerdos canalizados a través de SOFOFA..",
+        image: "/images/linea de tiempo/Imagen24.webp",
         isLogo: true,
-        imageScale: "scale-[120%]"
+        imageScale: "scale-[150%]"
     },
     {
         year: "2023",
         title: "Tercera Cumbre Espacio Industrial Minera",
-        description: "En julio de 2023, se realizó la tercera Cumbre Espacio Industrial Minera, reuniendo a más de 140 proveedores locales y grandes compañías mineras como MLP, Teck y CMP, con el fin de impulsar el desarrollo regional. El evento incluyó más de 100 ruedas de negocios, vitrinas comerciales y seminarios centrados en la vinculación, innovación y sostenibilidad del sector.",
-        image: "/images/linea de tiempo/.webp",
+        description: "En julio de 2023, se realizó la tercera Cumbre Espacio Industrial Minera, reuniendo a más de 140 proveedores locales y grandes compañías mineras como MLP, Teck y CMP. El evento incluyó más de 100 ruedas de negocios, vitrinas comerciales y seminarios centrados en la vinculación, innovación y sostenibilidad del sector.",
+        image: "/images/linea de tiempo/tercera-cumbre-industrial-minera.webp",
         isLogo: true,
-        imageScale: "scale-[185%]"
+        imageScale: "scale-[190%]"
     },
     {
         year: "2023",
@@ -249,6 +257,12 @@ const hitos: Hito[] = [
         title: "Primera Cumbre Gastronómica EIQF",
         description: "El evento se realizó en el Hotel Club La Serena y reunió a chefs, startups, emprendedores, grandes empresas, centros tecnológicos, restaurantes y a más de 30 speakers nacionales e internacionales.",
         image: "/images/linea de tiempo/cumbre-gastronomica.webp"
+    },
+    {
+        year: "2025",
+        title: "Quinta Cumbre Industrial Minera",
+        description: "Entre el 22 y 23 de julio de 2025 se realizó la quinta edición de la Cumbre Industrial Minera, organizada íntegramente por el equipo de CIDERE. Este evento marcó un hito al incorporar por primera vez una expo minera, reflejando la apuesta de CIDERE por brindar oportunidades a las nuevas generaciones y confiar en su potencial.",
+        image: "/images/linea de tiempo/quinta-cumbre-industrial-minera.webp"
     },
     {
         year: "2026",
