@@ -48,10 +48,10 @@ const Footer = () => {
                 {/* Destello elegante de fondo */}
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                         {/* Columna 1: Identidad*/}
-                        <div className="space-y-6 flex flex-col items-start justify-center h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-xl" tabIndex={0} aria-label="Logo Corporativo CIDERE">
+                        <div className="order-1 lg:order-1 space-y-6 flex flex-col items-start justify-center h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-xl" tabIndex={0} aria-label="Logo Corporativo CIDERE">
                             <Image
                                 src={logoCidere}
                                 alt="CIDERE Coquimbo"
@@ -62,7 +62,7 @@ const Footer = () => {
                         </div>
 
                         {/* Columna 2: Sitios de Interés*/}
-                        <div className="lg:pl-8">
+                        <div className="order-4 lg:order-2 lg:pl-8">
                             <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-sm" tabIndex={0}>Sitios de Interés</h3>
                             <ul className="space-y-4 text-sm text-gray-200">
                                 <li><Link href="https://rdscidere.cl" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-secondary transition-colors cursor-pointer hover:translate-x-1 duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b14]"><span className="text-secondary mr-2">›</span>Red de Socios CIDERE</Link></li>
@@ -73,7 +73,7 @@ const Footer = () => {
                         </div>
 
                         {/* Columna 3: Contacto */}
-                        <div className="lg:pl-4">
+                        <div className="order-3 lg:order-3 lg:pl-4">
                             <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-sm" tabIndex={0}>Contacto</h3>
                             <ul className="space-y-4 text-sm text-gray-200" aria-label="Información de contacto">
                                 <li className="flex items-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#050b14] rounded-md" tabIndex={0}>
@@ -96,7 +96,7 @@ const Footer = () => {
                         </div>
 
                         {/* Columna 4: Redes Sociales*/}
-                        <div className="lg:pl-4">
+                        <div className="order-2 lg:order-4 lg:pl-4">
                             <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider border-b border-white/20 pb-2 inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1b36] rounded-sm" tabIndex={0}>Redes Sociales</h3>
                             <div className="flex flex-wrap gap-4">
                                 {socialLinks.map((social) => (

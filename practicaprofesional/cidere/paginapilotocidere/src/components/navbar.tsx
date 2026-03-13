@@ -58,7 +58,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Menú Desktop / Tablet (iPad) */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden lg:flex items-center space-x-8">
                         <Link
                             href="/"
                             className={`font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 rounded-md px-1 py-0.5 ${isActive('/') ? 'text-primary' : 'text-primary hover:text-primary/80'}`}
@@ -111,7 +111,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Botón Menú Móvil */}
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             aria-expanded={isMobileMenuOpen}
@@ -129,7 +129,7 @@ const Navbar = () => {
             </div>
 
             {/* Panel Lateral Móvil */}
-            <div className={`md:hidden fixed inset-0 z-[60] ${isMobileMenuOpen ? 'visible' : 'invisible'}`}>
+            <div className={`lg:hidden fixed inset-0 z-[60] ${isMobileMenuOpen ? 'visible' : 'invisible'}`}>
                 <div className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} onClick={closeAll}></div>
                 <div className={`absolute right-0 top-0 h-[100dvh] w-[85%] max-w-[320px] bg-white shadow-2xl transition-transform duration-300 ease-in-out flex flex-col ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="p-6 flex flex-col h-full">
@@ -140,7 +140,7 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className="flex-1 space-y-2 overflow-y-auto pr-2">
-                            <Link href="/" className={`block px-4 py-3 rounded-xl font-bold ${isActive('/') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Inicio</Link>
+                            <Link href="/" className={`block px-4 py-2 rounded-xl font-bold ${isActive('/') ? 'bg-primary/10 text-primary' : 'text-primary'}`} onClick={closeAll}>Inicio</Link>
 
                             <div className="space-y-1">
                                 <button
@@ -150,8 +150,7 @@ const Navbar = () => {
                                         setIsMobileDropdownOpen(!isMobileDropdownOpen);
                                     }}
                                     aria-haspopup="true"
-                                    aria-expanded={isMobileDropdownOpen}
-                                    className={`w-full flex justify-between items-center px-4 py-3 rounded-xl font-bold transition-all select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
+                                    className={`w-full flex justify-between items-center px-4 py-2 rounded-xl font-bold transition-all select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${isMobileDropdownOpen ? 'text-primary bg-primary/5' : 'text-primary'}`}
                                 >
                                     Quiénes Somos
                                     <svg aria-hidden="true" className={`w-4 h-4 transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
@@ -159,21 +158,21 @@ const Navbar = () => {
 
                                 <div className={`overflow-hidden transition-all duration-300 ${isMobileDropdownOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
                                     <div className="pl-4 py-2 space-y-1 text-sm text-gray-600">
-                                        <Link href="/nosotros#mision" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Lineamientos estratégicos</Link>
-                                        <Link href="/nosotros/directorio#directorio" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Directorio</Link>
-                                        <Link href="/nosotros/equipo#equipo" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Equipo</Link>
-                                        <Link href="/nosotros/objetivos#objetivos" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros ejes</Link>
-                                        <Link href="/nosotros/hitos" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Hitos emblemáticos</Link>
-                                        <Link href="/socios" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros socios</Link>
-                                        <Link href="/rds" className="block py-2.5 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Plataforma RDS</Link>
+                                        <Link href="/nosotros#mision" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Lineamientos estratégicos</Link>
+                                        <Link href="/nosotros/directorio#directorio" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Directorio</Link>
+                                        <Link href="/nosotros/equipo#equipo" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Equipo</Link>
+                                        <Link href="/nosotros/objetivos#objetivos" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros ejes</Link>
+                                        <Link href="/nosotros/hitos" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Hitos emblemáticos</Link>
+                                        <Link href="/socios" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Nuestros socios</Link>
+                                        <Link href="/rds" className="block py-2 px-3 rounded-lg font-medium hover:bg-primary/5 hover:text-primary hover:translate-x-1 transition-all duration-200" onClick={closeAll}>Plataforma RDS</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-auto pt-6 space-y-3 border-t border-gray-100">
-                            <Link href="/hazte-socio" className="w-full block text-center border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors py-3 rounded-xl font-bold shadow-sm" onClick={closeAll}>Hazte socio</Link>
-                            <Link href="/contacto" className="w-full block text-center bg-primary text-white py-4 rounded-xl font-bold shadow-lg" onClick={closeAll}>Contacto</Link>
+                        <div className="mt-auto pt-4 space-y-2 border-t border-gray-100">
+                            <Link href="/hazte-socio" className="w-full block text-center border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors py-2 rounded-xl font-bold shadow-sm" onClick={closeAll}>Hazte socio</Link>
+                            <Link href="/contacto" className="w-full block text-center bg-primary text-white py-2.5 rounded-xl font-bold shadow-lg" onClick={closeAll}>Contacto</Link>
                         </div>
                     </div>
                 </div>

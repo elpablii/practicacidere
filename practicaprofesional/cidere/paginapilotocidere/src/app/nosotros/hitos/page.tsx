@@ -10,8 +10,8 @@ type Hito = {
     description: string;
     image: string;
     isLogo?: boolean;
-    imageScale?: string; // Clases Tailwind para zoom, ej: "scale-110", "scale-125", "scale-150"
-    objectPosition?: string; // Clases Tailwind para posición, ej: "object-top", "object-bottom", "object-[50%_20%]"
+    imageScale?: string;
+    objectPosition?: string;
     socios?: number;
 };
 
@@ -158,7 +158,9 @@ const hitos: Hito[] = [
         year: "2017",
         title: "Fondo de Innovación para la Competitividad Regional",
         description: "Por medio del fondo mencionado, CIDERE junto con la Corporación Regional del Desarrollo Productivo (CRDP) ejecutó el proyecto Desarrollo de Estudio de Prospección del Encadenamiento Productivo del Sector Industrial-Minero a través de una Estrategia de Fomento de Empresas Proveedoras Locales.",
-        image: "/images/linea de tiempo/Imagen49.webp"
+        image: "/images/linea de tiempo/fondo-innovacion-competitividad-regional.webp",
+        isLogo: true,
+        imageScale: "scale-[150%]"
     },
     {
         year: "2018",
