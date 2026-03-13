@@ -306,7 +306,7 @@ const HitosPage = () => {
 
                 <div className="relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
-                        Hitos <span className="text-blue-500">Históricos</span>
+                        Hitos <span className="text-blue-500">Emblemáticos</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl max-w-2xl mx-auto font-medium">
                         50 años creando región
