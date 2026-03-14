@@ -26,7 +26,7 @@ const AboutBrief = () => {
 
     return (
         <section className="py-12 bg-transparent">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 md:px-6">
 
                 <div className="flex flex-col items-center justify-center mb-16 gap-6 text-center">
                     <div className="max-w-4xl text-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary rounded-xl" tabIndex={0}>
@@ -36,11 +36,11 @@ const AboutBrief = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10">
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className="relative p-10 rounded-[3rem] bg-white/80 backdrop-blur-sm border border-white/60 shadow-xl shadow-blue-900/5 hover:-translate-y-2 hover:bg-white hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+                            className="relative p-6 sm:p-8 md:p-10 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] bg-white/80 backdrop-blur-sm border border-white/60 shadow-xl shadow-blue-900/5 hover:-translate-y-2 hover:bg-white hover:shadow-2xl transition-all duration-500 group overflow-hidden"
                         >
                             <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl group-hover:bg-blue-600/20 transition-colors"></div>
 

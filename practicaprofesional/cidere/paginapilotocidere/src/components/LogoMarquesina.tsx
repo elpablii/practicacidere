@@ -64,7 +64,7 @@ const sociosLogos = [
     "/images/socios/OLMUE.webp",
     "/images/socios/OPTICA.webp",
     "/images/socios/PACIFICO.webp",
-    "/images/socios/PACIFIcTEK.webp",
+    "/images/socios/pacifictek.webp",
     "/images/socios/PASMAR.webp",
     "/images/socios/PELAMBRE.webp",
     "/images/socios/Pernocenter.webp",

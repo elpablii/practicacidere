@@ -108,7 +108,7 @@ const HeroSlider = () => {
 
 
                     <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-8 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-[3.5rem]' : 'items-center'}`}>
-                        <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-6 sm:px-8 lg:px-12'}`}>
+                        <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-12 sm:px-16 lg:px-20'}`}>
                             <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl`} tabIndex={0}>
 
                                 {slide.badge && (
@@ -160,17 +160,17 @@ const HeroSlider = () => {
 
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 p-1.5 sm:p-2 md:p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm border border-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
                 aria-label="Anterior slide"
             >
-                <ChevronLeftIcon className="w-6 h-6" />
+                <ChevronLeftIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm hidden md:block border border-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 p-1.5 sm:p-2 md:p-3 rounded-full bg-black/30 hover:bg-white/20 text-white transition-all backdrop-blur-sm border border-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white"
                 aria-label="Siguiente slide"
             >
-                <ChevronRightIcon className="w-6 h-6" />
+                <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-3">

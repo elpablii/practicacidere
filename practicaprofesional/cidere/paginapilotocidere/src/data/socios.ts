@@ -55,7 +55,7 @@ export const socios = [
     { name: "Maquinarias Olmué", url: "https://www.maquinariasolmue.cl/", logo: "/images/socios/OLMUE.webp" },
     { name: "Vita Optica", url: "https://vitaoptica.cl/tienda/?swoof=1&product_cat=lentes-de-sol", logo: "/images/socios/OPTICA.webp" },
     { name: "CMP", url: "https://www.cmp.cl/", logo: "/images/socios/PACIFICO.webp" },
-    { name: "Pacifictek", url: "https://www.pacifictek.cl/", logo: "/images/socios/PACIFICTEK.webp" },
+    { name: "Pacifictek", url: "https://www.pacifictek.cl/", logo: "/images/socios/pacifictek.webp" },
     { name: "Pasmar", url: "http://www.pasmar.cl/", logo: "/images/socios/PASMAR.webp" },
     { name: "Minera Los Pelambres", url: "https://web.pelambres.cl/", logo: "/images/socios/PELAMBRE.webp" },
     { name: "Phillips, Yver y Cía Abogados", url: "", logo: "/images/socios/PHILLIPS.webp" },
