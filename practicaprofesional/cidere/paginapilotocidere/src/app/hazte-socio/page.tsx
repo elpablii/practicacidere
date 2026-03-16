@@ -78,7 +78,7 @@ const HazteSocio = () => {
                         Hazte <span className="text-blue-500">Socio</span>
                     </h1>
                     <p className="text-blue-100/70 text-lg md:text-xl font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
-                        Sea parte de una red consolidada de {socios.length} empresas que participan en el desarrollo de la Región de Coquimbo.
+                        Sé parte de una red consolidada de {socios.length} empresas que participan en el desarrollo de la Región de Coquimbo.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="https://rdscidere.cl" target="_blank" className="bg-white hover:bg-gray-100 text-primary font-bold py-4 px-10 rounded-xl shadow-lg transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary">

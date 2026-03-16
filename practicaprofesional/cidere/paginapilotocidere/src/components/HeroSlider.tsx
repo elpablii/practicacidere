@@ -51,7 +51,7 @@ const slides = [
         id: 4,
         image: "/images/slider/segundo-banner-pagina-inicio.webp",
         badge: "",
-        title: "¿Quieres ser Socio?",
+        title: "Sé parte de CIDERE",
         desc: "Empieza tu proceso de ingreso y postula para ser parte del desarrollo regional",
         primaryBtn: { text: "Hazte Socio", link: "/hazte-socio" },
         secondaryBtn: { text: "", link: "" }

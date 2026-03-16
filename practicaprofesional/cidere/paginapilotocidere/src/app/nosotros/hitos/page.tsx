@@ -97,8 +97,8 @@ const hitos: Hito[] = [
     {
         year: "1996",
         title: "Edificio Empresarial",
-        description: "CIDERE apuntó a la construcción de un edificio empresarial ubicado en la calle Cienfuegos en La Serena, ayudando a crecer el patrimonio de la institución.",
-        image: "/images/linea de tiempo/Imagen42.webp"
+        description: "CIDERE apuntó a la construcción de un edificio empresarial ubicado en la calle Cantournet 773 en La Serena, ayudando a crecer el patrimonio de la institución.",
+        image: "/images/linea de tiempo/hito-edificio-empresarial.webp"
     },
     {
         year: "2008",
@@ -129,18 +129,6 @@ const hitos: Hito[] = [
         title: "Primer programa de postgrados en la Región de Coquimbo",
         description: "CIDERE en conjunto con Executive Business School ayudó a que La Serena fuera hogar de la impartición de los primeros programas de postgrado de la Región de Coquimbo.",
         image: "/images/linea de tiempo/Imagen47.webp"
-    },
-    {
-        year: "2015",
-        title: "Acuerdo entre Universidad Bolivariana y CIDERE",
-        description: "La Universidad Bolivariana y CIDERE firmaron un convenio de beneficios en matrícula y aranceles para los trabajadores de los socios asociados y sus familias.",
-        image: "/images/linea de tiempo/Imagen31.webp"
-    },
-    {
-        year: "2015",
-        title: "Acuerdo entre Tronwell La Serena y CIDERE",
-        description: "Tronwell La Serena y CIDERE firmaron un convenio para los trabajadores de los socios asociados y sus familias que permite recibir capacitaciones en el idioma inglés.",
-        image: "/images/linea de tiempo/Imagen32.webp"
     },
     {
         year: "2016-2017",
@@ -187,6 +175,14 @@ const hitos: Hito[] = [
         imageScale: "scale-[150%]"
     },
     {
+        year: "2022",
+        title: "Compromiso Regional",
+        description: "Desde el 2022, CIDERE dió inicio al ciclo de desayunos Compromiso Regional, liderado por Diario El Día, Minera Los Pelambres y la Universidad Católica del Norte. Espacios donde se abordaron temáticas de interés regional y proyección, generando espacios de encuentro con alta participación de autoridades, el mundo empresarial, la academia y la comunidad en general.",
+        image: "/images/linea de tiempo/foto-hito-compromiso-regional-2024.webp",
+        isLogo: true,
+        imageScale: "scale-[500%]"
+    },
+    {
         year: "2023",
         title: "Creación de la Red Asociativa",
         description: "CIDERE junto con Corfo, Empresa Millan y West Rent a Car, crearon la Red Asociativa por medio del Espacio Industrial Minero, que tiene como objetivo aumentar la competitividad de un grupo de empresas proveedoras de servicios mineros de la Región de Coquimbo, a través de una estrategia asociativa que permita la incorporación de un modelo de negocios colaborativo, generando redes de carácter productivo, comercial y de innovación.",
@@ -196,8 +192,8 @@ const hitos: Hito[] = [
     },
     {
         year: "2023",
-        title: "Crecimiento de la corporación en socios y prácticas",
-        description: "En 2023, la cantidad de socios llegó a 81, lo que representó un crecimiento del 11% en el número de empresas asociadas, regionales y multisectoriales. Así mismo, CIDERE empezó a hacer colaboraciones significativas con universidades, institutos técnico-profesionales y liceos técnicos, impulsando prácticas para estudiantes en las áreas de comunicaciones, administración, economía, diseño e informática.",
+        title: "Creando futuro",
+        description: "Con el fin de fortalecer el ecosistema regional, CIDERE recibe desde 2023 a estudiantes de la Región de Coquimbo para la realización de sus prácticas y memorias. Esta iniciativa no solo responde a las necesidades del territorio, sino que también actúa como un puente estratégico para que los socios de la corporación identifiquen y retengan el talento joven de la zona.",
         image: "/images/linea de tiempo/alumnos-practica.webp",
         isLogo: true,
         imageScale: "scale-[150%]"
@@ -226,16 +222,8 @@ const hitos: Hito[] = [
     },
     {
         year: "2024",
-        title: "Compromiso Regional",
-        description: "Desde el 2024, CIDERE dió inicio al ciclo de desayunos Compromiso Regional, liderado por Diario El Día, Minera Los Pelambres y la Universidad Católica del Norte. Espacios donde se abordaron temáticas de interés regional y proyección, generando espacios de encuentro con alta participación de autoridades, el mundo empresarial, la academia y la comunidad en general.",
-        image: "/images/linea de tiempo/foto-hito-compromiso-regional-2024.webp",
-        isLogo: true,
-        imageScale: "scale-[500%]"
-    },
-    {
-        year: "2024",
-        title: "Encuentro RedColaborAcción",
-        description: "En Julio de 2024, CIDERE ayudó a la ejecución del Encuentro RedColaborAcción: Conecta y Crece, juntando a muchos emprendedores e innovadores.",
+        title: "Encuentro Red ColaborAcción",
+        description: "El evento Red ColaborAcción: ¡Conecta y Crece! realizado en el Faro Monumental de La Serena, consolidó una alianza estratégica entre expositores de alto nivel, empresarios y estudiantes de diversas provincias, fortaleciendo la sinergia regional, sentando las bases para un ecosistema de colaboración y crecimiento sostenible a largo plazo.",
         image: "/images/linea de tiempo/foto evento dinamiza red colaboraccion.webp",
         isLogo: true,
         imageScale: "scale-[185%]"
@@ -249,7 +237,7 @@ const hitos: Hito[] = [
     {
         year: "2025",
         title: "Quinta Cumbre Industrial Minera",
-        description: "Entre el 22 y 23 de julio de 2025 se realizó la quinta edición de la Cumbre Industrial Minera, organizada íntegramente por el equipo de CIDERE. Este evento marcó un hito al incorporar por primera vez una expo minera, reflejando la apuesta de CIDERE por brindar oportunidades a las nuevas generaciones y confiar en su potencial.",
+        description: "Entre el 22 y 23 de julio de 2025 se realizó la quinta edición de la Cumbre Industrial Minera, organizada íntegramente por el equipo de CIDERE. Este evento marcó un hito al incorporar por primera vez una expo minera.",
         image: "/images/linea de tiempo/foto-hito-quinta-cumbre-industrial.webp"
     },
     {
