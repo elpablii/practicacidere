@@ -24,7 +24,7 @@ const Identity = () => {
             title: "Nuestra Visión",
             desc: "Ser la corporación que lidera la transformación de la Región de Coquimbo, combinando data, tecnología y alianzas para impulsar iniciativas que mejoren la calidad de vida de las personas de la región y fortalezcan la identidad del territorio.",
             icon: <EyeIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-            image: "/images/slider/Imagen14.webp",
+            image: "/images/slider/foto-vision.webp",
             color: "from-amber-500 to-amber-300"
         },
         {
@@ -39,7 +39,7 @@ const Identity = () => {
                 { nombre: "Creatividad e innovación", descripcion: "Valoramos las ideas nuevas y el pensamiento crítico como herramientas para encontrar soluciones efectivas. Promovemos la innovación como un medio para mejorar continuamente y responder de manera responsable a los desafíos del entorno." }
             ],
             icon: <StarIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-            image: "/images/slider/Slide3QuieresSerSocio.webp",
+            image: "/images/slider/foto-nuestros-valores.webp",
             color: "from-emerald-500 to-emerald-300"
         }
     ];

@@ -120,12 +120,6 @@ const hitos: Hito[] = [
     },
     {
         year: "2013",
-        title: "Rueda de Negocios Proveedores de la Minería",
-        description: "En septiembre de 2013, CIDERE organizó por cuarta vez consecutiva en conjunto con Minera Los Pelambres y Corminco la Rueda de Negocios Proveedores de la Minería, con el objetivo de buscar un espacio de acercamiento entre la demanda de las compañias mineras regionales y la oferta disponible de los proveedores.",
-        image: "/images/linea de tiempo/Imagen45.webp"
-    },
-    {
-        year: "2013",
         title: "Acuerdo entre CIDERE y la Cámara de Comercio y Turismo de Chile",
         description: "En diciembre de 2013, ambas organizaciones firmaron un importante acuerdo de cooperación estratégica.",
         image: "/images/linea de tiempo/Imagen46.webp"
@@ -158,7 +152,7 @@ const hitos: Hito[] = [
         year: "2017",
         title: "Fondo de Innovación para la Competitividad Regional",
         description: "Por medio del fondo mencionado, CIDERE junto con la Corporación Regional del Desarrollo Productivo (CRDP) ejecutó el proyecto Desarrollo de Estudio de Prospección del Encadenamiento Productivo del Sector Industrial-Minero a través de una Estrategia de Fomento de Empresas Proveedoras Locales.",
-        image: "/images/linea de tiempo/fondo-innovacion-competitividad-regional.webp",
+        image: "/images/linea de tiempo/foto-hito-fondo-innovacion.webp",
         isLogo: true,
         imageScale: "scale-[150%]"
     },
@@ -181,6 +175,14 @@ const hitos: Hito[] = [
         title: "Primera Cumbre Industrial Minera",
         description: "Entre el 7 y 9 de julio CIDERE y la Corporación Regional de Desarrollo Productivo (CRDP) realizaron en modalidad online la primera Cumbre Industrial Minera de la Región de Coquimbo, apuntando a generar encuentros para la visibilización y vinculación entre la minería, la industria y los proveedores de la región de Coquimbo, a través de diversas actividades y reuniones.",
         image: "/images/linea de tiempo/Primera-cumbre-espacio-industrial-minero.webp",
+        isLogo: true,
+        imageScale: "scale-[150%]"
+    },
+    {
+        year: "2022",
+        title: "Participación Estratégica: Macrozona Norte",
+        description: "CIDERE forma parte de los gremios de la macrozona norte junto con la Asociación de Industriales de Arica (ASINDA), Asociación de Industriales de Iquique (AII), Asociación de Industriales de Antofagasta (AIA) y la Corporación para el Desarrollo de la Región de Atacama (CORPROA). Estas entidades se agrupan para defender intereses comunes, promover el desarrollo interregional y abordar desafíos conjuntos como infraestructura, inversión, permisos y leyes sectoriales, con acuerdos canalizados a través de SOFOFA..",
+        image: "/images/linea de tiempo/Imagen24.webp",
         isLogo: true,
         imageScale: "scale-[150%]"
     },
@@ -209,22 +211,6 @@ const hitos: Hito[] = [
         imageScale: "scale-[180%]"
     },
     {
-        year: "2022",
-        title: "Participación Estratégica: Macrozona Norte",
-        description: "CIDERE forma parte de los gremios de la macrozona norte junto con la Asociación de Industriales de Arica (ASINDA), Asociación de Industriales de Iquique (AII), Asociación de Industriales de Antofagasta (AIA) y la Corporación para el Desarrollo de la Región de Atacama (CORPROA). Estas entidades se agrupan para defender intereses comunes, promover el desarrollo interregional y abordar desafíos conjuntos como infraestructura, inversión, permisos y leyes sectoriales, con acuerdos canalizados a través de SOFOFA..",
-        image: "/images/linea de tiempo/Imagen24.webp",
-        isLogo: true,
-        imageScale: "scale-[150%]"
-    },
-    {
-        year: "2023",
-        title: "Tercera Cumbre Espacio Industrial Minera",
-        description: "En julio de 2023, se realizó la tercera Cumbre Espacio Industrial Minera, reuniendo a más de 140 proveedores locales y grandes compañías mineras como MLP, Teck y CMP. El evento incluyó más de 100 ruedas de negocios, vitrinas comerciales y seminarios centrados en la vinculación, innovación y sostenibilidad del sector.",
-        image: "/images/linea de tiempo/tercera-cumbre-industrial-minera.webp",
-        isLogo: true,
-        imageScale: "scale-[190%]"
-    },
-    {
         year: "2023",
         title: "Piloto Sello Regional",
         description: "Se estableció el Sello de Proveedores Región de Coquimbo por CIDERE y la UCN, con el objetivo principal de promover el desarrollo de empresas regionales, facilitar su encadenamiento y localización de nuevas empresas.",
@@ -242,9 +228,9 @@ const hitos: Hito[] = [
         year: "2024",
         title: "Compromiso Regional",
         description: "Desde el 2024, CIDERE dió inicio al ciclo de desayunos Compromiso Regional, liderado por Diario El Día, Minera Los Pelambres y la Universidad Católica del Norte. Espacios donde se abordaron temáticas de interés regional y proyección, generando espacios de encuentro con alta participación de autoridades, el mundo empresarial, la academia y la comunidad en general.",
-        image: "/images/linea de tiempo/Imagen52.webp",
+        image: "/images/linea de tiempo/foto-hito-compromiso-regional-2024.webp",
         isLogo: true,
-        imageScale: "scale-[150%]"
+        imageScale: "scale-[500%]"
     },
     {
         year: "2024",
@@ -264,7 +250,7 @@ const hitos: Hito[] = [
         year: "2025",
         title: "Quinta Cumbre Industrial Minera",
         description: "Entre el 22 y 23 de julio de 2025 se realizó la quinta edición de la Cumbre Industrial Minera, organizada íntegramente por el equipo de CIDERE. Este evento marcó un hito al incorporar por primera vez una expo minera, reflejando la apuesta de CIDERE por brindar oportunidades a las nuevas generaciones y confiar en su potencial.",
-        image: "/images/linea de tiempo/quinta-cumbre-industrial-minera.webp"
+        image: "/images/linea de tiempo/foto-hito-quinta-cumbre-industrial.webp"
     },
     {
         year: "2026",

@@ -6,7 +6,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const slides = [
     {
-        id: 5,
+        id: 1,
         image: "/images/slider/banner-pagina-web-nueva.webp",
         badge: "",
         title: "",
@@ -21,17 +21,8 @@ const slides = [
         }
     },
     {
-        id: 3,
-        image: "/images/slider/Slide3QuieresSerSocio.webp",
-        badge: "",
-        title: "¿Quieres ser Socio?",
-        desc: "Empieza tu proceso de ingreso y postula para ser parte del desarrollo regional",
-        primaryBtn: { text: "Hazte Socio", link: "/hazte-socio" },
-        secondaryBtn: { text: "", link: "" }
-    },
-    {
         id: 2,
-        image: "/images/slider/Slide2VerSocios.webp",
+        image: "/images/slider/tercer-banner-pagina-inicio-socios.webp",
         badge: "",
         title: "Nuestros Socios",
         desc: "Conoce a las organizaciones que forman parte de nuestra red de socios",
@@ -42,7 +33,7 @@ const slides = [
         }
     },
     {
-        id: 1,
+        id: 3,
         image: "/images/slider/Slide1RDS.webp",
         badge: "",
         title: "",
@@ -58,7 +49,16 @@ const slides = [
     },
     {
         id: 4,
-        image: "/images/slider/Slide4EspacioIndustrialMinero.webp",
+        image: "/images/slider/segundo-banner-pagina-inicio.webp",
+        badge: "",
+        title: "¿Quieres ser Socio?",
+        desc: "Empieza tu proceso de ingreso y postula para ser parte del desarrollo regional",
+        primaryBtn: { text: "Hazte Socio", link: "/hazte-socio" },
+        secondaryBtn: { text: "", link: "" }
+    },
+    {
+        id: 5,
+        image: "/images/slider/quinto-banner-inicio.webp",
         badge: "",
         title: "Registro Regional de Proveedores",
         desc: "Conecta con proveedores de la Región de Coquimbo",
@@ -97,19 +97,19 @@ const HeroSlider = () => {
                                 alt={slide.title ? `Imagen de fondo para: ${slide.title.replace(/<\/?[^>]+(>|$)/g, "")}` : ""}
                                 fill
                                 priority={index === 0}
-                                className={`${slide.id === 1 ? 'object-contain md:object-cover' : slide.id === 5 ? 'object-cover object-center md:object-bottom md:scale-100' : 'object-cover'}`}
+                                className={`${slide.id === 3 ? 'object-contain md:object-cover' : slide.id === 1 ? 'object-cover object-center md:object-bottom md:scale-100' : 'object-cover'}`}
                             />
                         )}
 
-                        {slide.id !== 1 && slide.id !== 5 && (
+                        {slide.id !== 3 && slide.id !== 1 && (
                             <div className="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-primary/95 md:via-primary/70 md:to-transparent"></div>
                         )}
                     </div>
 
 
-                    <div className={`relative z-20 h-full flex ${slide.id === 1 ? 'items-end justify-center pb-8 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-[3.5rem]' : 'items-center'}`}>
-                        <div className={`w-full ${slide.id === 1 ? 'flex justify-center' : 'max-w-7xl mx-auto px-12 sm:px-16 lg:px-20'}`}>
-                            <div className={`${slide.id === 1 ? 'text-center' : 'max-w-3xl'} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl`} tabIndex={0}>
+                    <div className={`relative z-20 h-full flex ${slide.id === 3 ? 'items-end justify-center pb-8 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-[3.5rem]' : 'items-center'}`}>
+                        <div className={`w-full ${slide.id === 3 ? 'flex justify-center' : 'max-w-7xl mx-auto px-12 sm:px-16 lg:px-20'}`}>
+                            <div className={`${slide.id === 3 ? 'text-center' : 'max-w-3xl'} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white rounded-xl`} tabIndex={0}>
 
                                 {slide.badge && (
                                     <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full mb-3 sm:mb-6">
@@ -133,11 +133,11 @@ const HeroSlider = () => {
                                 )}
 
 
-                                <div className={`flex ${slide.id === 1 ? 'justify-center' : 'flex-col sm:flex-row'} gap-2 sm:gap-4`}>
+                                <div className={`flex ${slide.id === 3 ? 'justify-center' : 'flex-col sm:flex-row'} gap-2 sm:gap-4`}>
                                     {slide.primaryBtn.text && (
                                         <Link
                                             href={slide.primaryBtn.link}
-                                            className={`bg-white text-primary font-bold text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary whitespace-nowrap ${slide.id === 1 ? 'px-3 py-1.5 text-xs rounded-lg sm:px-8 sm:py-4 sm:text-base sm:rounded-xl lg:px-6 lg:py-3 lg:text-sm xl:text-base' : 'px-4 py-2 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl text-xs sm:text-base'}`}
+                                            className={`bg-white text-primary font-bold text-center hover:bg-gray-100 transition-all shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary whitespace-nowrap ${slide.id === 3 ? 'px-3 py-1.5 text-xs rounded-lg sm:px-8 sm:py-4 sm:text-base sm:rounded-xl lg:px-6 lg:py-3 lg:text-sm xl:text-base' : 'px-4 py-2 sm:px-8 sm:py-4 rounded-lg sm:rounded-xl text-xs sm:text-base'}`}
                                         >
                                             {slide.primaryBtn.text}
                                         </Link>

@@ -21,7 +21,7 @@ const HazteSocio = () => {
             title: "Representación Regional",
             desc: "Representación en instancias de relacionamiento con autoridades y participación en Mesas Regionales.",
             icon: <BuildingOfficeIcon className="w-10 h-10" />,
-            image: "/images/slider/Imagen19.webp",
+            image: "/images/slider/foto-representacion-regional-hazte-socio.webp",
             color: "text-blue-500",
             bgIcon: "bg-blue-50"
         },
@@ -29,7 +29,7 @@ const HazteSocio = () => {
             title: "Acceso Preferencial",
             desc: "Acceso preferencial a ruedas de negocios, match empresariales, mentorías, seminarios y capacitaciones generados en alianzas público-privadas.",
             icon: <UserGroupIcon className="w-10 h-10" />,
-            image: "/images/slider/Imagen21.webp",
+            image: "/images/slider/foto-acceso-preferencial-hazte-socio.webp",
             color: "text-amber-500",
             bgIcon: "bg-amber-50"
         },
@@ -37,7 +37,7 @@ const HazteSocio = () => {
             title: "Valores Exclusivos",
             desc: "Valores exclusivos para ferias, ruedas de negocios y actividades regionales e interregionales donde CIDERE participa como organizador y co-organizador.",
             icon: <CurrencyDollarIcon className="w-10 h-10" />,
-            image: "/images/slider/Imagen22.webp",
+            image: "/images/slider/foto-valores-exclusivos-hazte-socio.webp",
             color: "text-emerald-500",
             bgIcon: "bg-emerald-50"
         },
@@ -48,13 +48,13 @@ const HazteSocio = () => {
             image: "/images/slider/Imagen24.webp",
             color: "text-cyan-500",
             bgIcon: "bg-cyan-50",
-            isLogo: true // Nueva propiedad para identificar si es logo
+            isLogo: true
         },
         {
             title: "Visibilidad y Difusión",
             desc: "Visibilidad y difusión estratégica de tu empresa en eventos y actividades organizadas o coorganizadas por CIDERE.",
             icon: <BriefcaseIcon className="w-10 h-10" />,
-            image: "/images/slider/Imagen23.webp",
+            image: "/images/slider/foto-visibilidad-y-difusion-hazte-socio.webp",
             color: "text-violet-500",
             bgIcon: "bg-violet-50"
         },
@@ -62,7 +62,7 @@ const HazteSocio = () => {
             title: "Desarrollo de Talento",
             desc: "Impulsa el desarrollo de talento regional a través de prácticas y tesis estudiantiles alineadas con las necesidades reales del territorio.",
             icon: <AcademicCapIcon className="w-10 h-10" />,
-            image: "/images/slider/Imagen20.webp",
+            image: "/images/slider/foto-desarrollo-de-talento-hazte-socio.webp",
             color: "text-rose-500",
             bgIcon: "bg-rose-50"
         }
