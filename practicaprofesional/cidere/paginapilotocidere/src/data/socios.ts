@@ -95,5 +95,8 @@ export const socios = [
     { name: "Angela Suckel y Asociados", url: "https://asuckel.cl/", logo: "/images/socios/Angela.webp" },
     { name: "ICOMAT", url: "https://icomat.cl/", logo: "/images/socios/icomat.webp" },
     { name: "Serviteg", url: "http://www.serviteg.cl/", logo: "/images/socios/Serviteg.webp" },
-    { name: "DV Drilling", url: "https://www.dvdrilling.cl/", logo: "/images/socios/dvd.webp" },
+    { name: "DV Drilling", url: "https://www.dvdrilling.cl/", logo: "/images/socios/dvd.webp" }, 
+    { name: "Mi Be EIRL", url: "https://www.linkedin.com/company/mibeing/?originalSubdomain=cl", logo: "/images/socios/MIBE.webp" },
+    { name: "Nealux", url: "https://WWW.NEALUX.CL/", logo: "/images/socios/Nealux.webp" },
+    { name: "Factor Ambiental", url: "https://factorambiental.cl//", logo: "/images/socios/factor ambiental.webp" },
 ];
