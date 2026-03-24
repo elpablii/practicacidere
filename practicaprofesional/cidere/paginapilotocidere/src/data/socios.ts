@@ -30,7 +30,6 @@ export const socios = [
     { name: "Viña Falernia", url: "https://falernia.com/", logo: "/images/socios/FALERNIA.webp" },
     { name: "Faremin", url: "https://faremin.cl/", logo: "/images/socios/FAREMIN.webp" },
     { name: "Flex Buses", url: "https://www.flexbuses.com/", logo: "/images/socios/FLEX.webp" },
-    { name: "F y A Servicios de Ingeniería", url: "https://www.instagram.com/fya_serviciosdeingenieria/", logo: "/images/socios/FYA-SERVICIOS-E-INGENIERIA.webp" },
     { name: "Habita", url: "https://www.ihabita.cl/", logo: "/images/socios/HABITA.webp" },
     { name: "Automotriz Hanshing", url: "https://www.automotrizhanshing.cl/", logo: "/images/socios/Hanshing.webp" },
     { name: "Agricola HC", url: "https://www.agricolahc.cl/", logo: "/images/socios/HC.webp" },
