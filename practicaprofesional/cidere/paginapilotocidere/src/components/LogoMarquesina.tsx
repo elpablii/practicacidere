@@ -36,7 +36,6 @@ const sociosLogos = [
     "/images/socios/FALERNIA.webp",
     "/images/socios/FAREMIN.webp",
     "/images/socios/FLEX.webp",
-    "/images/socios/FYA-SERVICIOS-E-INGENIERIA.webp",
     "/images/socios/HABITA.webp",
     "/images/socios/Hanshing.webp",
     "/images/socios/HC.webp",
@@ -100,6 +99,9 @@ const sociosLogos = [
     "/images/socios/VILLA-VERLA.webp",
     "/images/socios/WEST.webp",
     "/images/socios/WILUG.webp",
+    "/images/socios/MIBE.webp",
+    "/images/socios/Nealux.webp",
+    "/images/socios/factor ambiental.webp",
 
 ];
 
