@@ -46,7 +46,7 @@ export default function Home() {
 
                   <div className="absolute inset-0 z-0">
                     <img
-                      src="/images/slider/Imagen15.webp"
+                      src="/images/fotos-banners-y-tarjetas/Imagen15.webp"
                       alt="Hitos de la Corporación"
                       className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
                     />

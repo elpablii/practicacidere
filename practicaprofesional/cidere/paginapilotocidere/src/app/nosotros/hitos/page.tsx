@@ -20,7 +20,7 @@ const hitos: Hito[] = [
         year: "1976",
         title: "Fundación de CIDERE",
         description: "El 30 de marzo de 1976, CIDERE nace como una organización privada sin fines de lucro, formada por un grupo de empresarios regionales comprometidos con el desarrollo local.",
-        image: "/images/slider/laserena-70s.webp"
+        image: "/images/fotos-banners-y-tarjetas/laserena-70s.webp"
     },
     {
         year: "1978",
@@ -44,13 +44,13 @@ const hitos: Hito[] = [
         year: "1981",
         title: "La Recova",
         description: "CIDERE mediante una articulación público-privada, fue partícipe de la construcción de La Recova, centro importante del comercio local.",
-        image: "/images/slider/la-recova-la-serena.webp"
+        image: "/images/fotos-banners-y-tarjetas/la-recova-la-serena.webp"
     },
     {
         year: "1982-1983",
         title: "Terminal Pesquero de La Serena",
         description: "CIDERE con recursos propios financió la construcción del Terminal Pesquero de La Serena.",
-        image: "/images/slider/terminal-pesquero-la-serena.webp"
+        image: "/images/fotos-banners-y-tarjetas/terminal-pesquero-la-serena.webp"
     },
     {
         year: "1983",
@@ -74,13 +74,13 @@ const hitos: Hito[] = [
         year: "Años 80",
         title: "Aeropuerto La Florida",
         description: "Después de un intenso temporal a mediados de la década de 1980, CIDERE con ayuda de la Cámara Chilena de la Construcción, colaboró en la construcción de una pista alternativa en el Aeropuerto La Florida.",
-        image: "/images/slider/aeropuerto-la-florida.webp"
+        image: "/images/fotos-banners-y-tarjetas/aeropuerto-la-florida.webp"
     },
     {
         year: "Años 80",
         title: "Ruta al Cerro Grande",
         description: "El primer camino que permitió acceder al Cerro Grande fue financiado por CIDERE.",
-        image: "/images/slider/camino-cerro-grande.webp"
+        image: "/images/fotos-banners-y-tarjetas/camino-cerro-grande.webp"
     },
     {
         year: "1987-1989",
@@ -244,7 +244,7 @@ const hitos: Hito[] = [
         year: "2026",
         title: "50 Aniversario",
         description: `CIDERE cumple medio siglo de presencia en la región, con ${socios.length} empresas socias y una visión clara hacia el desarrollo sostenible de la región.`,
-        image: "/images/slider/Slide2VerSocios.webp"
+        image: "/images/fotos-banners-y-tarjetas/Slide2VerSocios.webp"
     }
 ];
 
@@ -273,7 +273,7 @@ const HitosPage = () => {
         <main className="min-h-screen bg-transparent overflow-x-hidden">
 
             {/* Header Institucional */}
-            <PageHeaderAnimator bgImage="/images/slider/laserena-70s.webp" className="bg-primary pt-32 pb-24 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator bgImage="/images/fotos-banners-y-tarjetas/laserena-70s.webp" className="bg-primary pt-32 pb-24 px-6 text-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full opacity-10">
                     <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500 rounded-full blur-[120px]"></div>
                 </div>

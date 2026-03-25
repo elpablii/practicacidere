@@ -7,7 +7,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 const slides = [
     {
         id: 1,
-        image: "/images/slider/banner-pagina-web-nueva.webp",
+        image: "/images/fotos-banners-y-tarjetas/banner-pagina-web-nueva.webp",
         badge: "",
         title: "",
         desc: "",
@@ -22,7 +22,7 @@ const slides = [
     },
     {
         id: 2,
-        image: "/images/slider/tercer-banner-pagina-inicio-socios.webp",
+        image: "/images/fotos-banners-y-tarjetas/tercer-banner-pagina-inicio-socios.webp",
         badge: "",
         title: "Nuestros Socios",
         desc: "Conoce a las organizaciones que forman parte de nuestra red de socios",
@@ -34,7 +34,7 @@ const slides = [
     },
     {
         id: 3,
-        image: "/images/slider/Slide1RDS.webp",
+        image: "/images/fotos-banners-y-tarjetas/Slide1RDS.webp",
         badge: "",
         title: "",
         desc: "",
@@ -49,7 +49,7 @@ const slides = [
     },
     {
         id: 4,
-        image: "/images/slider/segundo-banner-pagina-inicio.webp",
+        image: "/images/fotos-banners-y-tarjetas/segundo-banner-pagina-inicio.webp",
         badge: "",
         title: "Sé parte de CIDERE",
         desc: "Empieza tu proceso de ingreso y postula para ser parte del desarrollo regional",
@@ -58,7 +58,7 @@ const slides = [
     },
     {
         id: 5,
-        image: "/images/slider/quinto-banner-inicio.webp",
+        image: "/images/fotos-banners-y-tarjetas/quinto-banner-inicio.webp",
         badge: "",
         title: "Registro Regional de Proveedores",
         desc: "Conecta con proveedores de la Región de Coquimbo",
