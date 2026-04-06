@@ -22,7 +22,7 @@ const DirectorioPage = () => {
             role: "Vicepresidente",
             company: "West Rent a Car",
             image: "/images/directorio/vicepresidente-luiscarmona.webp",
-            imageClass: "scale-[1.2] translate-y-6",
+            imageClass: "scale-[1.2] translate-y-0",
         },
         {
             name: "Gastón Yver Hudson",
@@ -48,6 +48,13 @@ const DirectorioPage = () => {
             company: "Dalbosco Hermanos y Cia Ltda.",
             image: "/images/directorio/director-francodalbosco.webp",
             imageClass: "scale-[1.0] translate-y-0",
+        },
+        {
+            name: "Fernando Sánchez",
+            role: "Director",
+            company: "Industrias Celta Ltda.",
+            image: "/images/directorio/director-fernandosanchez.webp",
+            imageClass: "scale-[1.05] translate-y-0",
         },
     ];
 
