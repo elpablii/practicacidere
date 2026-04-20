@@ -21,7 +21,7 @@ const HazteSocio = () => {
             title: "Representación Regional",
             desc: "Representación en instancias de relacionamiento con autoridades y participación en Mesas Regionales.",
             icon: <BuildingOfficeIcon className="w-10 h-10" />,
-            image: "/images/slider/foto-representacion-regional-hazte-socio.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-representacion-regional-hazte-socio.webp",
             color: "text-blue-500",
             bgIcon: "bg-blue-50"
         },
@@ -29,7 +29,7 @@ const HazteSocio = () => {
             title: "Acceso Preferencial",
             desc: "Acceso preferencial a ruedas de negocios, match empresariales, mentorías, seminarios y capacitaciones generados en alianzas público-privadas.",
             icon: <UserGroupIcon className="w-10 h-10" />,
-            image: "/images/slider/foto-acceso-preferencial-hazte-socio.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-acceso-preferencial-hazte-socio.webp",
             color: "text-amber-500",
             bgIcon: "bg-amber-50"
         },
@@ -37,7 +37,7 @@ const HazteSocio = () => {
             title: "Valores Exclusivos",
             desc: "Valores exclusivos para ferias, ruedas de negocios y actividades regionales e interregionales donde CIDERE participa como organizador y co-organizador.",
             icon: <CurrencyDollarIcon className="w-10 h-10" />,
-            image: "/images/slider/foto-valores-exclusivos-hazte-socio.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-valores-exclusivos-hazte-socio.webp",
             color: "text-emerald-500",
             bgIcon: "bg-emerald-50"
         },
@@ -45,7 +45,7 @@ const HazteSocio = () => {
             title: "Plataforma RDS",
             desc: "Acceso a RDS (Red de Socios CIDERE), plataforma web exclusiva para la vinculación y perfilamiento de los socios de CIDERE.",
             icon: <GlobeAltIcon className="w-10 h-10" />,
-            image: "/images/slider/Imagen24.webp",
+            image: "/images/fotos-banners-y-tarjetas/Imagen24.webp",
             color: "text-cyan-500",
             bgIcon: "bg-cyan-50",
             isLogo: true
@@ -54,7 +54,7 @@ const HazteSocio = () => {
             title: "Visibilidad y Difusión",
             desc: "Visibilidad y difusión estratégica de tu empresa en eventos y actividades organizadas o coorganizadas por CIDERE.",
             icon: <BriefcaseIcon className="w-10 h-10" />,
-            image: "/images/slider/foto-visibilidad-y-difusion-hazte-socio.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-visibilidad-y-difusion-hazte-socio.webp",
             color: "text-violet-500",
             bgIcon: "bg-violet-50"
         },
@@ -62,7 +62,7 @@ const HazteSocio = () => {
             title: "Desarrollo de Talento",
             desc: "Impulsa el desarrollo de talento regional a través de prácticas y tesis estudiantiles alineadas con las necesidades reales del territorio.",
             icon: <AcademicCapIcon className="w-10 h-10" />,
-            image: "/images/slider/foto-desarrollo-de-talento-hazte-socio.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-desarrollo-de-talento-hazte-socio.webp",
             color: "text-rose-500",
             bgIcon: "bg-rose-50"
         }
@@ -71,7 +71,7 @@ const HazteSocio = () => {
     return (
         <div className="bg-white min-h-screen">
 
-            <PageHeaderAnimator id="hazte-socio" bgImage="/images/slider/foto-banner-directorio-2.webp" imagePosition="object-center" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator id="hazte-socio" bgImage="/images/fotos-banners-y-tarjetas/foto-banner-directorio-2.webp" imagePosition="object-center" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-4xl mx-auto relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">

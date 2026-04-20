@@ -16,7 +16,7 @@ const Identity = () => {
             title: "Nuestra Misión",
             desc: "Velar por los intereses de nuestros asociados y las necesidades de la Región de Coquimbo, impulsando el desarrollo sostenible con impacto económico, social y con sensibilidad medioambiental, a través de la articulación entre el sector privado, público y academia.",
             icon: <FlagIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-            image: "/images/slider/Imagen10.webp",
+            image: "/images/fotos-banners-y-tarjetas/Imagen10.webp",
             color: "from-blue-600 to-blue-400"
         },
         {
@@ -24,7 +24,7 @@ const Identity = () => {
             title: "Nuestra Visión",
             desc: "Ser la corporación que lidera la transformación de la Región de Coquimbo, combinando data, tecnología y alianzas para impulsar iniciativas que mejoren la calidad de vida de las personas de la región y fortalezcan la identidad del territorio.",
             icon: <EyeIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-            image: "/images/slider/foto-vision.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-vision.webp",
             color: "from-amber-500 to-amber-300"
         },
         {
@@ -39,7 +39,7 @@ const Identity = () => {
                 { nombre: "Creatividad e innovación", descripcion: "Valoramos las ideas nuevas y el pensamiento crítico como herramientas para encontrar soluciones efectivas. Promovemos la innovación como un medio para mejorar continuamente y responder de manera responsable a los desafíos del entorno." }
             ],
             icon: <StarIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />,
-            image: "/images/slider/foto-nuestros-valores.webp",
+            image: "/images/fotos-banners-y-tarjetas/foto-nuestros-valores.webp",
             color: "from-emerald-500 to-emerald-300"
         }
     ];
@@ -49,7 +49,7 @@ const Identity = () => {
         title: "Propuesta de Valor",
         desc: "CIDERE impulsa la conexión y visibilidad del ecosistema empresarial con la academia y el sector público de la Región de Coquimbo, entregando a sus socios información oportuna, redes y espacios de encuentro que fortalecen su posicionamiento, oportunidades de crecimiento y vínculo con el territorio. Nuestra trayectoria, junto a un equipo multidisciplinario comprometido con la excelencia y una base de socios multisectoriales, nos permiten generar iniciativas de alto impacto que promueven la colaboración, la innovación y la sostenibilidad para contribuir al desarrollo integral y a la mejora en la calidad de vida de quienes habitan nuestra región.",
         icon: <StarIcon className="w-10 h-10 text-primary" />,
-        image: "/images/slider/Imagen13.webp"
+        image: "/images/fotos-banners-y-tarjetas/Imagen13.webp"
     };
 
     return (

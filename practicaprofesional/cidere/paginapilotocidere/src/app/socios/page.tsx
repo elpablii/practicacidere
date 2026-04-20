@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const SociosPage = () => {
     return (
         <div className="bg-transparent min-h-screen">
-            <PageHeaderAnimator id="socios" bgImage="/images/slider/Imagen4.webp" className="bg-gradient-to-br from-primary to-blue-900 pt-36 pb-20 px-6 relative overflow-hidden">
+            <PageHeaderAnimator id="socios" bgImage="/images/fotos-banners-y-tarjetas/Imagen4.webp" className="bg-gradient-to-br from-primary to-blue-900 pt-36 pb-20 px-6 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 pointer-events-none"
                     style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
                 <div className="max-w-7xl mx-auto text-center relative z-10">

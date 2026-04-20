@@ -21,7 +21,7 @@ const ejes = [
         border: "hover:border-blue-600/30",
         bgIcon: "bg-blue-50",
         bullet: "bg-blue-600",
-        image: "/images/slider/Imagen4.webp"
+        image: "/images/fotos-banners-y-tarjetas/Imagen4.webp"
     },
     {
         titulo: "Eje Social",
@@ -32,7 +32,7 @@ const ejes = [
         border: "hover:border-amber-500/30",
         bgIcon: "bg-amber-50",
         bullet: "bg-amber-500",
-        image: "/images/slider/foto-eje-social.webp"
+        image: "/images/fotos-banners-y-tarjetas/foto-eje-social.webp"
     },
     {
         titulo: "Eje Medioambiental",
@@ -43,7 +43,7 @@ const ejes = [
         border: "hover:border-emerald-500/30",
         bgIcon: "bg-emerald-50",
         bullet: "bg-emerald-500",
-        image: "/images/slider/foto-eje-medioambiental.webp"
+        image: "/images/fotos-banners-y-tarjetas/foto-eje-medioambiental.webp"
     },
     {
         titulo: "Eje Relacional",
@@ -54,7 +54,7 @@ const ejes = [
         border: "hover:border-cyan-500/30",
         bgIcon: "bg-cyan-50",
         bullet: "bg-cyan-500",
-        image: "/images/slider/foto-eje-relacional.webp"
+        image: "/images/fotos-banners-y-tarjetas/foto-eje-relacional.webp"
     },
     {
         titulo: "Eje Comunicacional",
@@ -65,7 +65,7 @@ const ejes = [
         border: "hover:border-violet-500/30",
         bgIcon: "bg-violet-50",
         bullet: "bg-violet-500",
-        image: "/images/slider/foto-eje-comunicacional.webp"
+        image: "/images/fotos-banners-y-tarjetas/foto-eje-comunicacional.webp"
     },
     {
         titulo: "Eje Transversal",
@@ -76,17 +76,17 @@ const ejes = [
         border: "hover:border-rose-500/30",
         bgIcon: "bg-rose-50",
         bullet: "bg-rose-500",
-        image: "/images/slider/Imagen8.webp"
+        image: "/images/fotos-banners-y-tarjetas/Imagen8.webp"
     },
 ];
 
-const ObjetivosPage = () => {
+const NuestrosEjesPage = () => {
     const [activeCardId, setActiveCardId] = useState<string | null>(null);
 
     return (
         <main className="min-h-screen bg-transparent overflow-x-hidden">
             {/* Header Institucional */}
-            <PageHeaderAnimator id="objetivos" bgImage="/images/slider/banner-ejes-estrategicos.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator id="nuestros-ejes" bgImage="/images/fotos-banners-y-tarjetas/banner-ejes-estrategicos.webp" className="bg-primary pt-40 pb-28 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
                 <div className="max-w-4xl mx-auto relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
@@ -165,4 +165,4 @@ const ObjetivosPage = () => {
     );
 };
 
-export default ObjetivosPage;
+export default NuestrosEjesPage;

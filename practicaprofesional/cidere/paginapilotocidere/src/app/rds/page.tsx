@@ -15,7 +15,7 @@ const RDSPage = () => {
     return (
         <main className="min-h-screen bg-gradient-to-br from-slate-50 via-[#f8fafc] to-blue-50/50 overflow-x-hidden">
             {/* Header Animado */}
-            <PageHeaderAnimator id="rds-header" bgImage="/images/slider/Imagen1.webp" imagePosition="object-center" className="bg-primary pt-32 pb-20 px-6 text-center relative overflow-hidden">
+            <PageHeaderAnimator id="rds-header" bgImage="/images/fotos-banners-y-tarjetas/Imagen1.webp" imagePosition="object-center" className="bg-primary pt-32 pb-20 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent z-10"></div>
 
                 <div className="max-w-4xl mx-auto relative z-10">

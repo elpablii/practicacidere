@@ -55,7 +55,7 @@ const EquipoPage = () => {
     return (
         <div className="bg-transparent min-h-screen">
             {/* Header de la Sección */}
-            <PageHeaderAnimator id="equipo" bgImage="/images/slider/banner-equipo.webp" className="bg-primary pt-32 pb-16 px-4 relative overflow-hidden">
+            <PageHeaderAnimator id="equipo" bgImage="/images/fotos-banners-y-tarjetas/banner-equipo.webp" className="bg-primary pt-32 pb-16 px-4 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto text-center relative z-10">
                     <h1 className="text-white text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
                         Equipo
