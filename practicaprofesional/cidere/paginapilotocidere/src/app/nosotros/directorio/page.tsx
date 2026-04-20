@@ -27,7 +27,7 @@ const DirectorioPage = () => {
         {
             name: "Gastón Yver Hudson",
             role: "Secretario",
-            company: "Phillips, Yver y San Francisco Ltda.",
+            company: "Phillips, Yver y Cía. Abogados",
             image: "/images/directorio/secretario-gastonyver.webp",
         },
         {
