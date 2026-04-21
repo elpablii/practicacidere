@@ -98,4 +98,6 @@ export const socios = [
     { name: "Mi Be EIRL", url: "https://www.linkedin.com/company/mibeing/?originalSubdomain=cl", logo: "/images/socios/MIBE.webp" },
     { name: "Nealux", url: "https://WWW.NEALUX.CL/", logo: "/images/socios/Nealux.webp" },
     { name: "Factor Ambiental", url: "https://factorambiental.cl//", logo: "/images/socios/factor ambiental.webp" },
+    { name: "Valle Norte Servicios", url: "https://vns.cl/", logo: "/images/socios/vns.webp" },
+    { name: "Mutual de Seguridad CCHC", url: "https://www.mutual.cl/portal/publico/empresa/home", logo: "/images/socios/Mutual CCHC.webp" },
 ];
