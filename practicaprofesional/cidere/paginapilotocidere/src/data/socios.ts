@@ -67,7 +67,6 @@ export const socios = [
     { name: "Buses Romani", url: "https://www.busesromani.cl/", logo: "/images/socios/ROMANI.webp" },
     { name: "SAE", url: "https://www.sae.cl/", logo: "/images/socios/SAE.webp" },
     { name: "Minera San Gerónimo", url: "https://www.cmsg.cl/nuestra-gente/", logo: "/images/socios/SAN-GERONIMO.webp" },
-    { name: "Sercomp", url: "https://sercompruiz.cl/", logo: "/images/socios/Sercomp.webp" },
     { name: "Serena Golf", url: "https://www.serenagolf.cl/", logo: "/images/socios/Serena-Golf.webp" },
     { name: "Serena Suite Park Hotel WG", url: "https://www.serenasuiteparkhotelwg.com/", logo: "/images/socios/SERENA-SUITE.webp" },
     { name: "Inmobiliaria Serena", url: "https://www.iserena.cl/", logo: "/images/socios/Serena.webp" },
@@ -101,4 +100,5 @@ export const socios = [
     { name: "Valle Norte Servicios", url: "https://vns.cl/", logo: "/images/socios/vns.webp" },
     { name: "Mutual de Seguridad CCHC", url: "https://www.mutual.cl/portal/publico/empresa/home", logo: "/images/socios/Mutual CCHC.webp" },
     { name: "Transelec S.A.", url: "https://www.transelec.cl/", logo: "/images/socios/transelec.webp" },
+    { name: "Perfomin Servicios Mineros", url: "http://www.perfominspa.cl", logo: "/images/socios/Perfomin.webp" },
 ];
