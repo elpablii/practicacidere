@@ -101,4 +101,9 @@ export const socios = [
     { name: "Mutual de Seguridad CCHC", url: "https://www.mutual.cl/portal/publico/empresa/home", logo: "/images/socios/Mutual CCHC.webp" },
     { name: "Transelec S.A.", url: "https://www.transelec.cl/", logo: "/images/socios/transelec.webp" },
     { name: "Perfomin Servicios Mineros", url: "http://www.perfominspa.cl", logo: "/images/socios/Perfomin.webp" },
+    { name: "Compañía General De Construcciones CGC LTDA", url: "https://www.constructoracgc.cl", logo: "/images/socios/cgc.webp" },
+    { name: "V&V Seguridad", url: "https://www.vyvseguridad.cl", logo: "/images/socios/vyv.webp" },
+    { name: "INCOPROVIL SPA", url: "https://www.incoprovil.cl", logo: "/images/socios/Incoprovil.webp" },
+    { name: "MKL SERVICIOS A LA MINERIA SPA", url: "https://mklingenieria.cl/", logo: "/images/socios/MKL.webp" },
+    { name: "MAQUINARIAS SEMAC SPA", url: "https://msemac.cl", logo: "/images/socios/SEMAC.webp" },
 ];
