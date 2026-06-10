@@ -106,4 +106,5 @@ export const socios = [
     { name: "INCOPROVIL SPA", url: "https://www.incoprovil.cl", logo: "/images/socios/Incoprovil.webp" },
     { name: "MKL SERVICIOS A LA MINERIA SPA", url: "https://mklingenieria.cl/", logo: "/images/socios/MKL.webp" },
     { name: "MAQUINARIAS SEMAC SPA", url: "https://msemac.cl", logo: "/images/socios/SEMAC.webp" },
+    { name: "Mademet SPA", url: "https://mademet.cl/", logo: "/images/socios/Mademet.webp" },
 ];
