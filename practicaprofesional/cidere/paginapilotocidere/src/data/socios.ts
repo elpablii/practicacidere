@@ -86,7 +86,6 @@ export const socios = [
     { name: "Pernocenter", url: "https://www.instagram.com/pernocenter_laserena/", logo: "/images/socios/Pernocenter.webp" },
     { name: "clínica Red Salud Elqui", url: "https://www.redsalud.cl/", logo: "/images/socios/Red-Salud.webp" },
     { name: "Dulcería Lilis", url: "https://www.lilis.cl/quienes-somos/", logo: "/images/socios/Lilis.webp" },
-    { name: "Elquivisión", url: "https://www.elquivision.cl/", logo: "/images/socios/Elquivision.webp" },
     { name: "SIMAQ", url: "https://www.gruasimaq.cl/", logo: "/images/socios/SIMAQ.webp" },
     { name: "CA Servicios Spa", url: "https://caserviciosspa.cl/", logo: "/images/socios/CA.webp" },
     { name: "R y T Ingeniería Construcción", url: "https://rytconstruccion.cl/", logo: "/images/socios/RyT.webp" },
@@ -107,4 +106,6 @@ export const socios = [
     { name: "MKL SERVICIOS A LA MINERIA SPA", url: "https://mklingenieria.cl/", logo: "/images/socios/MKL.webp" },
     { name: "MAQUINARIAS SEMAC SPA", url: "https://msemac.cl", logo: "/images/socios/SEMAC.webp" },
     { name: "Mademet SPA", url: "https://mademet.cl/", logo: "/images/socios/Mademet.webp" },
+    { name: "Minterra SPA", url: "https://minterraspa.cl/", logo: "/images/socios/Minterra.webp" },
+    { name: "Castcon Spa", url: "https://castcon.cl/", logo: "/images/socios/Castcon.webp" },
 ];
