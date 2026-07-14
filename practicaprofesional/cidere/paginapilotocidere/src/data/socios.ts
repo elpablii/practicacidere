@@ -108,4 +108,5 @@ export const socios = [
     { name: "Mademet SPA", url: "https://mademet.cl/", logo: "/images/socios/Mademet.webp" },
     { name: "Minterra SPA", url: "https://minterraspa.cl/", logo: "/images/socios/Minterra.webp" },
     { name: "Castcon Spa", url: "https://castcon.cl/", logo: "/images/socios/Castcon.webp" },
+    { name: "Transportes Piero", url: "https://piero.cl/", logo: "/images/socios/Piero.webp" },
 ];
