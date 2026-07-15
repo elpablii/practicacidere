@@ -109,4 +109,7 @@ export const socios = [
     { name: "Minterra SPA", url: "https://minterraspa.cl/", logo: "/images/socios/Minterra.webp" },
     { name: "Castcon Spa", url: "https://castcon.cl/", logo: "/images/socios/Castcon.webp" },
     { name: "Transportes Piero", url: "https://piero.cl/", logo: "/images/socios/Piero.webp" },
+    { name: "IGM Servicios", url: "https://www.igmservicios.cl/", logo: "/images/socios/IGM.webp" },
+    { name: "Control Pisquero", url: "https://cooperativacontrolpisquero.cl/", logo: "/images/socios/ControlPisquero.webp" },
+    { name: "CETMED", url: "https://cetmed.cl/", logo: "/images/socios/CETMED.webp" },
 ];
