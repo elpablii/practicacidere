@@ -41,12 +41,7 @@ const EquipoPage = () => {
             company: "valentina@cidere.cl",
             image: "/images/equipo/coordinadora-articulacion-publico-privada-valentina.webp",
         },
-        {
-            name: "Yanabel Muñoz",
-            role: "Encargada de Comunicaciones",
-            company: "yanabel@cidere.cl",
-            image: "/images/equipo/encargada-comunicaciones-yanabel.webp",
-        },
+      
     ];
 
     const gerenciaData = equipoData.slice(0, 2);
