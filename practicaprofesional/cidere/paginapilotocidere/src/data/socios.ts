@@ -34,7 +34,6 @@ export const socios = [
     { name: "Automotriz Hanshing", url: "https://www.automotrizhanshing.cl/", logo: "/images/socios/Hanshing.webp" },
     { name: "Agricola HC", url: "https://www.agricolahc.cl/", logo: "/images/socios/HC.webp" },
     { name: "Hellema", url: "https://www.hhechile.com/", logo: "/images/socios/Hellema.webp" },
-    { name: "Hikza", url: "https://hikza.com/", logo: "/images/socios/hikza.webp" },
     { name: "IGD Chile", url: "https://igdchile.com/", logo: "/images/socios/IGD.webp" },
     { name: "Imatec Salud", url: "https://www.imatecsalud.cl/", logo: "/images/socios/IMATEC.webp" },
     { name: "Inacap", url: "https://portal.inacap.cl/", logo: "/images/socios/INACAP.webp" },
@@ -112,4 +111,6 @@ export const socios = [
     { name: "IGM Servicios", url: "https://www.igmservicios.cl/", logo: "/images/socios/IGM.webp" },
     { name: "Control Pisquero", url: "https://cooperativacontrolpisquero.cl/", logo: "/images/socios/ControlPisquero.webp" },
     { name: "CETMED", url: "https://cetmed.cl/", logo: "/images/socios/CETMED.webp" },
+    { name: "A&C Ingeniería", url: "https://www.aycingenieria.cl/", logo: "/images/socios/A&C.webp" },
+    { name: "FIVOSH", url: "https://fivosh.cl/", logo: "/images/socios/FIVOSH.webp" },
 ];
